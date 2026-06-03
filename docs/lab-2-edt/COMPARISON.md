@@ -70,7 +70,7 @@ This document compares the two versions of Lab 2 to help you choose which is bes
 
 ---
 
-### Part 3/4: Code Analysis (15-20 minutes)
+### Part 3/4: Code Analysis & Iteration (15-20 minutes)
 
 **Standard Lab 2:**
 - **Exercise 3.1:** Code Detective & Improvement (20 min)
@@ -337,3 +337,4 @@ Both versions are excellent - choose based on your specific situation and learni
 *Comparison Document for Bob AI Workshop Lab 2*  
 *Version 1.0*  
 *Created to help instructors choose the right workshop format*
+

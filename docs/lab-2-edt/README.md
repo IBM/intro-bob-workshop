@@ -766,3 +766,4 @@ As AI tools become more capable, the ability to think like a designer - with emp
 *EDT Edition - Version 1.0*  
 *Designed for high school students who have completed Enterprise Design Thinking activities*  
 *Duration: 90 minutes*
+
