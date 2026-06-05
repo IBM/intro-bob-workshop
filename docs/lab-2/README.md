@@ -133,6 +133,7 @@ Bob, please read the virtual-pet/script.js file and:
 **Task:** Choose ONE project idea and ask Bob to build it with you!
 
 **Quick Project Ideas (pick one):**
+
 - **Study Quiz:** Interactive quiz for a subject you're learning
 - **Mood Tracker:** Track and visualize your daily mood
 - **Decision Maker:** Random decision/advice generator
@@ -191,6 +192,7 @@ Bob, can you add [specific feature] to my project?
    - Understanding how to work with AI is a valuable skill
 
 **4. Bob's Key Capabilities Demonstrated:**
+
    - **File Operations:** Creating, reading, and modifying files
    - **Code Analysis:** Understanding and improving existing code
    - **Multi-file Projects:** Organizing complex projects with HTML, CSS, JS
@@ -245,10 +247,14 @@ Bob, can you add [specific feature] to my project?
 ### Getting Better Results
 
 **Instead of:** "Make a website"
-**Try:** "Create a personal portfolio website with a home page, about section, and contact form. Use a blue and white color scheme with modern, clean design."
+
+!!! tip "Try this instead"
+    "Create a personal portfolio website with a home page, about section, and contact form. Use a blue and white color scheme with modern, clean design."
 
 **Instead of:** "This doesn't work"
-**Try:** "The button on line 15 isn't responding when I click it. Can you check the JavaScript event listener?"
+
+!!! tip "Try this instead"
+    "The button on line 15 isn't responding when I click it. Can you check the JavaScript event listener?"
 
 ---
 
@@ -257,9 +263,24 @@ Bob, can you add [specific feature] to my project?
 ### Want to Learn More?
 
 - **Web Development Basics:** HTML, CSS, JavaScript fundamentals
+  - [MDN Web Docs](https://developer.mozilla.org/) - Comprehensive web development documentation
+  - [freeCodeCamp](https://www.freecodecamp.org/) - Free interactive coding lessons
+  - [W3Schools](https://www.w3schools.com/) - Tutorials and references for web technologies
+
 - **AI and Machine Learning:** How AI systems learn and work
+  - [Elements of AI](https://www.elementsofai.com/) - Free online course about AI basics
+  - [Machine Learning for Kids](https://machinelearningforkids.co.uk/) - Hands-on ML projects
+  - [Google's AI Experiments](https://experiments.withgoogle.com/collection/ai) - Interactive AI demos
+
 - **Programming Concepts:** Variables, functions, loops, conditionals
+  - [Khan Academy - Computer Programming](https://www.khanacademy.org/computing/computer-programming) - Interactive programming courses
+  - [Scratch](https://scratch.mit.edu/) - Visual programming for beginners
+  - [Code.org](https://code.org/) - Learn computer science fundamentals
+
 - **Design Principles:** User interface and user experience design
+  - [IBM Design Thinking](https://www.ibm.com/design/thinking/) - Enterprise Design Thinking framework
+  - [Google's Material Design](https://material.io/design) - Design system and guidelines
+  - [Nielsen Norman Group](https://www.nngroup.com/articles/) - UX research and best practices
 
 ### Questions to Explore
 
