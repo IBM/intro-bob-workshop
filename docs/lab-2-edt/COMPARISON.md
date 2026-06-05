@@ -25,6 +25,7 @@ This document compares the two versions of Lab 2 to help you choose which is bes
 ### Part 1: Introduction (First 10-15 minutes)
 
 **Standard Lab 2:**
+
 - **Exercise 1.1:** First Conversation (5 min)
   - Students ask Bob to introduce himself
   - Learn about agentic AI vs. chatbots
@@ -36,6 +37,7 @@ This document compares the two versions of Lab 2 to help you choose which is bes
   - Introduction to Bob's analytical abilities
 
 **EDT Edition:**
+
 - **Part 1:** Getting to Know Bob (5 min)
   - Quick instructor-led demo
   - Brief explanation of agentic AI
@@ -51,15 +53,17 @@ This document compares the two versions of Lab 2 to help you choose which is bes
 
 ---
 
-### Part 2/3: Creative Work (20-25 minutes)
+### Part 2 and 3: Creative Work (20-25 minutes)
 
 **Standard Lab 2:**
+
 - **Exercise 2.1:** Create an Interactive Game (25 min)
   - Build a browser-based game
   - Focus on fun and engagement
   - Learn about game logic and interactivity
 
 **EDT Edition:**
+
 - **Part 3:** Creative Projects (20 min)
   - Apply design thinking to new problems
   - Practice problem reframing
@@ -70,9 +74,10 @@ This document compares the two versions of Lab 2 to help you choose which is bes
 
 ---
 
-### Part 3/4: Code Analysis & Iteration (15-20 minutes)
+### Part 3 and 4: Code Analysis & Iteration (15-20 minutes)
 
 **Standard Lab 2:**
+
 - **Exercise 3.1:** Code Detective & Improvement (20 min)
   - Read and analyze existing code
   - Identify improvements
@@ -80,6 +85,7 @@ This document compares the two versions of Lab 2 to help you choose which is bes
   - Learn about iteration
 
 **EDT Edition:**
+
 - **Part 4:** Code Analysis & Iteration (15 min)
   - Similar content but condensed
   - Emphasizes iteration as part of design thinking
@@ -89,9 +95,10 @@ This document compares the two versions of Lab 2 to help you choose which is bes
 
 ---
 
-### Part 4/5: Real-World Applications (20-25 minutes)
+### Part 4 and 5: Real-World Applications (20-25 minutes)
 
 **Standard Lab 2:**
+
 - **Exercise 4.1:** Build Your Own Project (25 min)
   - Choose from project ideas
   - Build something unique
@@ -99,6 +106,7 @@ This document compares the two versions of Lab 2 to help you choose which is bes
   - Apply all learned skills
 
 **EDT Edition:**
+
 - **Part 5:** Your Design Challenge (20 min)
   - Structured around design thinking framework
   - Empathize → Define → Ideate → Prototype → Test
@@ -109,15 +117,17 @@ This document compares the two versions of Lab 2 to help you choose which is bes
 
 ---
 
-### Part 5/6: Wrap-Up (10 minutes)
+### Part 5 and 6: Wrap-Up (10 minutes)
 
 **Standard Lab 2:**
+
 - Group sharing
 - Key takeaways about agentic AI
 - Reflection on AI capabilities
 - Discussion of limitations and ethics
 
 **EDT Edition:**
+
 - Group sharing with design thinking lens
 - Key takeaways about human-AI partnership
 - Reflection on complete design cycle
@@ -131,20 +141,22 @@ This document compares the two versions of Lab 2 to help you choose which is bes
 ## Learning Outcomes Comparison
 
 ### Standard Lab 2 Emphasizes:
-✅ Understanding agentic AI capabilities  
-✅ Writing effective prompts  
-✅ Code analysis and iteration  
-✅ Creative problem-solving with AI  
-✅ Technical understanding of AI tools  
-✅ Responsible AI use
+
+- ✅ Understanding agentic AI capabilities
+- ✅ Writing effective prompts
+- ✅ Code analysis and iteration
+- ✅ Creative problem-solving with AI
+- ✅ Technical understanding of AI tools
+- ✅ Responsible AI use
 
 ### EDT Edition Emphasizes:
-✅ Design thinking methodology  
-✅ Problem reframing and user empathy  
-✅ Human-AI partnership in design  
-✅ Complete design-to-implementation cycle  
-✅ Experience-focused solution design  
-✅ Responsible AI use in design context
+
+- ✅ Design thinking methodology
+- ✅ Problem reframing and user empathy
+- ✅ Human-AI partnership in design
+- ✅ Complete design-to-implementation cycle
+- ✅ Experience-focused solution design
+- ✅ Responsible AI use in design context
 
 ### Both Versions Cover:
 - Agentic AI vs. traditional chatbots
@@ -160,24 +172,28 @@ This document compares the two versions of Lab 2 to help you choose which is bes
 
 ### Use Standard Lab 2 When:
 
-✅ **Standalone Workshop**
+**✅ Standalone Workshop**
+
 - Students haven't done EDT activities
 - This is their first exposure to design thinking
 - Focus is purely on AI capabilities
 - No prior context needed
 
-✅ **Technical Focus**
+**✅ Technical Focus**
+
 - Goal is to teach AI and coding concepts
 - Less emphasis on design methodology
 - More time for technical exploration
 - Students are interested in how AI works
 
-✅ **Flexible Scheduling**
+**✅ Flexible Scheduling**
+
 - Workshop is not tied to other activities
 - Can be scheduled anytime
 - No coordination with other instructors needed
 
-✅ **Broader Audience**
+**✅ Broader Audience**
+
 - Mixed group with different backgrounds
 - Some students may have done EDT, others haven't
 - Need a universal starting point
@@ -186,25 +202,29 @@ This document compares the two versions of Lab 2 to help you choose which is bes
 
 ### Use EDT Edition When:
 
-✅ **Following EDT Session**
+**✅ Following EDT Session**
+
 - Students completed flower vase activity previous day
 - Want to build on design thinking concepts
 - Create continuity between sessions
 - Show complete design cycle
 
-✅ **Design Thinking Focus**
+**✅ Design Thinking Focus**
+
 - Goal is to teach design methodology + AI
 - Emphasize human-centered design
 - Show how AI fits into design process
 - Connect to IBM's EDT framework
 
-✅ **Coordinated Program**
+**✅ Coordinated Program**
+
 - Part of multi-day workshop or camp
 - Coordinating with other instructors
 - Building progressive learning experience
 - Want strong narrative arc
 
-✅ **Career Exploration**
+**✅ Career Exploration**
+
 - Showing students design careers
 - Demonstrating modern design tools
 - Emphasizing human creativity + AI capability
@@ -217,16 +237,19 @@ This document compares the two versions of Lab 2 to help you choose which is bes
 ### Standard Lab 2 Requires:
 
 **Preparation:**
+
 - Test Bob functionality
 - Prepare example projects
 - Have backup prompts ready
 
 **Skills:**
+
 - Comfort with AI concepts
 - Basic understanding of web development
 - Ability to troubleshoot technical issues
 
 **Time:**
+
 - 90 minutes (can extend to 100-110 if needed)
 - Flexible pacing
 - Can adjust based on student progress
@@ -236,6 +259,7 @@ This document compares the two versions of Lab 2 to help you choose which is bes
 ### EDT Edition Requires:
 
 **Preparation:**
+
 - Coordinate with EDT instructor
 - Review students' EDT work
 - Understand flower vase activity outcomes
@@ -243,12 +267,14 @@ This document compares the two versions of Lab 2 to help you choose which is bes
 - Test Bob functionality
 
 **Skills:**
+
 - Comfort with AI concepts
 - Understanding of design thinking methodology
 - Ability to connect EDT principles to AI
 - Facilitation of design discussions
 
 **Time:**
+
 - Strict 90 minutes (less flexible)
 - Part 2 (EDT bridge) is time-critical
 - May need to make Part 4 optional
@@ -297,7 +323,9 @@ This document compares the two versions of Lab 2 to help you choose which is bes
 - ⭐⭐⭐ Emphasizing design thinking + AI
 
 ### Consider Hybrid Approach:
+
 You could also:
+
 - Start with EDT bridge (Part 2 from EDT edition)
 - Then follow standard lab structure
 - Best of both worlds, but requires 100-110 minutes
@@ -307,7 +335,9 @@ You could also:
 ## Success Metrics
 
 ### Standard Lab 2 Success:
+
 Students can:
+
 - Explain what agentic AI is
 - Write effective prompts for Bob
 - Create working projects
@@ -315,7 +345,9 @@ Students can:
 - Think critically about AI
 
 ### EDT Edition Success:
+
 Students can:
+
 - Connect design thinking to AI implementation
 - Reframe problems for better solutions
 - Use AI to prototype designs
@@ -334,7 +366,7 @@ Both versions are excellent - choose based on your specific situation and learni
 
 ---
 
-*Comparison Document for Bob AI Workshop Lab 2*  
-*Version 1.0*  
+*Comparison Document for Bob AI Workshop Lab 2*
+*Version 1.0*
 *Created to help instructors choose the right workshop format*
 
