@@ -75,6 +75,8 @@ Yesterday, you explored **Enterprise Design Thinking** and learned to reframe pr
 #### Quick Introduction to Bob's Capabilities
 
 **Objective:** Understand what makes Bob different from regular chatbots
+![From Coder to Architect](../images/CodertoArchitect.png)
+
 
 Bob isn't just conversational AI - Bob is an **agentic AI** that can:
 - Create and modify files
