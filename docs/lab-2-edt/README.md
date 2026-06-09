@@ -96,6 +96,30 @@ Bob isn't just conversational AI - Bob is an **agentic AI** that can:
 
 ### Part 2: From Design Thinking to Reality (20 minutes)
 
+#### Getting Started: Launch Bob and Set Up Your Workspace
+
+**Before we begin, let's get Bob ready to work!**
+
+**Step 1: Launch Bob on Mac**
+
+1. Open **Spotlight Search** by pressing `Cmd + Space`
+2. Type "Bob" and press `Enter`
+3. Wait for Bob to fully load - you'll see the Bob interface in the sidebar
+
+**Step 2: Create Your Workspace Folder**
+
+We'll create a dedicated folder for today's workshop projects:
+
+1. In the left sidebar, click the **"Open Folder"** button
+2. Navigate to where you want to create your workshop folder (e.g., Desktop or Documents)
+3. Click the **"New Folder"** button
+4. Name the folder with a meaningful name for your projects (e.g., `bob-workshop` or `my-projects`)
+5. Select your new folder and click **"Open"**
+
+**You're now ready to start building!** 🚀
+
+---
+
 #### Exercise 2.1: Reflecting on Your EDT Work
 **Objective:** Bridge yesterday's design thinking to today's implementation
 
