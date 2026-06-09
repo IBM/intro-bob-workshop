@@ -70,7 +70,7 @@ Yesterday, you explored **Enterprise Design Thinking** and learned to reframe pr
 
 ## Workshop Structure
 
-### Part 1: Getting to Know Bob (5 minutes)
+### Part 1: Getting to Know Bob (10 minutes)
 
 #### Quick Introduction to Bob's Capabilities
 
@@ -207,7 +207,7 @@ Save it in a folder called "virtual-flower-garden"
 
 **Step 3: Watch Bob Work (8 minutes)**
 
-The instructor will type 2-3 student prompts into Bob (projected on screen).
+Type your prompt you decided upon from above and watch Bob work:
 
 **What to Observe:**
 
@@ -379,102 +379,9 @@ Make sure it [describe desired behavior or appearance].
 
 ---
 
-### Part 5: Real-World Applications (20 minutes)
+### Part 5: Wrap-Up & Reflection (25 minutes)
 
-#### Exercise 5.1: Your Design Challenge
-**Objective:** Apply everything you've learned to solve a real problem
-
-**The Challenge:** Create something that solves a real problem for you, your school, or your community!
-
-**Design Thinking Framework:**
-
-**1. Empathize (3 minutes)**
-
-- Who are you designing for?
-- What do they need or struggle with?
-- What would make their experience better?
-
-**2. Define & Reframe (2 minutes)**
-
-- What's the real problem (not just the surface issue)?
-- How can you reframe it to focus on experience?
-- What outcome do you want to create?
-
-**3. Ideate (3 minutes)**
-
-- What are possible solutions?
-- What features would create the best experience?
-- What would make it engaging and useful?
-
-**4. Prototype with Bob (10 minutes)**
-
-- Write a detailed prompt
-- Let Bob build it
-- Test and refine
-
-**5. Test & Reflect (2 minutes)**
-
-- Does it solve the problem?
-- How does it feel to use?
-- What would you improve?
-
-**Real-World Project Ideas:**
-
-**For Students:**
-
-- Study session organizer with focus timers
-- Assignment tracker with deadline reminders
-- Class notes organizer with search
-- Group project coordinator
-- Test prep quiz generator
-
-**For School Community:**
-
-- Club event calendar
-- Lost and found tracker
-- Lunch menu with dietary filters
-- Peer tutoring matcher
-- School spirit generator
-
-**For Personal Growth:**
-
-- Habit tracker with encouragement
-- Goal progress visualizer
-- Gratitude journal
-- Skill learning tracker
-- Reading log with insights
-
-**For Fun & Creativity:**
-
-- Story idea generator
-- Character creator for writing
-- Art prompt generator
-- Music playlist mood matcher
-- Random act of kindness suggester
-
-**Example Prompt Template:**
-```
-Bob, I want to create a [project name] for [target users] who need to
-[problem/goal].
-
-This should help them feel [desired emotion/outcome] by:
-- [Key feature 1 that supports the experience]
-- [Key feature 2 that supports the experience]
-- [Key feature 3 that supports the experience]
-
-Design it to feel [mood/style] with [visual preferences].
-
-Make it easy to [primary user action] and include [special touches that
-enhance the experience].
-
-Save it in a folder called "[project-name]"
-```
-
----
-
-### Part 6: Wrap-Up & Reflection (10 minutes)
-
-#### Group Share (5 minutes)
+#### Group Share (20 minutes)
 
 - 2-3 volunteers demo their projects
 - Explain the problem they were solving
@@ -638,136 +545,6 @@ Save it in a folder called "[project-name]"
 - Don't be afraid to ask Bob to try differently
 - Don't forget to save work in clearly named folders
 - Don't expect perfection on the first try
-
----
-
-## Instructor Notes
-
-### Pre-Workshop Preparation
-
-**Day Before (EDT Session):**
-
-- Ensure students complete the flower vase activity
-- Have students save or photograph their sketches
-- Remind students to think about their reframed solutions
-- Build excitement for seeing ideas come to life
-
-**Workshop Day:**
-
-- Test Bob functionality thoroughly
-- Prepare 2-3 backup prompts for each section
-- Have examples ready from EDT session
-- Set up projector for demonstrations
-- Create a shared space for students to showcase projects
-
-### Facilitation Tips
-
-**Connecting to EDT:**
-
-- Frequently reference yesterday's work
-- Use EDT terminology (empathize, reframe, iterate)
-- Show how Bob completes the design thinking cycle
-- Emphasize human creativity + AI implementation
-
-**Managing the Flow:**
-
-- Keep Part 1 brief (5 min max) - students are eager to build
-- Part 2 is crucial - take time to make the EDT connection clear
-- Be flexible with timing in Parts 3-5
-- If running short, make Part 4 optional
-- Always save time for Part 6 reflection
-
-**Encouraging Design Thinking:**
-
-- Push students to reframe, not just describe
-- Ask "What experience are you creating?" not "What features do you want?"
-- Celebrate creative problem reframing
-- Connect solutions back to user needs
-
-**Handling Technical Issues:**
-
-- Have backup prompts ready
-- Use errors as teaching moments about iteration
-- Keep energy positive
-- Focus on the design thinking process, not just the output
-
-### Assessment Ideas
-
-**Formative Assessment:**
-
-- Observe prompt quality (experience-focused vs. feature-focused)
-- Listen to how students describe their designs
-- Note connections students make to EDT concepts
-- Watch for iteration and refinement
-
-**Summative Assessment:**
-
-- Quality of final project (does it solve a real problem?)
-- Depth of reflection on design thinking + AI partnership
-- Ability to articulate the user experience created
-- Understanding of AI capabilities and limitations
-
-**Discussion-Based Assessment:**
-
-- Can students explain their problem reframing?
-- Do they understand the human-AI partnership?
-- Can they identify when to use AI vs. human judgment?
-- Do they think critically about AI ethics?
-
-### Time Management Strategies
-
-**If Running Ahead:**
-
-- Spend more time on Part 2 (EDT bridge)
-- Allow more projects in Part 3
-- Add deeper code analysis in Part 4
-- Include extension activities
-
-**If Running Behind:**
-
-- Shorten Part 1 to 3 minutes
-- Demo only 1-2 prompts in Part 2
-- Make Part 4 optional or very brief
-- Combine Parts 3 and 5
-- Keep Part 6 for closure (essential)
-
-**Priority Ranking:**
-
-1. Part 2 (EDT Bridge) - Core connection
-2. Part 5 (Real-World Application) - Core learning
-3. Part 6 (Reflection) - Essential closure
-4. Part 3 (Creative Projects) - Important practice
-5. Part 1 (Intro) - Can be very brief
-6. Part 4 (Code Analysis) - Optional if time-constrained
-
-### Common Challenges and Solutions
-
-**Challenge:** Students struggle to reframe problems
-**Solution:** Use the flower vase example, ask "What experience do you want to create?"
-
-**Challenge:** Prompts are too vague
-**Solution:** Use the prompt templates, ask guiding questions about features and interactions
-
-**Challenge:** Students want to code themselves
-**Solution:** Emphasize that Bob handles implementation so they can focus on design
-
-**Challenge:** Projects don't work as expected
-**Solution:** Frame as iteration opportunity, ask Bob to refine
-
-**Challenge:** Students finish at different paces
-**Solution:** Have extension activities ready, encourage peer helping
-
-### Success Metrics
-
-**Workshop is successful if students:**
-
-- Connect EDT principles to AI implementation
-- Write experience-focused prompts
-- Create working prototypes that solve real problems
-- Understand the human-AI partnership
-- Think critically about AI capabilities and ethics
-- Feel empowered to use AI as a design tool
-- Can articulate the complete design thinking cycle
 
 ---
 
