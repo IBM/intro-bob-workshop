@@ -97,7 +97,6 @@ These workshops have been tested with:
 ## Technology Used
 
 - **IBM Bob**: Agentic AI assistant with autonomous tool usage
-- **VS Code**: Integrated development environment
 - **Web Technologies**: HTML, CSS, JavaScript (created by Bob)
 - **Node.js**: For API and backend examples (IBM workshop)
 
@@ -132,9 +131,11 @@ These workshops have been tested with:
 
 ## Credits
 
-- **Workshop Design**: IBM Developer Advocacy Team
-- **Bob Development**: IBM Research and Engineering
-- **Content Contributors**: IBM Education and Training
+- **Bob**
+- **James Busche**: IBM Research
+- **Yi-Hong Wang**: IBM Research
+- **Ted Chang**: IBM Research
+- **Nhan Hoang**: IBM Research
 
 ---
 

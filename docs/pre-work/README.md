@@ -14,7 +14,7 @@ This section covers the prerequisites and setup needed before attending the IBM 
 ### High School Workshop
 Students will need:
 
-- **Laptop** with internet connection
+- **Laptop** with internet connection (provided by instructor/school)
 - **Bob access** (provided by instructor/school)
 - **Web browser** (Chrome, Firefox, Safari, or Edge)
 - **Basic computer literacy** (file management, typing)
@@ -23,30 +23,14 @@ Students will need:
 
 IBMers will need:
 
-- **Laptop** with internet connection
-- **Bob access** (provided by workshop facilitator)
+- **Employee Laptop** with internet connection
+- **Employee Bob access** (If you don't already have Bob access, you'll need to request and sign up.)
 - **Web browser** (Chrome, Firefox, Safari, or Edge)
 
 **Optional (for advanced examples):**
-- VS Code with Bob extension
-- Node.js (for running code examples)
 - Git (for version control examples)
 
-## Setting Up Bob (High School & IBM Workshops)
-
-### For High School Students
-
-Your instructor will provide Bob access. Typically this involves:
-
-1. **Access credentials** provided by your school or instructor
-2. **Web-based interface** or VS Code extension
-3. **Test your access** before the workshop day
-
-If you have questions about access, contact your workshop instructor.
-
 ### For IBM Employees
-
-**Good news!** As an IBM employee, you already have access to IBM Bob. No additional setup or credentials needed.
 
 #### What You Need
 
@@ -68,7 +52,6 @@ If you want to test Bob before the workshop:
 2. Try a simple prompt like: "Bob, introduce yourself and explain what makes you different from ChatGPT"
 3. If you have any issues, contact the workshop facilitator
 
-**Note:** The workshop will guide you through everything, so don't worry if you haven't used Bob before!
 
 #### Optional: Prepare Your Exploration Topic
 
@@ -81,40 +64,6 @@ The workshop includes 30 minutes where you'll use Bob to work on something relev
 - Any work problem where AI assistance could help
 
 Don't have something specific? No problem! We'll provide plenty of example scenarios during the workshop.
-
-## Workshop Materials
-
-### What to Bring
-
-**All Workshops:**
-
-- Laptop (except Middle School workshop)
-- Charger
-- Notebook and pen (optional, for notes)
-- Questions and curiosity!
-
-**Middle School Workshop:**
-
-- Paper and pencil for drafting prompts
-- Team spirit and creativity
-
-**High School Workshop:**
-
-- Laptop with Bob access
-- Ideas for projects you'd like to create
-
-**IBM Workshop:**
-
-- Your IBM laptop (Bob already available)
-- Optional: A current work challenge or project to explore with Bob
-- Optional: Code or documentation you'd like to improve
-
-### What We'll Provide
-
-- Workshop materials and guides
-- Example prompts and templates
-- Access to sample projects
-- Support and guidance throughout
 
 ## Pre-Workshop Checklist
 
@@ -138,25 +87,6 @@ Don't have something specific? No problem! We'll provide plenty of example scena
 - [ ] Optional: Thought about a work challenge to explore with Bob
 - [ ] Optional: Brought code or documentation to work on
 
-## Troubleshooting
-
-### Can't Access Bob?
-
-- **High School**: Contact your instructor before workshop day
-- **IBM**: Bob is included with your IBM access. If you have issues, contact the workshop facilitator
-
-### Connection Problems?
-
-- Verify internet connection
-- Check firewall settings
-- Try a different network if available
-
-### Still Having Issues?
-
-- Arrive 15 minutes early to workshop
-- Workshop facilitators will help with setup
-- We'll have backup plans ready
-
 ## Learning Resources (Optional)
 
 Want to learn more before the workshop?
@@ -173,17 +103,8 @@ Want to learn more before the workshop?
 
 ### For Developers (IBM Workshop)
 
-- [VS Code Documentation](https://code.visualstudio.com/docs) - Editor basics
 - [Node.js Getting Started](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs) - JavaScript runtime
 - [Git Handbook](https://guides.github.com/introduction/git-handbook/) - Version control basics
-
-## Questions?
-
-If you have questions about pre-work or setup:
-
-- **Middle School**: Contact your teacher or workshop coordinator
-- **High School**: Email your workshop instructor
-- **IBM Employees**: Contact the workshop facilitator or post in the workshop Slack channel
 
 ## Ready to Go!
 
