@@ -137,72 +137,67 @@ Think about:
 
 **Example Prompt Structure:**
 ```
-Bob, I want to create a [name of your solution] that helps people [user need/goal].
+Create a [name of solution] that helps people [user need/goal].
 
-The main features should be:
-- [Feature 1 - describe what it does]
-- [Feature 2 - describe what it does]
-- [Feature 3 - describe what it does]
+Features:
+- [Feature 1]
+- [Feature 2]
+- [Feature 3]
 
-Design it to feel [mood/emotion - peaceful, joyful, organized, etc.] with
-[color scheme and style preferences].
+Design: [mood/emotion] with [specific colors and style]
+Interactions: [how users interact with it]
 
-Make it interactive so users can [describe key interactions].
-
-Save it in a folder called "flower-[concept-name]"
+Save in folder: "flower-[concept-name]"
 ```
 
 **Example Prompts Based on EDT Reframing:**
 
 **Digital Flower Memory Journal:**
 ```
-Bob, create a digital flower memory journal where people can capture and
-remember special moments with flowers.
+Create a flower memory journal to capture special moments with flowers.
 
 Features:
-- Add entries with flower type, date, occasion, and personal memory
-- Display entries as beautiful cards with flower emojis
-- Search or filter memories by flower type or occasion
-- Export memories as a keepsake
+- Add entries with flower type, date, occasion, and memory
+- Display as cards with flower emojis
+- Search and filter by flower type or occasion
+- Export as keepsake
 
-Design it with soft, warm colors (pastels and earth tones) to feel nostalgic
-and meaningful. Make it easy to add new memories with a simple form.
+Design: Nostalgic feel with soft pastels and earth tones
+Interactions: Simple form to add memories
 
-Save it in a folder called "flower-memory-journal"
+Save in folder: "flower-memory-journal"
 ```
 
 **Flower Care Companion:**
 ```
-Bob, create a flower care companion app that helps people keep their flowers
-alive and beautiful longer.
+Create a flower care app to keep flowers alive longer.
 
 Features:
-- Track different flowers with care schedules
-- Send reminders for watering, sunlight, and care tasks
-- Provide care tips for different flower types
-- Show flower health status with visual indicators
+- Track flowers with care schedules
+- Reminders for watering and care tasks
+- Care tips for different flower types
+- Health status with visual indicators
 
-Design it with fresh, natural colors (greens and florals) to feel helpful
-and encouraging. Make it simple to add flowers and check care tasks.
+Design: Helpful feel with fresh greens and florals
+Interactions: Simple to add flowers and check tasks
 
-Save it in a folder called "flower-care-companion"
+Save in folder: "flower-care-companion"
 ```
 
 **Virtual Flower Garden:**
 ```
-Bob, create a virtual flower garden where people can collect and arrange
-digital flowers to enjoy anytime.
+Create a virtual garden to collect and arrange digital flowers.
 
 Features:
-- Choose from different flower types to add to garden
-- Arrange flowers in different layouts
+- Choose flower types to add
+- Arrange in different layouts
 - Change seasons or backgrounds
-- Save and share garden designs
+- Save and share designs
 
-Design it with vibrant, cheerful colors to feel playful and creative.
-Make it interactive with drag-and-drop or click-to-add flowers.
+Design: Playful and creative with vibrant, cheerful colors
+Interactions: Drag-and-drop or click-to-add flowers
 
-Save it in a folder called "virtual-flower-garden"
+Save in folder: "virtual-flower-garden"
 ```
 
 **Step 3: Watch Bob Work (8 minutes)**
@@ -332,11 +327,10 @@ Give Bob your prompt and watch your design come to life!
 
 Ask Bob to analyze the code:
 ```
-Bob, please read the [project-name] files and:
-1. Explain what the code does in simple terms
-2. Identify the main components (HTML structure, CSS styling, JavaScript logic)
-3. Point out any interesting techniques or patterns used
-4. Suggest 2-3 possible enhancements
+Read the [project-name] files and:
+1. Explain what the code does
+2. Identify main components
+3. Suggest 2-3 enhancements
 ```
 
 **What to Observe:**
@@ -350,8 +344,7 @@ Bob, please read the [project-name] files and:
 
 Choose one enhancement and ask Bob to implement it:
 ```
-Bob, can you add [specific enhancement] to the [project-name]?
-Make sure it [describe desired behavior or appearance].
+Add [specific enhancement] to [project-name] that [describe behavior].
 ```
 
 **Enhancement Ideas:**
