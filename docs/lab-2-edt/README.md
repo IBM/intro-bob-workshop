@@ -28,14 +28,14 @@ Yesterday, you explored **Enterprise Design Thinking** and learned to reframe pr
 
 ### The Design-to-Implementation Cycle
 
-**EDT Session (Yesterday):**
+#### EDT Session (Yesterday)
 
 - 🎯 **Empathize** - Understand user needs
 - 💡 **Ideate** - Reframe the challenge
 - ✏️ **Sketch** - Visualize solutions
 - 🗣️ **Playback** - Share and refine ideas
 
-**Bob Workshop (Today):**
+#### Bob Workshop (Today)
 
 - 🤖 **Implement** - Turn ideas into working prototypes
 - 🧪 **Test** - See your designs in action
@@ -46,13 +46,13 @@ Yesterday, you explored **Enterprise Design Thinking** and learned to reframe pr
 
 ## What is Agentic AI?
 
-**Traditional AI Chatbots:**
+### Traditional AI Chatbots
 
 - Answer questions
 - Provide information
 - Have conversations
 
-**Agentic AI (like Bob):**
+### Agentic AI (like Bob)
 
 - Takes autonomous actions
 - Uses tools to accomplish tasks
@@ -60,7 +60,7 @@ Yesterday, you explored **Enterprise Design Thinking** and learned to reframe pr
 - Creates real, working prototypes
 - Learns from results and adapts
 
-**The Power of Human + AI:**
+### The Power of Human + AI
 
 - **You bring:** Empathy, creativity, problem reframing, user understanding
 - **Bob brings:** Technical implementation, rapid prototyping, iteration speed
@@ -72,7 +72,7 @@ Yesterday, you explored **Enterprise Design Thinking** and learned to reframe pr
 
 ### Part 1: Getting to Know Bob (10 minutes)
 
-#### Quick Introduction to Bob's Capabilities
+**Quick Introduction to Bob's Capabilities**
 
 **Objective:** Understand what makes Bob different from regular chatbots
 ![From Coder to Architect](../images/CodertoArchitect.png)
@@ -98,9 +98,9 @@ Bob isn't just conversational AI - Bob is an **agentic AI** that can:
 
 ### Part 2: From Design Thinking to Reality (20 minutes)
 
-#### Getting Started: Launch Bob and Set Up Your Workspace
+**Getting Started: Launch Bob and Set Up Your Workspace**
 
-**Before we begin, let's get Bob ready to work!**
+Before we begin, let's get Bob ready to work!
 
 **Step 1: Launch Bob on Mac**
 
@@ -122,7 +122,8 @@ We'll create a dedicated folder for today's workshop projects:
 
 ---
 
-#### Exercise 2.1: Reflecting on Your EDT Work
+**🧩 Exercise 2.1: Reflecting on Your EDT Work**
+
 **Objective:** Bridge yesterday's design thinking to today's implementation
 
 **Group Discussion (3 minutes):**
@@ -144,7 +145,8 @@ We'll create a dedicated folder for today's workshop projects:
 
 ---
 
-#### Exercise 2.2: Bringing Your Design to Life with Bob
+**🧩 Exercise 2.2: Bringing Your Design to Life with Bob**
+
 **Objective:** See Bob implement your design thinking solution
 
 **The Challenge:** Choose one reframed "better way to enjoy flowers" concept and ask Bob to build a working prototype!
@@ -252,7 +254,7 @@ Open the created projects in a browser and test them!
 
 ---
 
-#### Key Insight: The Design Thinking + AI Partnership
+**Key Insight: The Design Thinking + AI Partnership**
 
 **What You Did (EDT):**
 
@@ -272,9 +274,8 @@ Open the created projects in a browser and test them!
 
 ---
 
-### Part 3: Creative Projects (20 minutes)
+### Part 3: Build Something New (20 minutes)
 
-#### Exercise 3.1: Build Something New
 **Objective:** Apply design thinking principles to create an original project
 
 **The Challenge:** Think of a problem or need in your life, reframe it (like you did with the vase), and ask Bob to build a solution!
@@ -342,9 +343,8 @@ Give Bob your prompt and watch your design come to life!
 
 ---
 
-### Part 4: Code Analysis & Iteration (15 minutes)
+### Part 4: Understanding and Improving (15 minutes)
 
-#### Exercise 4.1: Understanding and Improving
 **Objective:** See how Bob reads, analyzes, and improves existing code
 
 **The Challenge:** Pick one of the projects created today and ask Bob to enhance it!
@@ -400,59 +400,59 @@ Add [specific enhancement] to [project-name] that [describe behavior].
 
 ### Part 5: Wrap-Up & Reflection (25 minutes)
 
-#### Group Share (20 minutes)
+**Group Share (20 minutes)**
 
 - 2-3 volunteers demo their projects
 - Explain the problem they were solving
 - Show how their solution creates a better experience
 - Share what surprised them about working with Bob
 
-#### Key Takeaways Discussion (5 minutes)
+**Key Takeaways Discussion (5 minutes)**
 
-**The Design Thinking + AI Cycle:**
+### The Design Thinking + AI Cycle
 
-**Human Strengths:**
+#### Human Strengths
 
 - Empathy and understanding user needs
 - Creative problem reframing
 - Defining meaningful experiences
 - Evaluating and refining solutions
 
-**AI Strengths:**
+#### AI Strengths
 
 - Rapid prototyping and implementation
 - Technical execution
 - Iteration speed
 - Handling complexity
 
-**Together:**
+#### Together
 
 - Complete the full design cycle faster
 - Test ideas quickly
 - Iterate based on real feedback
 - Focus human creativity where it matters most
 
-**Discussion Questions:**
+### Discussion Questions
 
-**About Design Thinking:**
+#### About Design Thinking
 
 - How did reframing problems lead to better solutions?
 - What's the difference between designing an object vs. designing an experience?
 - How did your EDT work yesterday inform today's projects?
 
-**About Agentic AI:**
+#### About Agentic AI
 
 - What impressed you most about Bob's capabilities?
 - How is Bob different from other AI tools you've used?
 - What are Bob's limitations?
 
-**About the Partnership:**
+#### About the Partnership
 
 - How does AI change the design process?
 - What role should humans play vs. AI?
 - How might this change how products are built in the future?
 
-**About Ethics and Responsibility:**
+#### About Ethics and Responsibility
 
 - Who owns the designs Bob creates from your ideas?
 - How should we give credit when using AI assistance?
@@ -466,14 +466,14 @@ Add [specific enhancement] to [project-name] that [describe behavior].
 
 ### Important Considerations
 
-**AI Capabilities and Limitations:**
+#### AI Capabilities and Limitations
 
 - Bob can make mistakes - always test and review
 - Bob's knowledge has a cutoff date
 - Bob can't understand context like humans do
 - Bob follows instructions but doesn't have judgment
 
-**Responsible AI Use:**
+#### Responsible AI Use
 
 - Give credit when using AI assistance
 - Understand what the code does (don't just use it blindly)
@@ -481,7 +481,7 @@ Add [specific enhancement] to [project-name] that [describe behavior].
 - Consider privacy and data security
 - Think about societal impact
 
-**Design Ethics:**
+#### Design Ethics
 
 - Design for real user needs, not just cool features
 - Consider accessibility and inclusion
@@ -489,7 +489,7 @@ Add [specific enhancement] to [project-name] that [describe behavior].
 - Respect user privacy and data
 - Design responsibly and ethically
 
-**Academic and Professional Integrity:**
+#### Academic and Professional Integrity
 
 - Using AI as a tool is different from claiming AI's work as your own
 - Always follow your school's policies on AI use
@@ -502,22 +502,22 @@ Add [specific enhancement] to [project-name] that [describe behavior].
 
 Congratulations on completing the Design Thinking + Agentic AI Workshop! You've experienced the complete cycle from empathy and ideation to rapid prototyping and testing. You've seen how human creativity and AI implementation can work together to bring ideas to life faster than ever before.
 
-**Key Takeaways:**
+### Key Takeaways
 
-🎯 **Design Thinking Works:** Reframing problems leads to better solutions
-🤖 **AI Accelerates:** Agentic AI can rapidly implement human-centered designs
-🤝 **Partnership Matters:** Humans and AI each bring unique strengths
-🔄 **Iteration is Key:** Quick prototyping enables faster learning and improvement
-💡 **You're Empowered:** You can now turn ideas into working prototypes
+- 🎯 **Design Thinking Works:** Reframing problems leads to better solutions
+- 🤖 **AI Accelerates:** Agentic AI can rapidly implement human-centered designs
+- 🤝 **Partnership Matters:** Humans and AI each bring unique strengths
+- 🔄 **Iteration is Key:** Quick prototyping enables faster learning and improvement
+- 💡 **You're Empowered:** You can now turn ideas into working prototypes
 
-**Remember:**
+### Remember
 
 - Your empathy, creativity, and judgment are irreplaceable
 - AI is a powerful tool that amplifies human capability
 - The best solutions come from human-centered design + AI implementation
 - Keep learning, iterating, and creating!
 
-**The Future of Design:**
+### The Future of Design
 As AI tools become more capable, the ability to think like a designer - with empathy, creativity, and user focus - becomes even more valuable. You're learning skills that will serve you throughout your career, no matter what field you enter.
 
 **Keep designing, keep building, keep making the world better!** 🚀
