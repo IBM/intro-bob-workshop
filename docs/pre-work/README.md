@@ -106,23 +106,23 @@ Don't have something specific? No problem! We'll provide plenty of example scena
 
 ### Middle School Students
 
-- [ ] Assigned to a team (instructor will do this)
-- [ ] Ready to brainstorm creative ideas
-- [ ] Excited to see AI in action!
+- Assigned to a team (instructor will do this)
+- Ready to brainstorm creative ideas
+- Excited to see AI in action!
 
 ### High School Students
 
-- [ ] Laptop charged and ready
-- [ ] Bob access verified
-- [ ] Web browser working
-- [ ] Thought about what you'd like to create
+- Laptop charged and ready
+- Bob access verified
+- Web browser working
+- Thought about what you'd like to create
 
 ### IBM Employees
 
-- [ ] IBM laptop ready with internet connection
-- [ ] Bob is available (already included with IBM access)
-- [ ] Optional: Thought about a work challenge to explore with Bob
-- [ ] Optional: Brought code or documentation to work on
+- IBM laptop ready with internet connection
+- Bob is available (already included with IBM access)
+- Optional: Thought about a work challenge to explore with Bob
+- Optional: Brought code or documentation to work on
 
 ## Learning Resources (Optional)
 
