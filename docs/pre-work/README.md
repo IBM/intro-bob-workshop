@@ -2,10 +2,44 @@
 
 This section covers the prerequisites and setup needed before attending the IBM Bob workshops.
 
+## Getting Started: Launch Bob and Set Up Your Workspace
+
+Before the workshop, familiarize yourself with launching Bob and creating your workspace:
+
+**Don't have Bob installed yet?** Download and install Bob from the [official installation guide](https://bob.ibm.com/docs/ide/getting-started/install).
+
+**Step 1: Launch Bob**
+
+**On Mac:**
+
+1. Open **Spotlight Search** by pressing `Cmd + Space`
+2. Type "Bob" and press `Enter`
+3. Wait for Bob to fully load - you'll see the Bob interface in the sidebar
+
+**On Windows:**
+
+1. Press the **Windows key** or click the **Start menu**
+2. Type "Bob" in the search box
+3. Click on **Bob** from the search results
+4. Wait for Bob to fully load - you'll see the Bob interface in the sidebar
+
+**Step 2: Create Your Workspace Folder**
+
+Create a dedicated folder for workshop projects:
+
+1. In the left sidebar, click the **"Open Folder"** button
+2. Navigate to where you want to create your workshop folder (e.g., Desktop or Documents)
+3. Click the **"New Folder"** button
+4. Name the folder with a meaningful name for your projects (e.g., `bob-workshop` or `my-projects`)
+5. Select your new folder and click **"Open"**
+
+**You're now ready to explore Bob!** 🚀
+
 ## Prerequisites by Workshop
 
 ### Middle School Workshop
 **No technical setup required!** This is an instructor-led demonstration workshop where:
+
 - The instructor operates Bob on a projected screen
 - Students work in teams to create prompts
 - No individual computers or Bob access needed
@@ -28,6 +62,7 @@ IBMers will need:
 - **Web browser** (Chrome, Firefox, Safari, or Edge)
 
 **Optional (for advanced examples):**
+
 - Git (for version control examples)
 
 ### For IBM Employees
@@ -35,11 +70,13 @@ IBMers will need:
 #### What You Need
 
 **Required:**
+
 - Your IBM laptop
-- Bob is already available to you as an IBM employee
+- Bob is already available to you as an IBM employee (if not installed, see [Getting Started](#getting-started-launch-bob-and-set-up-your-workspace) section above)
 - Internet connection
 
 **Optional (but helpful):**
+
 - Think about a current work challenge or project you'd like to explore with Bob
 - Review the workshop agenda to see what we'll cover
 - Bring questions about how Bob could help your specific role
