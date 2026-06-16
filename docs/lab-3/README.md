@@ -57,6 +57,7 @@ This workshop is structured around Bob's systematic approach to problem-solving,
 
 ### Part 1: Code Development & Refactoring (20 minutes)
 **Workflow Phase:** CHANGE - Implementation
+
 **Recommended Mode:** 💻 Code Mode
 
 This section demonstrates Bob's systematic implementation capabilities. Notice how Bob follows the CHANGE phase: creating structured, production-ready code based on clear requirements.
@@ -84,6 +85,7 @@ Save it in a folder called "product-catalog-api"
 ```
 
 **What to observe:**
+
 - Bob creates multiple files with proper separation of concerns
 - Implements industry best practices (error handling, validation, documentation)
 - Generates complete, runnable code
@@ -91,6 +93,7 @@ Save it in a folder called "product-catalog-api"
 - Time saved: ~2-3 hours of manual coding
 
 **Discussion Points:**
+
 - How does this accelerate proof-of-concept development?
 - What would you need to add for production readiness?
 - How does Bob's code quality compare to manual development?
@@ -116,6 +119,7 @@ Make these changes incrementally, explaining each improvement.
 ```
 
 **What to observe:**
+
 - **UNDERSTAND:** Bob reads and understands existing code structure first
 - **CHANGE:** Makes surgical, targeted changes without breaking functionality
 - Adds enterprise-grade features systematically
@@ -134,6 +138,7 @@ Make these changes incrementally, explaining each improvement.
 
 ### Part 2: Documentation & Knowledge Management (15 minutes)
 **Workflow Phase:** UNDERSTAND + VERIFY
+
 **Recommended Mode:** ❓ Ask Mode
 
 This section demonstrates how Bob analyzes and documents existing systems (UNDERSTAND) and performs quality assessments (VERIFY). Documentation requires deep understanding of the codebase.
@@ -157,6 +162,7 @@ Save as "TECHNICAL_DOCUMENTATION.md"
 ```
 
 **What to observe:**
+
 - **UNDERSTAND:** Bob analyzes code to extract accurate information
 - Creates structured, professional documentation
 - Includes practical examples and use cases
@@ -166,6 +172,7 @@ Save as "TECHNICAL_DOCUMENTATION.md"
 **Workflow Principle:** Quality documentation requires deep understanding. Bob reads and analyzes the code systematically before documenting, ensuring accuracy.
 
 **IBM Use Case:**
+
 - Client deliverable documentation
 - Internal knowledge base articles
 - Onboarding materials for new team members
@@ -192,6 +199,7 @@ Save as "CODE_REVIEW_REPORT.md"
 ```
 
 **What to observe:**
+
 - **VERIFY:** Bob systematically validates code quality and standards
 - Identifies issues a human reviewer would catch
 - Provides actionable recommendations
@@ -201,6 +209,7 @@ Save as "CODE_REVIEW_REPORT.md"
 **Workflow Principle:** Verification catches issues before production. Bob's systematic review ensures code meets quality standards and requirements.
 
 **IBM Use Case:**
+
 - Pre-deployment code reviews
 - Technical debt assessment
 - Client code audits
@@ -210,6 +219,7 @@ Save as "CODE_REVIEW_REPORT.md"
 
 ### Part 3: Data Analysis & Automation (15 minutes)
 **Workflow Phase:** UNDERSTAND + CHANGE
+
 **Recommended Mode:** 💻 Code Mode
 
 This section shows Bob analyzing data (UNDERSTAND) and creating automation tools (CHANGE). Bob extracts insights from existing data and builds tools to automate repetitive tasks.
@@ -234,6 +244,7 @@ Save in "log-analyzer" folder.
 ```
 
 **What to observe:**
+
 - **UNDERSTAND:** Bob analyzes log patterns and structures
 - **CHANGE:** Creates both the analyzer and sample data
 - Implements data processing logic
@@ -243,6 +254,7 @@ Save in "log-analyzer" folder.
 **Workflow Principle:** Effective automation requires understanding the data first. Bob analyzes patterns before building tools.
 
 **IBM Use Case:**
+
 - Client system monitoring
 - Incident analysis and root cause identification
 - Performance optimization
@@ -269,6 +281,7 @@ Save in "test-data-generator" folder.
 ```
 
 **What to observe:**
+
 - **CONSTRAIN:** Bob understands testing requirements and edge cases
 - **CHANGE:** Creates realistic, varied test data
 - Supports multiple output formats
@@ -277,6 +290,7 @@ Save in "test-data-generator" folder.
 **Workflow Principle:** Good test data requires understanding constraints and edge cases. Bob considers boundary conditions and validation rules.
 
 **IBM Use Case:**
+
 - QA and testing automation
 - Demo environment setup
 - Performance testing data
@@ -286,6 +300,7 @@ Save in "test-data-generator" folder.
 
 ### Part 4: Client-Facing Deliverables (15 minutes)
 **Workflow Phase:** PLAN + CONSTRAIN
+
 **Recommended Mode:** 📝 Plan Mode
 
 This section demonstrates strategic planning and constraint definition. Bob creates proposals and assessments that require understanding requirements, planning solutions, and defining constraints.
@@ -312,6 +327,7 @@ Save as "TECHNICAL_PROPOSAL.md"
 ```
 
 **What to observe:**
+
 - **PLAN:** Bob designs solution architecture and implementation roadmap
 - **CONSTRAIN:** Defines success metrics and risk mitigation
 - Creates business-focused technical content
@@ -321,6 +337,7 @@ Save as "TECHNICAL_PROPOSAL.md"
 **Workflow Principle:** Good proposals require planning before implementation. Bob thinks through architecture, risks, and success criteria upfront.
 
 **IBM Use Case:**
+
 - Client proposals and RFP responses
 - Architecture decision records
 - Executive briefings
@@ -349,6 +366,7 @@ Save in "migration-assessment" folder.
 ```
 
 **What to observe:**
+
 - **UNDERSTAND:** Bob analyzes current codebase and dependencies
 - **PLAN:** Creates phased migration roadmap
 - **CONSTRAIN:** Identifies blockers and estimates complexity
@@ -358,6 +376,7 @@ Save in "migration-assessment" folder.
 **Workflow Principle:** Migration requires thorough understanding and planning. Bob assesses current state, plans the journey, and identifies constraints before execution.
 
 **IBM Use Case:**
+
 - Cloud migration projects
 - Modernization assessments
 - Client consulting engagements
@@ -367,6 +386,7 @@ Save in "migration-assessment" folder.
 
 ### Part 5: Advanced Scenarios & Integration (10 minutes)
 **Workflow Phase:** CHANGE + VERIFY
+
 **Recommended Mode:** 💻 Code Mode or 🛠️ Advanced Mode
 
 This section demonstrates implementing automation (CHANGE) with built-in verification (VERIFY). CI/CD pipelines embody the complete workflow: they understand code, plan builds, enforce constraints, make changes, and verify results.
@@ -392,6 +412,7 @@ Include all necessary configuration files and documentation.
 ```
 
 **What to observe:**
+
 - **CHANGE:** Bob implements comprehensive CI/CD automation
 - **VERIFY:** Includes automated testing, security scanning, and quality gates
 - **CONSTRAIN:** Enforces standards through pipeline gates
@@ -401,6 +422,7 @@ Include all necessary configuration files and documentation.
 **Workflow Principle:** CI/CD pipelines automate the workflow. They understand code changes, plan builds, enforce constraints (quality gates), make changes (deploy), and verify results (tests).
 
 **IBM Use Case:**
+
 - Client DevOps implementations
 - Internal project automation
 - Standardized deployment processes
@@ -434,12 +456,14 @@ Throughout this workshop, you've seen Bob's systematic approach:
 ### Why This Methodology Matters
 
 **Without the workflow:**
+
 - ❌ Misaligned solutions that don't meet requirements
 - ❌ Rework due to missed constraints
 - ❌ Quality issues discovered late
 - ❌ Scope creep and unclear boundaries
 
 **With the workflow:**
+
 - ✅ Solutions aligned with actual needs
 - ✅ Constraints identified upfront
 - ✅ Quality built in from the start
@@ -521,24 +545,28 @@ Throughout this workshop, you've seen Bob's systematic approach:
 ### Do's ✅
 
 **Be Specific and Contextual**
+
 - Provide clear requirements and constraints
 - Mention IBM-specific standards or client requirements
 - Specify technology stack preferences
 - Include security and compliance considerations
 
 **Iterate and Refine**
+
 - Start with core functionality, then enhance
 - Ask Bob to explain architectural decisions
 - Request alternatives for critical components
 - Validate and test Bob's outputs
 
 **Leverage Bob's Strengths**
+
 - Use for rapid prototyping and scaffolding
 - Automate repetitive documentation tasks
 - Generate boilerplate and configuration files
 - Perform code analysis and reviews
 
 **Maintain Quality Standards**
+
 - Review Bob's code before client delivery
 - Ensure compliance with IBM and client standards
 - Test thoroughly in appropriate environments
@@ -547,24 +575,28 @@ Throughout this workshop, you've seen Bob's systematic approach:
 ### Don'ts ❌
 
 **Don't Skip Review**
+
 - Always review code before production deployment
 - Verify security implementations
 - Test edge cases and error handling
 - Validate against client requirements
 
 **Don't Expose Sensitive Information**
+
 - Avoid including client-specific data in prompts
 - Don't share proprietary algorithms or IP
 - Be cautious with security configurations
 - Follow IBM's data handling policies
 
 **Don't Over-Rely**
+
 - Use Bob as a tool, not a replacement for expertise
 - Apply critical thinking to Bob's suggestions
 - Maintain your technical skills and knowledge
 - Make architectural decisions with human judgment
 
 **Don't Forget Context**
+
 - Consider the full project lifecycle
 - Think about maintenance and scalability
 - Account for team skills and preferences
@@ -691,22 +723,40 @@ Create a Node.js REST API following IBM's microservices best practices with:
 
 ## Q&A and Discussion
 
-### Common Questions
+<details>
+<summary><strong>Q: Can Bob access our internal IBM systems or databases?</strong></summary>
 
-**Q: Can Bob access our internal IBM systems or databases?**
-A: No, Bob operates within your local development environment and doesn't access external systems unless explicitly configured with proper credentials.
+No, Bob operates within your local development environment and doesn't access external systems unless explicitly configured with proper credentials.
 
-**Q: How do we ensure Bob-generated code meets IBM security standards?**
-A: Always review Bob's code, run security scans, and apply your standard security review process. Bob can help implement security patterns, but human verification is essential.
+</details>
 
-**Q: Can Bob work with proprietary IBM frameworks?**
-A: Bob can work with any framework if provided with documentation or examples. You may need to guide Bob with specific IBM framework patterns.
+<details>
+<summary><strong>Q: How do we ensure Bob-generated code meets IBM security standards?</strong></summary>
 
-**Q: How do we handle client IP and confidentiality?**
-A: Follow IBM's data handling policies. Don't include sensitive client information in prompts. Use Bob for generic implementations, then customize with client-specific details.
+Always review Bob's code, run security scans, and apply your standard security review process. Bob can help implement security patterns, but human verification is essential.
 
-**Q: What if Bob makes a mistake?**
-A: Bob can make errors like any tool. Always review, test, and validate outputs. You can ask Bob to fix issues or try alternative approaches.
+</details>
+
+<details>
+<summary><strong>Q: Can Bob work with proprietary IBM frameworks?</strong></summary>
+
+Bob can work with any framework if provided with documentation or examples. You may need to guide Bob with specific IBM framework patterns.
+
+</details>
+
+<details>
+<summary><strong>Q: How do we handle client IP and confidentiality?</strong></summary>
+
+Follow IBM's data handling policies. Don't include sensitive client information in prompts. Use Bob for generic implementations, then customize with client-specific details.
+
+</details>
+
+<details>
+<summary><strong>Q: What if Bob makes a mistake?</strong></summary>
+
+Bob can make errors like any tool. Always review, test, and validate outputs. You can ask Bob to fix issues or try alternative approaches.
+
+</details>
 
 ---
 
