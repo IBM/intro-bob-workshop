@@ -37,22 +37,6 @@ This hands-on workshop demonstrates how IBM Bob, an agentic AI assistant, can tr
 
 ---
 
-## Bob's Professional Workflow: Understand → Plan → Constrain → Change → Verify
-
-This workshop is structured around Bob's systematic approach to problem-solving, mirroring professional software engineering practices. 
-
-### The Five-Phase Methodology
-
-| Phase | Focus | Purpose |
-|-------|-------|---------|
-| **Understand** | Analysis & Context | Gather information, analyze existing systems |
-| **Plan** | Design & Strategy | Create roadmaps, design architecture |
-| **Constrain** | Scope & Boundaries | Define requirements, set standards |
-| **Change** | Implementation | Build, modify, refactor code |
-| **Verify** | Testing & Review | Validate quality, test functionality |
-
----
-
 ## Workshop Structure
 
 ### 60-Minute Agenda
@@ -66,8 +50,6 @@ This workshop is structured around Bob's systematic approach to problem-solving,
 
 ### Part 1: Guided Exercise - Rapid Prototyping (15 minutes)
 
-**Workflow Phase:** CHANGE - Implementation
-
 This section demonstrates Bob's implementation capabilities in a compact, achievable exercise. The goal is to show how quickly Bob can turn a clear request into a useful starting point.
 
 #### Exercise 1: Build a Small Product Catalog API
@@ -75,8 +57,6 @@ This section demonstrates Bob's implementation capabilities in a compact, achiev
 **Objective:** Experience Bob's ability to scaffold a useful, working solution quickly.
 
 **Scenario:** You need a lightweight microservice prototype for a client or internal demo.
-
-**Workflow Context:** This exercise focuses on the CHANGE phase. Bob takes a clear request and produces a structured implementation that participants can inspect and discuss.
 
 **Task:**
 ```
