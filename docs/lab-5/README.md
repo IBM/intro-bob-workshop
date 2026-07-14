@@ -63,11 +63,10 @@ This section demonstrates Bob's ability to produce polished PM deliverables quic
 ```
 Write a one-page PRD for the following feature:
 
-Feature: A smart meeting summary tool integrated into IBM Slack
-- Automatically summarizes IBM Meetings recordings into key decisions,
-  action items, and open questions
-- Sends a formatted Slack message to the meeting channel after the call ends
-- Allows attendees to react to action items to acknowledge ownership
+Feature: A dark mode setting for the IBM internal developer portal
+- Allows users to toggle between light and dark themes
+- Persists the user's preference across sessions
+- Applies consistently across all portal pages and components
 
 Include:
 - Problem statement
@@ -78,7 +77,7 @@ Include:
 - Open questions and risks
 
 Keep it concise — one page, executive-friendly.
-Save it as "meeting-summary-prd.md"
+Save it as "dark-mode-prd.md"
 ```
 
 **What to observe:**
@@ -284,35 +283,35 @@ Use this time to compare how Bob performed across different PM contexts — new 
 
 ## Key Takeaways for IBM PMs
 
-### 1. **Productivity Multiplier**
+### 1. Productivity Multiplier
 
 - Reduce time-to-first-draft by 60–80% for common PM artifacts
 - Eliminate repetitive formatting and boilerplate writing
 - Focus on high-value strategy, customer discovery, and prioritization decisions
 - Accelerate cross-functional alignment and stakeholder communication
 
-### 2. **Consistency Across Teams**
+### 2. Consistency Across Teams
 
 - Produce PRDs, user stories, and roadmaps in a consistent format
 - Reduce back-and-forth with engineering caused by unclear requirements
 - Ensure every artifact includes the sections stakeholders expect
 - Scale PM best practices across the team without additional coaching
 
-### 3. **Strategic Thinking Support**
+### 3. Strategic Thinking Support
 
 - Use Bob to quickly generate a first-draft competitive analysis to stress-test
 - Get a structured framework for a problem you're approaching for the first time
 - Synthesize research, notes, or interview transcripts into actionable insights
 - Explore "what if" scenarios for roadmap trade-offs
 
-### 4. **Faster Stakeholder Alignment**
+### 4. Faster Stakeholder Alignment
 
 - Produce exec-ready summaries and briefings in minutes
 - Draft communication for launches, deprecations, and roadmap updates
 - Prepare QBR materials, OKR summaries, and board-level updates faster
 - More time for the conversations that require a human in the room
 
-### 5. **Competitive Advantage for Your Products**
+### 5. Competitive Advantage for Your Products
 
 - Respond to market changes with faster, better-informed roadmap pivots
 - Deliver higher-quality requirements that reduce rework in engineering
@@ -355,7 +354,7 @@ Use this time to compare how Bob performed across different PM contexts — new 
 
 ## Best Practices for Using Bob as a PM
 
-### Do's ✅
+### Do's
 
 **Provide Rich Context**
 
@@ -385,7 +384,7 @@ Use this time to compare how Bob performed across different PM contexts — new 
 - Apply your customer and business context that Bob doesn't have
 - Make prioritization and strategy calls yourself — Bob informs, you decide
 
-### Don'ts ❌
+### Don'ts
 
 **Don't Skip Review**
 
