@@ -115,7 +115,7 @@ Kick off the workshop with a quick introduction to what AI is, how it's differen
 
 **Example Prompt Structure:**
 ```
-Bob, create a [type of game] where:
+Create a [type of game] where:
 - [What appears on screen]
 - [What the player does]
 - [How you score points]
@@ -141,7 +141,7 @@ Once the game is built, teams can write a follow-up prompt to make it even bette
 
 **Example Improvement Prompt:**
 ```
-Bob, can you improve the [game name] by adding:
+Improve the [game name] by adding:
 - [Specific feature you want]
 - [How it should look]
 - [What it should do]
@@ -199,7 +199,7 @@ Bob, can you improve the [game name] by adding:
 
 **Example Prompt Template:**
 ```
-Bob, create a [name of your project] that:
+Create a [name of your project] that:
 - [Main purpose - what does it do?]
 - [What appears on the screen?]
 - [What can users click or interact with?]
@@ -225,15 +225,15 @@ Save it in a folder called "[creative-name]"
 
 **Example Mashup Prompts:**
 ```
-Bob, can you add a timer to the joke generator so it shows a new joke every 10 seconds automatically?
+Add a timer to the joke generator so it shows a new joke every 10 seconds automatically.
 ```
 
 ```
-Bob, can you combine the mood tracker with the compliment generator so when I click a mood, it gives me a matching compliment?
+Combine the mood tracker with the compliment generator so when I click a mood, it gives me a matching compliment.
 ```
 
 ```
-Bob, can you add the scoring system from the game to the trivia quiz?
+Add the scoring system from the game to the trivia quiz.
 ```
 
 ---
@@ -307,12 +307,12 @@ This is where it all comes together! Teams share their what they created, what t
 
 **Good Prompt:**
 ```
-Bob, make a game with circles I can click.
+Make a game with circles I can click.
 ```
 
 **GREAT Prompt:**
 ```
-Bob, create a fast-paced clicking game where:
+Create a fast-paced clicking game where:
 - Colorful circles (red, blue, green, yellow) pop up randomly
 - Each circle is worth 10 points
 - Circles disappear after 2 seconds if not clicked

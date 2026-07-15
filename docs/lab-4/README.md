@@ -90,7 +90,7 @@ Bob is a special kind of AI—not just a chatbot that answers questions, but an 
 
 **Simple (Ages 5-8):**
 ```
-Bob, create a webpage with:
+Create a webpage with:
 - A big rainbow across the top
 - My name "Emma" in huge purple letters in the middle
 - Yellow stars that twinkle all around
@@ -102,7 +102,7 @@ Save it in a folder called "emma-rainbow"
 
 **More Advanced (Ages 9-14):**
 ```
-Bob, create an animated webpage with:
+Create an animated webpage with:
 - A dark blue background like outer space
 - Planets that slowly orbit around a sun in the center
 - Twinkling stars in the background
@@ -148,7 +148,7 @@ Save it in a folder called "my-solar-system"
 
 **Simple Game (Ages 5-8):**
 ```
-Bob, create a clicking game where:
+Create a clicking game where:
 - Colorful smiley faces pop up in random places
 - When I click a smiley, it disappears and I get 1 point
 - New smileys keep appearing every 2 seconds
@@ -162,7 +162,7 @@ Save it in a folder called "smiley-clicker"
 
 **Advanced Game (Ages 9-14):**
 ```
-Bob, create a reaction game where:
+Create a reaction game where:
 - A circle in the center starts red
 - After a random time (2-5 seconds), it turns green
 - I have to click it as fast as possible when it's green
@@ -231,7 +231,7 @@ Save it in a folder called "reaction-timer"
 
 **For Younger Kids (5-8):**
 ```
-Bob, create a magic decision maker where:
+Create a magic decision maker where:
 - I type in a yes/no question
 - I click a big colorful button
 - A fun animation happens
@@ -245,7 +245,7 @@ Save it in a folder called "magic-helper"
 
 **For Older Kids (9-14):**
 ```
-Bob, create a mood journal where:
+Create a mood journal where:
 - I can click on emoji faces to show how I'm feeling (happy, sad, excited, tired, etc.)
 - When I click a mood, it saves it with today's date
 - I can add a short note about why I feel that way
@@ -727,7 +727,7 @@ Today, you and your child asked "What if?" and made it real. That's pretty amazi
 ### Prompt Formula:
 
 ```
-Bob, create a [what] where:
+Create a [what] where:
 - [describe what it looks like]
 - [describe what it does]
 - [describe colors/style]

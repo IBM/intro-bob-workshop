@@ -86,7 +86,7 @@ IBMers will need:
 If you want to test Bob before the workshop:
 
 1. Open Bob (you already have access as an IBMer)
-2. Try a simple prompt like: "Bob, introduce yourself and explain what makes you different from ChatGPT"
+2. Try a simple prompt like: "Introduce yourself and explain what makes you different from ChatGPT"
 3. If you have any issues, contact the workshop facilitator
 
 
