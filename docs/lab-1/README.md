@@ -1,4 +1,4 @@
-# Bob AI Workshop for Middle School Students
+# TechTrek Workshop with Bob
 ## Fun with AI: Create Cool Stuff with Bob!
 
 ### Workshop Overview
@@ -6,7 +6,7 @@ Get ready to see how AI can actually build things! In this interactive demonstra
 
 **Duration:** 90 minutes
 
-**Age Group:** Middle School (grades 6-8)
+**Age Group:** TechTrek (grades 6-8)
 
 **Format:** Team-based demonstration (instructor types prompts into Bob)
 
@@ -46,9 +46,8 @@ Think of Bob as a super-smart assistant who can turn your ideas into real projec
 | Segment | Time |
 | :--- | :--- |
 | Intro to AI & Live Demo | 15 minutes |
-| Round 1: Team Game Challenge | 15 minutes |
-| Round 2: Improvement Challenge | 10 minutes |
-| Round 3: Creative Challenge | 20 minutes |
+| Round 1: Team Game Challenge | 20 minutes |
+| Round 2: Creative Challenge | 20 minutes |
 | Demonstration & Discussion | 30 minutes |
 | **Total** | **90 minutes** |
 
@@ -96,16 +95,15 @@ Kick off the workshop with a quick introduction to what AI is, how it's differen
 
 ---
 
-### 🎮 Round 1: Team Game Challenge! (15 minutes)
+### 🎮 Round 1: Team Game Challenge! (20 minutes)
 
-**The Challenge:** Each team creates a prompt for a fun browser game!
+**The Challenge:** Each team creates a prompt for a fun browser game — then, if there's time, improves it!
 
-**Team Planning Time:**
+**Part A — Build It (planning ~5 min):**
 
-- Huddle with your team
-- Decide what kind of game you want
-- Write down your prompt on paper
-- Make it creative and specific!
+- Huddle with your team and decide what kind of game you want
+- Write down your prompt on paper — be specific!
+- Hand it to the instructor to type into Bob
 
 **Game Ideas to Inspire You:**
 
@@ -128,18 +126,9 @@ Bob, create a [type of game] where:
 Save it in a folder called "[team-name]-game"
 ```
 
----
+**Part B — Improve It (if time allows):**
 
-### 🎨 Round 2: Improvement Challenge! (10 minutes)
-
-**The Challenge:** Teams write prompts to improve something that already exists!
-
-**Team Planning Time:**
-
-- Look at the virtual pet or fun facts site (shown on screen)
-- Discuss: What would make it cooler?
-- Write a prompt to add ONE awesome new feature
-- Be creative but specific!
+Once the game is built, teams can write a follow-up prompt to make it even better!
 
 **Improvement Ideas:**
 
@@ -150,9 +139,9 @@ Save it in a folder called "[team-name]-game"
 - Add a scoring system
 - Include fun messages or reactions
 
-**Example Prompt Structure:**
+**Example Improvement Prompt:**
 ```
-Bob, can you improve the [project name] by adding:
+Bob, can you improve the [game name] by adding:
 - [Specific feature you want]
 - [How it should look]
 - [What it should do]
@@ -161,7 +150,7 @@ Bob, can you improve the [project name] by adding:
 
 ---
 
-### 🌟 Round 3: Creative Challenge! (20 minutes)
+### 🌟 Round 2: Creative Challenge! (20 minutes)
 
 **The Challenge:** Teams create something completely new and unique!
 
@@ -226,7 +215,7 @@ Save it in a folder called "[creative-name]"
 
 ### 🏆 Bonus Round: Mashup Challenge! (If Time Allows)
 
-**The Challenge:** Combine ideas from different projects!
+**The Challenge:** Combine ideas from two different projects!
 
 **Quick Team Brainstorm:**
 
@@ -657,6 +646,6 @@ Every prompt you wrote today was unique and special. You showed that when humans
 
 *Workshop created for IBM Bob - Making AI Fun and Accessible!*
 *Version 2.0 - Team-Based Demonstration Format*
-*Designed for middle school students (grades 6-8)*
+*Designed for TechTrek students (grades 6-8)*
 *Duration: 90 minutes*
 *Format: Instructor-led demonstration with team prompt creation*

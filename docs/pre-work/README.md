@@ -37,7 +37,7 @@ Create a dedicated folder for workshop projects:
 
 ## Prerequisites by Workshop
 
-### Middle School Workshop
+### TechTrek Workshop
 **No technical setup required!** This is an instructor-led demonstration workshop where:
 
 - The instructor operates Bob on a projected screen
@@ -104,7 +104,7 @@ Don't have something specific? No problem! We'll provide plenty of example scena
 
 ## Pre-Workshop Checklist
 
-### Middle School Students
+### TechTrek Students
 
 - Assigned to a team (instructor will do this)
 - Ready to brainstorm creative ideas
@@ -153,6 +153,6 @@ See you at the workshop! 🚀
 
 **Next Steps:**
 
-- [Middle School Workshop →](../lab-1/README.md)
+- [TechTrek Workshop →](../lab-1/README.md)
 - [High School Workshop →](../lab-2/README.md)
 - [IBM Employee Workshop →](../lab-3/README.md)

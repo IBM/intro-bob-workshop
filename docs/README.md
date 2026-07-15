@@ -24,12 +24,12 @@ Bob is an **agentic AI assistant** that goes beyond traditional chatbots. While 
 
 Choose the workshop that best fits your experience level and goals:
 
-#### 🎓 Middle School Workshop (45 minutes)
+#### 🎓 TechTrek Workshop (90 minutes)
 **Fun with AI: Create Cool Stuff with Bob!**
 
 Perfect for students in grades 6-8 who want to see AI in action. Work in teams to create games, websites, and interactive projects using creative prompts. No coding experience needed!
 
-[Start Middle School Workshop →](lab-1/README.md)
+[Start TechTrek Workshop →](lab-1/README.md)
 
 #### 🚀 High School Workshop (90 minutes)
 **Introduction to Agentic AI with IBM Bob**
@@ -59,7 +59,7 @@ Each workshop is designed to be:
 |  |  |
 | :--- | :--- |
 | [Lab 0: Pre-work](pre-work/README.md) | Setup and prerequisites for the workshops |
-| [Lab 1: Middle School Workshop](lab-1/README.md) | Team-based demonstration format (45 minutes) |
+| [Lab 1: TechTrek Workshop](lab-1/README.md) | Team-based demonstration format (90 minutes) |
 | [Lab 2: High School Workshop (EDT Edition)](lab-2-edt/README.md) | Design thinking to AI implementation (90 minutes) |
 | [Lab 3: IBM Employee Workshop](lab-3/README.md) | Professional development acceleration (75 minutes) |
 | [Lab 4: Take Your Child to Work Day](lab-4/README.md) | Parent-child AI adventure (45 minutes) |
@@ -108,7 +108,7 @@ These workshops have been tested with:
 - Web browser for viewing created projects
 - Curiosity and willingness to experiment!
 
-### Middle School Workshop
+### TechTrek Workshop
 - No technical prerequisites
 - Instructor will operate Bob
 - Students work in teams to create prompts
