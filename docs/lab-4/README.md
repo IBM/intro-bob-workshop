@@ -13,6 +13,7 @@ Welcome to a special day where parents and children explore the magic of AI toge
 **Prerequisites:** None! Just imagination and curiosity
 
 **What You'll Need:**
+
 - One computer per parent-child pair with Bob access
 - Internet connection
 - Your creativity and teamwork!
@@ -24,6 +25,7 @@ Welcome to a special day where parents and children explore the magic of AI toge
 Bob is a special kind of AI—not just a chatbot that answers questions, but an AI that can actually **CREATE** things!
 
 **Bob can:**
+
 - 🎨 Build colorful websites and animations
 - 🎮 Create fun games you can play right away
 - ✨ Make interactive tools and toys
@@ -36,11 +38,13 @@ Bob is a special kind of AI—not just a chatbot that answers questions, but an 
 ## How This Works 👨‍👩‍👧‍👦
 
 ### Parent-Child Teamwork
+
 - **Kids:** Come up with creative ideas and describe what you want
 - **Parents:** Help type the instructions (prompts) for Bob
 - **Together:** Watch Bob create your project and test it out!
 
 ### The Magic Formula
+
 1. **Imagine** - What do you want to create?
 2. **Describe** - Tell Bob exactly what you want (be specific!)
 3. **Watch** - See Bob build it step-by-step
@@ -58,6 +62,7 @@ Bob is a special kind of AI—not just a chatbot that answers questions, but an 
 **Perfect for:** All ages (especially younger children 5-8)
 
 **How it works:**
+
 1. Child describes what they want to see
 2. Parent helps turn it into a prompt for Bob
 3. Bob creates a webpage with their vision
@@ -66,6 +71,7 @@ Bob is a special kind of AI—not just a chatbot that answers questions, but an 
 **Ideas to Spark Imagination:**
 
 **For Younger Kids (5-8):**
+
 - A rainbow with your name in big, colorful letters
 - Dancing stars that twinkle
 - Your favorite animal with fun animations
@@ -73,6 +79,7 @@ Bob is a special kind of AI—not just a chatbot that answers questions, but an 
 - Colorful balloons floating up
 
 **For Older Kids (9-14):**
+
 - An animated solar system
 - A digital art gallery with your favorite colors
 - A moving pattern or kaleidoscope
@@ -107,6 +114,7 @@ Save it in a folder called "my-solar-system"
 ```
 
 **Parent Tips:**
+
 - Let your child describe their vision first
 - Ask questions: "What colors?" "What should it do?" "Where should things be?"
 - Help them be specific—the more details, the better!
@@ -123,12 +131,14 @@ Save it in a folder called "my-solar-system"
 **Game Ideas by Age:**
 
 **For Younger Kids (5-8):**
+
 - **Click the Emoji:** Click on happy faces before they disappear
 - **Color Match:** Click the button that matches the color shown
 - **Catch the Stars:** Move your mouse to catch falling stars
 - **Find the Animal:** Click on the right animal when you hear its name
 
 **For Older Kids (9-14):**
+
 - **Reaction Timer:** Click as fast as you can when the color changes
 - **Memory Match:** Remember and match pairs of cards
 - **Math Challenge:** Solve problems before time runs out
@@ -166,6 +176,7 @@ Save it in a folder called "reaction-timer"
 ```
 
 **Parent Tips:**
+
 - Start with a simple game concept
 - Test it together and see if it's fun
 - You can always ask Bob to make it easier or harder
@@ -182,30 +193,35 @@ Save it in a folder called "reaction-timer"
 **Project Ideas:**
 
 **🎱 Decision Makers & Fortune Tellers**
+
 - Magic 8-Ball that answers yes/no questions
 - Fortune cookie generator
 - "What should I do today?" suggestion tool
 - Random activity picker for family fun
 
 **🎭 Fun Generators**
+
 - Joke of the day displayer
 - Compliment generator (makes you feel good!)
 - Silly story creator with random words
 - Character name generator for games
 
 **😊 Mood & Feelings Tools**
+
 - Mood tracker with emoji faces
 - Gratitude journal with pretty design
 - Positive affirmation generator
 - "How I'm feeling today" chart
 
 **🎨 Creative Tools**
+
 - Drawing idea generator
 - Story starter creator
 - "What should I draw?" tool
 - Random color palette maker
 
 **⏰ Countdown & Timers**
+
 - Birthday countdown
 - Summer vacation timer
 - Homework timer with encouragement
@@ -242,6 +258,7 @@ Save it in a folder called "my-mood-journal"
 ```
 
 **Parent Tips:**
+
 - Choose something your child is genuinely interested in
 - This is their creation—let them lead the ideas
 - Think about what they might actually use or show friends
@@ -252,12 +269,14 @@ Save it in a folder called "my-mood-journal"
 ## Tips for Great Teamwork 👨‍👩‍👧‍👦
 
 ### For Kids:
+
 - **Be Creative!** There are no wrong ideas
 - **Be Specific!** Tell Bob exactly what you want
 - **Use Your Words!** Describe colors, sizes, and what should happen
 - **Have Fun!** This is about playing and creating together
 
 ### For Parents:
+
 - **Listen First:** Let your child fully explain their vision
 - **Ask Questions:** Help them think through details
 - **Encourage Specificity:** "What color?" "How big?" "What happens when you click?"
@@ -267,6 +286,7 @@ Save it in a folder called "my-mood-journal"
 ### Making Great Prompts Together:
 
 **The Formula:**
+
 1. **What is it?** (A game, a webpage, a tool)
 2. **What does it look like?** (Colors, shapes, style)
 3. **What does it do?** (Actions, interactions)
@@ -274,6 +294,7 @@ Save it in a folder called "my-mood-journal"
 5. **What's special?** (Unique features, fun details)
 
 **Example Conversation:**
+
 - **Parent:** "What do you want to create?"
 - **Child:** "A game!"
 - **Parent:** "What kind of game?"
@@ -294,6 +315,7 @@ Now you have all the details for a great prompt!
 ## What You're Learning Today 🎓
 
 ### Kids Learn:
+
 - **Creativity:** Turning ideas into real things
 - **Communication:** Describing ideas clearly
 - **Problem-solving:** Thinking through how things work
@@ -301,12 +323,14 @@ Now you have all the details for a great prompt!
 - **Confidence:** "I can make cool stuff!"
 
 ### Parents Learn:
+
 - **AI Capabilities:** What modern AI can actually do
 - **Prompt Engineering:** How to communicate with AI effectively
 - **Your Child's Creativity:** See their imagination in action
 - **Future Skills:** Understanding tools your kids will use
 
 ### Together You Learn:
+
 - **Teamwork:** Collaborating on a creative project
 - **Technology Bonding:** Sharing a modern experience
 - **Iteration:** Trying, improving, and refining
@@ -320,24 +344,28 @@ Now you have all the details for a great prompt!
 Even without Bob at home, you can practice the skills you learned:
 
 **For Kids:**
+
 - Write prompts for imaginary projects
 - Describe apps or games you wish existed
 - Draw pictures of what you created today
 - Tell family members about what you made
 
 **For Parents:**
+
 - Discuss how AI might be used in different jobs
 - Explore age-appropriate AI tools together
 - Encourage creative thinking and clear communication
 - Talk about responsible technology use
 
 ### Conversation Starters:
+
 - "What was your favorite thing we created today?"
 - "If you could create anything with AI, what would it be?"
 - "How do you think AI might help people in the future?"
 - "What was the most surprising thing Bob did?"
 
 ### Share Your Creations:
+
 - Take screenshots of what you made
 - Show grandparents or friends (via video call)
 - Write about your experience
@@ -350,18 +378,21 @@ Even without Bob at home, you can practice the skills you learned:
 ### Setup (Before the Event)
 
 **Technical Preparation:**
+
 - Ensure all computers have Bob access configured
 - Test Bob on a few sample prompts
 - Have backup computers ready
 - Prepare a demo project to show as an example
 
 **Room Setup:**
+
 - Arrange seating for parent-child pairs
 - Ensure good visibility of screens
 - Have a projector for demonstrations (optional)
 - Create a welcoming, fun atmosphere
 
 **Materials:**
+
 - Printed quick-start guide for each pair
 - Example prompts as handouts
 - Name tags or table cards
@@ -370,23 +401,27 @@ Even without Bob at home, you can practice the skills you learned:
 ### Facilitation Tips
 
 **Opening (2 minutes):**
+
 - Welcome everyone warmly
 - Explain that this is about fun and creativity
 - Emphasize that there are no wrong answers
 - Show a quick demo of Bob creating something simple
 
 **During Activities:**
+
 - Circulate to help pairs who are stuck
 - Celebrate successes loudly—encourage others!
 - If someone finishes early, suggest improvements
 - Take photos/videos (with permission) of happy moments
 
 **Managing Different Ages:**
+
 - **Ages 5-7:** Parents will do most typing; focus on simple, visual projects
 - **Ages 8-10:** Kids can help type; balance simplicity with engagement
 - **Ages 11-14:** Kids can lead more; offer more complex challenges
 
 **Handling Challenges:**
+
 - **Bob makes an error:** "Even AI makes mistakes! Let's try again."
 - **Child is shy:** "Parents, you can start by suggesting ideas."
 - **Too ambitious:** "Great idea! Let's start with the main part first."
@@ -395,17 +430,20 @@ Even without Bob at home, you can practice the skills you learned:
 ### Time Management
 
 **Flexible Schedule:**
+
 - Some pairs will move faster than others
 - Have extension ideas ready for quick finishers
 - It's okay if not everyone completes all three rounds
 - Focus on fun, not completion
 
 **If Running Behind:**
+
 - Skip to Round 2 or 3 (the most engaging)
 - Combine rounds (create a game with special features)
 - Do a group demo instead of individual work
 
 **If Ahead of Schedule:**
+
 - **Bonus Challenge:** Combine two projects
 - **Show & Tell:** Pairs demo their creations
 - **Improvement Round:** Enhance existing projects
@@ -414,6 +452,7 @@ Even without Bob at home, you can practice the skills you learned:
 ### Success Indicators
 
 **You'll know it's working when:**
+
 - Kids are excited and engaged
 - Parents are smiling and participating
 - Pairs are talking and collaborating
@@ -424,18 +463,21 @@ Even without Bob at home, you can practice the skills you learned:
 ### Troubleshooting
 
 **"Bob isn't working!"**
+
 - Check internet connection
 - Restart Bob/VS Code
 - Switch to a backup computer
 - Have a pre-made project to show as backup
 
 **"My child is frustrated"**
+
 - Simplify the project
 - Show them it's okay to start over
 - Celebrate small wins
 - Remind them they're learning something new
 
 **"This is too easy/hard"**
+
 - Adjust complexity on the fly
 - Offer different project suggestions
 - Pair advanced kids with younger ones to help
@@ -444,12 +486,14 @@ Even without Bob at home, you can practice the skills you learned:
 ### Wrap-Up (2 minutes)
 
 **Celebration:**
+
 - Ask for volunteers to show what they created
 - Applaud every creation
 - Take a group photo
 - Hand out certificates or thank-you notes
 
 **Key Messages:**
+
 - "You all created something amazing today!"
 - "AI is a tool that helps bring your ideas to life"
 - "Your creativity is what makes it special"
@@ -462,18 +506,21 @@ Even without Bob at home, you can practice the skills you learned:
 ### Beginner Projects (Ages 5-8)
 
 **"My Rainbow Page"**
+
 - Colorful rainbow graphic
 - Child's name in big letters
 - Animated stars or hearts
 - Simple and visually appealing
 
 **"Click the Smiley"**
+
 - Smiley faces appear randomly
 - Click to score points
 - 30-second timer
 - Shows final score
 
 **"Magic Answer Ball"**
+
 - Type a question
 - Click a button
 - Get a fun answer
@@ -482,18 +529,21 @@ Even without Bob at home, you can practice the skills you learned:
 ### Intermediate Projects (Ages 9-11)
 
 **"Emoji Catcher"**
+
 - Emojis fall from top of screen
 - Move mouse to catch them
 - Different emojis worth different points
 - Timer and score display
 
 **"My Mood Tracker"**
+
 - Click emoji to record mood
 - Add optional note
 - See mood history
 - Encouraging messages
 
 **"Story Starter Generator"**
+
 - Click button for random story beginning
 - Includes character, setting, and problem
 - Save favorite starters
@@ -502,18 +552,21 @@ Even without Bob at home, you can practice the skills you learned:
 ### Advanced Projects (Ages 12-14)
 
 **"Reaction Time Challenge"**
+
 - Tests reaction speed
 - Multiple rounds
 - Tracks best time
 - Leaderboard feature
 
 **"Study Timer with Rewards"**
+
 - Pomodoro-style timer
 - Motivational messages
 - Break reminders
 - Progress tracking
 
 **"Creative Prompt Generator"**
+
 - Generates art/writing prompts
 - Multiple categories
 - Save favorites
@@ -564,17 +617,20 @@ A: Bob is AI software—a computer program that's really good at understanding w
 ### For Continued Learning:
 
 **Age-Appropriate AI Resources:**
+
 - AI4K12.org - AI education for kids
 - Code.org - Learn basic programming concepts
 - Scratch - Visual programming for kids
 - Khan Academy - Free learning resources
 
 **Books About AI for Kids:**
+
 - "Hello Ruby: Adventures in Coding" (Ages 5-9)
 - "Artificial Intelligence for Kids" (Ages 8-12)
 - "The AI Book for Kids" (Ages 10-14)
 
 **Family Discussion Topics:**
+
 - How is AI used in everyday life?
 - What jobs might use AI in the future?
 - How can AI help solve problems?
@@ -583,12 +639,14 @@ A: Bob is AI software—a computer program that's really good at understanding w
 ### For Parents:
 
 **Understanding AI:**
+
 - IBM AI Education resources
 - "AI for Everyone" course (Coursera)
 - Parent guides to AI literacy
 - Responsible AI discussions
 
 **Supporting Your Child:**
+
 - Encourage creative projects
 - Discuss technology thoughtfully
 - Balance screen time with other activities
@@ -649,16 +707,19 @@ Today, you and your child asked "What if?" and made it real. That's pretty amazi
 ### The 3 Rounds:
 
 **Round 1: Draw with Words (8 min)**
+
 - Create a colorful webpage
 - Describe what you want to see
 - Watch Bob make it appear!
 
 **Round 2: Make a Game (10 min)**
+
 - Build a fun browser game
 - Choose: clicking, matching, catching, or guessing
 - Play it together!
 
 **Round 3: Something Special (10 min)**
+
 - Create your unique project
 - Ideas: decision maker, joke generator, mood tracker
 - Make it yours!
@@ -676,6 +737,7 @@ Save it in a folder called "[name]"
 ```
 
 ### Tips:
+
 - ✅ Be specific about colors, sizes, actions
 - ✅ Describe what happens when you click
 - ✅ Start simple, then improve

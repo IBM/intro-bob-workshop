@@ -4,7 +4,7 @@
 ### Workshop Overview
 Get ready to see how AI can actually build things! In this interactive demonstration workshop, you'll work in teams to come up with creative ideas and write prompts that tell Bob (an AI assistant) what to create. Watch as your ideas come to life in real-time! No coding experience needed - you bring the creativity, Bob does the building!
 
-**Duration:** 45 minutes
+**Duration:** 90 minutes
 
 **Age Group:** Middle School (grades 6-8)
 
@@ -41,9 +41,23 @@ Think of Bob as a super-smart assistant who can turn your ideas into real projec
 
 ---
 
+## Workshop Agenda
+
+| Segment | Time |
+| :--- | :--- |
+| Intro to AI & Live Demo | 15 minutes |
+| Round 1: Team Game Challenge | 15 minutes |
+| Round 2: Improvement Challenge | 10 minutes |
+| Round 3: Creative Challenge | 20 minutes |
+| Demonstration & Discussion | 30 minutes |
+| **Total** | **90 minutes** |
+
+---
+
 ## How This Workshop Works
 
 ### Team-Based Prompt Creation
+
 1. **Teams of 3-4 students** work together
 2. **Teams brainstorm** what they want Bob to create
 3. **Teams write a prompt** describing their idea
@@ -52,6 +66,7 @@ Think of Bob as a super-smart assistant who can turn your ideas into real projec
 6. **Test the creation** together and see it work!
 
 ### What Makes a Great Prompt?
+
 - **Be specific** about what you want
 - **Describe colors, shapes, and actions**
 - **Say what should happen** when you click or interact
@@ -61,17 +76,39 @@ Think of Bob as a super-smart assistant who can turn your ideas into real projec
 
 ## Workshop Activities
 
+### 🎙️ Intro to AI & Live Demo (15 minutes)
+
+Kick off the workshop with a quick introduction to what AI is, how it's different from a regular chatbot, and what makes Bob special. Finish with a live demo so students can see Bob in action before the team rounds begin.
+
+**What to Cover:**
+
+- What is AI, and how is it different from a search engine or chatbot?
+- What is *agentic* AI — AI that can actually *do* things?
+- Quick intro to Bob: how it works, what it can build
+- Live demo: instructor types a simple prompt and the class watches Bob create something from scratch
+
+**Tips:**
+
+- Keep it visual — use the projector to show Bob working in real-time
+- Pick a simple, wow-factor prompt (e.g. a colourful animated webpage with the school name)
+- Invite students to shout out ideas for the demo prompt
+- Leave a minute for quick questions before moving to Round 1
+
+---
+
 ### 🎮 Round 1: Team Game Challenge! (15 minutes)
 
 **The Challenge:** Each team creates a prompt for a fun browser game!
 
-**Team Planning Time (5 minutes):**
+**Team Planning Time:**
+
 - Huddle with your team
 - Decide what kind of game you want
 - Write down your prompt on paper
 - Make it creative and specific!
 
 **Game Ideas to Inspire You:**
+
 - Clicking game (click objects that appear)
 - Reaction game (press button when color changes)
 - Memory game (remember patterns)
@@ -91,32 +128,21 @@ Bob, create a [type of game] where:
 Save it in a folder called "[team-name]-game"
 ```
 
-**Demonstration Time (10 minutes):**
-- 2-3 teams share their prompts
-- Instructor types each prompt into Bob
-- Watch Bob create the game step-by-step
-- Test each game together!
-- Discuss what Bob did well
-
-**What to Watch For:**
-- How Bob breaks down the task into steps
-- How Bob creates multiple files (HTML, CSS, JavaScript)
-- How Bob explains what it's doing
-- How the game actually works when we test it!
-
 ---
 
-### 🎨 Round 2: Improvement Challenge! (12 minutes)
+### 🎨 Round 2: Improvement Challenge! (10 minutes)
 
 **The Challenge:** Teams write prompts to improve something that already exists!
 
-**Team Planning Time (4 minutes):**
+**Team Planning Time:**
+
 - Look at the virtual pet or fun facts site (shown on screen)
 - Discuss: What would make it cooler?
 - Write a prompt to add ONE awesome new feature
 - Be creative but specific!
 
 **Improvement Ideas:**
+
 - Add animations or sound effects
 - Change colors or appearance
 - Add new buttons or features
@@ -133,26 +159,14 @@ Bob, can you improve the [project name] by adding:
 - [Any special effects or animations]
 ```
 
-**Demonstration Time (8 minutes):**
-- 2-3 teams share their improvement prompts
-- Instructor types prompts into Bob
-- Watch Bob read the existing code
-- See Bob make careful changes
-- Test the improvements!
-
-**What to Watch For:**
-- How Bob reads and understands existing code
-- How Bob makes changes without breaking things
-- How Bob adds new features while keeping old ones working
-- The difference between the before and after!
-
 ---
 
-### 🌟 Round 3: Creative Challenge! (15 minutes)
+### 🌟 Round 3: Creative Challenge! (20 minutes)
 
 **The Challenge:** Teams create something completely new and unique!
 
-**Team Planning Time (7 minutes):**
+**Team Planning Time:**
+
 - Brainstorm: What would be fun or useful?
 - Think about things you'd actually want to use
 - Write a detailed prompt for your creation
@@ -161,29 +175,34 @@ Bob, can you improve the [project name] by adding:
 **Project Ideas (Pick One or Create Your Own!):**
 
 **🎱 Magic Decision Maker**
+
 - Helps you make decisions
 - Gives random answers or advice
 - Fun animations and colors
 
 **🎨 Creative Generator**
+
 - Random drawing ideas
 - Story starters
 - Character creators
 - Writing prompts
 
 **😊 Mood & Feelings**
+
 - Mood tracker with emojis
 - Compliment generator
 - Positive message maker
 - Daily affirmation tool
 
 **🎮 Mini Games**
+
 - Trivia quiz on your favorite topic
 - Memory matching game
 - Word guessing game
 - Math challenge game
 
 **🎭 Fun Tools**
+
 - Joke or riddle generator
 - Random fact displayer
 - Fortune teller
@@ -203,13 +222,6 @@ Bob, create a [name of your project] that:
 Save it in a folder called "[creative-name]"
 ```
 
-**Demonstration Time (8 minutes):**
-- 2 teams share their creative prompts
-- Watch Bob build something from scratch
-- See the complete project come to life
-- Test it out together!
-- Celebrate the creativity!
-
 ---
 
 ### 🏆 Bonus Round: Mashup Challenge! (If Time Allows)
@@ -217,6 +229,7 @@ Save it in a folder called "[creative-name]"
 **The Challenge:** Combine ideas from different projects!
 
 **Quick Team Brainstorm:**
+
 - What if we mixed the game with the joke generator?
 - What if we added a timer to something?
 - What if we combined two different features?
@@ -236,27 +249,58 @@ Bob, can you add the scoring system from the game to the trivia quiz?
 
 ---
 
+## 🎤 Demonstration & Discussion (30 minutes)
+
+This is where it all comes together! Teams share their what they created, what they learned, and what they'd do next.
+
+
+### Discussion
+
+**About Bob:**
+
+- What was the most impressive thing Bob did?
+- What surprised you about how Bob works?
+
+
+**About Your Prompts:**
+
+- Which prompt produced the best result? Why?
+- What made a prompt work really well?
+- How would you improve a prompt that didn't work as expected?
+
+**About AI and the Future:**
+
+- How could tools like Bob help with school or future jobs?
+- What should we be careful about when using AI?
+- How can AI help people be more creative, not less?
+
+---
+
 ## Tips for Writing Great Prompts
 
 ### 🎯 The Secret to Success
 
 **Be Specific!**
+
 - ❌ "Make a game"
 - ✅ "Make a clicking game with rainbow stars that I click to get points, with a 30-second timer and fun sound effects"
 
 **Paint a Picture with Words!**
+
 - Describe colors, shapes, and sizes
 - Say what should happen when you click
 - Explain how it should look and feel
 - Use descriptive words!
 
 **Break It Down!**
+
 - What appears on screen?
 - What can you click or do?
 - What happens when you interact?
 - How does it end or reset?
 
 **Add Your Personality!**
+
 - Use your favorite colors
 - Pick themes you like
 - Make it fun for YOU
@@ -296,6 +340,7 @@ Save it in a folder called "circle-clicker"
 ## What You Learned Today
 
 ### About Bob's Superpowers 🦸
+
 - **Bob can CREATE** - Makes new projects from scratch
 - **Bob can READ** - Looks at existing code to understand it
 - **Bob can IMPROVE** - Makes changes without breaking things
@@ -303,6 +348,7 @@ Save it in a folder called "circle-clicker"
 - **Bob works step-by-step** - Breaks big tasks into small steps
 
 ### About AI
+
 - AI can create real things, not just answer questions
 - AI can read and understand code that already exists
 - AI can make careful changes to improve projects
@@ -310,6 +356,7 @@ Save it in a folder called "circle-clicker"
 - AI follows your instructions to build what you imagine
 
 ### About Creating
+
 - You can make websites and games without knowing how to code
 - Your ideas are the most important part
 - You can improve things that already exist
@@ -321,6 +368,7 @@ Save it in a folder called "circle-clicker"
 ## Wrap-Up & Reflection
 
 ### 🎉 What We Created Today!
+
 - [List the projects created during the workshop]
 - Each one started as just an idea and words
 - Bob turned those words into real, working projects
@@ -329,16 +377,19 @@ Save it in a folder called "circle-clicker"
 ### 💭 Discussion Questions
 
 **About Bob:**
+
 - What was the most impressive thing Bob did?
 - What surprised you about how Bob works?
 - How is Bob different from other AI you've seen?
 
 **About Your Experience:**
+
 - Which project was your favorite? Why?
 - What made a prompt work really well?
 - If you could create anything with Bob, what would it be?
 
 **About AI and the Future:**
+
 - How could tools like Bob help with school?
 - What jobs might use AI like this?
 - What should we be careful about with AI?
@@ -347,6 +398,7 @@ Save it in a folder called "circle-clicker"
 ### 🌟 Key Takeaways
 
 **About Bob's Superpowers:**
+
 - Bob can CREATE - Makes new projects from scratch
 - Bob can READ - Understands existing code
 - Bob can IMPROVE - Adds features without breaking things
@@ -354,6 +406,7 @@ Save it in a folder called "circle-clicker"
 - Bob works STEP-BY-STEP - Breaks big tasks into small steps
 
 **About Working with AI:**
+
 - Clear communication is key (good prompts = good results)
 - AI is a tool that amplifies YOUR creativity
 - You don't need to know coding to create cool things
@@ -361,6 +414,7 @@ Save it in a folder called "circle-clicker"
 - The more specific you are, the better the result
 
 **About Your Creativity:**
+
 - Your ideas are the most important part
 - Technology can help bring imagination to life
 - Teamwork makes prompts even better
@@ -379,18 +433,21 @@ Even though you don't have Bob at home, you learned important skills today:
 - How AI can help turn ideas into real things
 
 ### 🎨 Practice Your Prompt-Writing Skills
+
 - Write prompts for imaginary projects
 - Describe apps or games you wish existed
 - Practice being specific and creative with words
 - Share your prompt ideas with friends and family
 
 ### 🚀 Future Possibilities
+
 - Maybe you'll use AI tools like Bob in the future
 - The skills you learned today (clear communication, creative thinking) are valuable everywhere
 - Technology keeps getting better at helping people create
 - Your generation will have amazing tools to bring ideas to life!
 
 ### 📝 Ideas to Write Prompts For (Just for Fun!)
+
 - A quiz about your favorite book or movie
 - A countdown timer for your birthday
 - A random compliment generator for your friends
@@ -406,6 +463,7 @@ Even though you don't have Bob at home, you learned important skills today:
 ### Setup & Preparation
 
 **Before the Workshop:**
+
 - Test Bob and ensure it's working properly
 - Have the projector/screen ready and visible to all students
 - Prepare the virtual-pet and fun-facts-site folders for Round 2
@@ -413,6 +471,7 @@ Even though you don't have Bob at home, you learned important skills today:
 - Have backup prompts ready in case teams struggle
 
 **Materials Needed:**
+
 - Computer with Bob access (connected to projector)
 - Whiteboard or paper for teams to draft prompts
 - Timer for team planning sessions
@@ -421,23 +480,27 @@ Even though you don't have Bob at home, you learned important skills today:
 ### Facilitation Tips
 
 **Team Formation (2 minutes):**
+
 - Create diverse teams of 3-4 students
 - Mix different skill levels and personalities
 - Assign team roles: Idea Generator, Detail Adder, Prompt Writer, Spokesperson
 
 **Managing Time:**
+
 - Use a visible timer for planning sessions
 - Give 2-minute and 1-minute warnings
 - Be flexible - if a demonstration is really engaging, let it run a bit longer
 - Have backup prompts ready if a team isn't ready
 
 **Encouraging Participation:**
+
 - Rotate which teams present each round
 - Celebrate creative and specific prompts
 - Ask teams to explain their thinking
 - Encourage students to build on each other's ideas
 
 **Handling Technical Issues:**
+
 - Have 2-3 backup prompts ready for each round
 - If Bob encounters an error, explain that AI can make mistakes
 - Use it as a teaching moment about iteration and refinement
@@ -446,12 +509,14 @@ Even though you don't have Bob at home, you learned important skills today:
 ### What Students Learn
 
 **Technical Skills:**
+
 - Understanding agentic AI vs. traditional chatbots
 - How AI breaks down complex tasks
 - The importance of clear, specific instructions
 - How code creates interactive experiences
 
 **Soft Skills:**
+
 - Teamwork and collaboration
 - Clear communication
 - Creative problem-solving
@@ -459,6 +524,7 @@ Even though you don't have Bob at home, you learned important skills today:
 - Attention to detail
 
 **AI Literacy:**
+
 - AI capabilities and limitations
 - How AI follows instructions
 - The importance of human creativity and direction
@@ -467,18 +533,21 @@ Even though you don't have Bob at home, you learned important skills today:
 ### Assessment Ideas
 
 **Informal Assessment:**
+
 - Observe team collaboration and engagement
 - Note quality and specificity of prompts
 - Listen to student discussions and questions
 - Watch for "aha!" moments during demonstrations
 
 **Discussion-Based Assessment:**
+
 - Ask students to explain what made a prompt effective
 - Have students identify what Bob did well/poorly
 - Discuss how they would improve a prompt
 - Reflect on what they learned about AI
 
 **Optional Follow-Up:**
+
 - Have students write a reflection about their favorite creation
 - Ask students to write a prompt for a dream project
 - Create a class gallery of prompt ideas
@@ -487,12 +556,14 @@ Even though you don't have Bob at home, you learned important skills today:
 ### Extension Activities
 
 **In Class:**
+
 - Have students write prompts for curriculum topics (math games, science quizzes)
 - Create a "Prompt of the Week" challenge
 - Build a class collection of great prompts
 - Connect to writing skills (descriptive language, clear instructions)
 
 **Cross-Curricular Connections:**
+
 - **Writing:** Descriptive language, clear instructions, technical writing
 - **Art:** Design thinking, color theory, visual communication
 - **Math:** Logic, sequencing, problem decomposition
@@ -501,6 +572,7 @@ Even though you don't have Bob at home, you learned important skills today:
 ### Safety & Ethics Discussion
 
 **Important Points to Cover:**
+
 - AI is a tool created by humans
 - AI follows instructions but can make mistakes
 - Always review and test what AI creates
@@ -512,18 +584,21 @@ Even though you don't have Bob at home, you learned important skills today:
 ### Troubleshooting
 
 **If a prompt doesn't work well:**
+
 - Ask the class: "How could we make this prompt more specific?"
 - Have Bob explain what it understood from the prompt
 - Refine the prompt together as a class
 - Use it as a learning opportunity
 
 **If students are stuck:**
+
 - Show example prompts from the guide
 - Ask guiding questions: "What colors do you want?" "What should happen when you click?"
 - Encourage them to describe it like they're explaining to a friend
 - Remind them there are no wrong ideas
 
 **If time runs short:**
+
 - Prioritize Round 1 and Round 3 (creation rounds)
 - Combine team presentations (show 2 projects back-to-back)
 - Save detailed testing for after the workshop
@@ -532,6 +607,7 @@ Even though you don't have Bob at home, you learned important skills today:
 ### Success Metrics
 
 **Workshop is successful if students:**
+
 - Understand that AI can create real, functional projects
 - Learn to write clear, specific instructions
 - Experience the creative possibilities of AI
@@ -542,12 +618,14 @@ Even though you don't have Bob at home, you learned important skills today:
 ### Post-Workshop
 
 **Share Results:**
+
 - Take screenshots of created projects
 - Share with parents/administrators
 - Post on school website or newsletter
 - Create a highlight video
 
 **Follow-Up:**
+
 - Send home a summary of what students learned
 - Share prompt-writing tips for parents
 - Provide resources for learning more about AI
@@ -562,6 +640,7 @@ Even though you don't have Bob at home, you learned important skills today:
 Today you learned how to communicate with AI to create real projects! You saw your ideas turn into games, websites, and tools - all because you learned to describe what you wanted clearly and creatively.
 
 **Remember:**
+
 - Your creativity and ideas are the most important part
 - Clear, specific instructions help AI understand what you want
 - AI is a powerful tool that can help bring imagination to life
@@ -579,5 +658,5 @@ Every prompt you wrote today was unique and special. You showed that when humans
 *Workshop created for IBM Bob - Making AI Fun and Accessible!*
 *Version 2.0 - Team-Based Demonstration Format*
 *Designed for middle school students (grades 6-8)*
-*Duration: 45 minutes*
+*Duration: 90 minutes*
 *Format: Instructor-led demonstration with team prompt creation*

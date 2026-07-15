@@ -60,9 +60,10 @@ Each workshop is designed to be:
 | :--- | :--- |
 | [Lab 0: Pre-work](pre-work/README.md) | Setup and prerequisites for the workshops |
 | [Lab 1: Middle School Workshop](lab-1/README.md) | Team-based demonstration format (45 minutes) |
-| [Lab 2: High School Workshop](lab-2/README.md) | Hands-on introduction to agentic AI (90 minutes) |
-| [Lab 2 EDT: High School Workshop (EDT Edition)](lab-2-edt/README.md) | Design thinking to AI implementation (90 minutes) |
+| [Lab 2: High School Workshop (EDT Edition)](lab-2-edt/README.md) | Design thinking to AI implementation (90 minutes) |
 | [Lab 3: IBM Employee Workshop](lab-3/README.md) | Professional development acceleration (75 minutes) |
+| [Lab 4: Take Your Child to Work Day](lab-4/README.md) | Parent-child AI adventure (45 minutes) |
+| [Lab 5: IBM PM Workshop](lab-5/README.md) | Accelerate PM work with agentic AI (60 minutes) |
 
 ## What You'll Learn
 
