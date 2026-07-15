@@ -58,7 +58,7 @@ What can you do that a regular chatbot can't?
 
 **Example prompt:**
 ```
-Bob, can you explore my current project directory and tell me what files and
+Can you explore my current project directory and tell me what files and
 folders are here? Create a visual tree structure showing the organization.
 ```
 
@@ -78,7 +78,7 @@ folders are here? Create a visual tree structure showing the organization.
 
 **Example prompt:**
 ```
-Bob, create a fun browser game for me! Make it a simple clicking game where:
+Create a fun browser game for me! Make it a simple clicking game where:
 - I click on objects that appear randomly on screen
 - I get points for each click
 - There's a timer counting down
@@ -109,7 +109,7 @@ Save it in a folder called "click-game"
 
 **Example prompt:**
 ```
-Bob, please read the virtual-pet/script.js file and:
+Please read the virtual-pet/script.js file and:
 1. Explain what the code does
 2. Identify any potential improvements or bugs
 3. Suggest 2-3 enhancements to make it more engaging
@@ -142,7 +142,7 @@ Bob, please read the virtual-pet/script.js file and:
 
 **Example prompt structure:**
 ```
-Bob, I want to create [your idea]. It should [describe main features].
+I want to create [your idea]. It should [describe main features].
 Make it [describe style/appearance]. Save it in a folder called "[project-name]"
 ```
 
@@ -155,7 +155,7 @@ Make it [describe style/appearance]. Save it in a folder called "[project-name]"
 **Iteration Challenge:**
 After Bob creates your project, ask him to add ONE new feature:
 ```
-Bob, can you add [specific feature] to my project?
+Can you add [specific feature] to my project?
 ```
 
 **What to observe:**

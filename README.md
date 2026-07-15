@@ -8,7 +8,7 @@ This repository contains hands-on workshops for learning how to work with IBM Bo
 
 These workshops demonstrate how IBM Bob transforms work through practical exercises. Choose the workshop that fits your experience level:
 
-### 🎓 Middle School Workshop (45 minutes)
+### 🎓 TechTrek Workshop (90 minutes)
 **Fun with AI: Create Cool Stuff with Bob!**
 
 Team-based demonstration format where students create prompts and watch Bob build games, websites, and interactive projects. No coding experience needed!
@@ -40,7 +40,7 @@ Visit the workshop website: **[https://ibm.github.io/intro-bob-workshop](https:/
 ├── docs/                          # Workshop documentation
 │   ├── README.md                  # Workshop overview and introduction
 │   ├── pre-work/                  # Prerequisites and setup
-│   ├── lab-1/                     # Middle School Workshop
+│   ├── lab-1/                     # TechTrek Workshop
 │   ├── lab-2/                     # High School Workshop
 │   ├── lab-3/                     # IBM Employee Workshop
 │   ├── resources/                 # Additional resources and guides
@@ -131,7 +131,7 @@ Bob represents the future of AI-assisted development and productivity.
 
 1. Start with [Pre-work](docs/pre-work/README.md) to set up your environment
 2. Choose your workshop:
-   - [Middle School Workshop](docs/lab-1/README.md)
+   - [TechTrek Workshop](docs/lab-1/README.md)
    - [High School Workshop](docs/lab-2/README.md)
    - [IBM Employee Workshop](docs/lab-3/README.md)
 3. Explore [Additional Resources](docs/resources/RESOURCES.md) to learn more
@@ -145,7 +145,7 @@ Bob represents the future of AI-assisted development and productivity.
 
 ## 📊 Workshop Statistics
 
-- **3 Workshop Tracks**: Middle School, High School, IBM Employee
+- **3 Workshop Tracks**: TechTrek, High School, IBM Employee
 - **210 Minutes**: Total workshop content
 - **Hands-on Learning**: Interactive exercises with real projects
 - **No Prerequisites**: Workshops designed for all skill levels
