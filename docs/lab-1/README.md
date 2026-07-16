@@ -45,7 +45,7 @@ Think of Bob as a super-smart assistant who can turn your ideas into real projec
 
 | Segment | Time |
 | :--- | :--- |
-| Intro to AI & Live Demo | 15 minutes |
+| Intro to AI & Live Demo | 15-20 minutes |
 | Round 1: Team Game Challenge | 20 minutes |
 | Round 2: Creative Challenge | 20 minutes |
 | Demonstration & Discussion | 30 minutes |
@@ -79,21 +79,23 @@ Think of Bob as a super-smart assistant who can turn your ideas into real projec
 
 Kick off the workshop with a quick introduction to what AI is, how it's different from a regular chatbot, and what makes Bob special. Finish with a live demo so students can see Bob in action before the team rounds begin.
 
-**What to Cover:**
 
-- What is AI, and how is it different from a search engine or chatbot?
-- What is *agentic* AI — AI that can actually *do* things?
-- Quick intro to Bob: how it works, what it can build
-- Live demo: instructor types a simple prompt and the class watches Bob create something from scratch
 
-**Tips:**
+![What is AI?](../images/slide-what-is-ai.png)
 
-- Keep it visual — use the projector to show Bob working in real-time
-- Pick a simple, wow-factor prompt (e.g. a colourful animated webpage with the school name)
-- Invite students to shout out ideas for the demo prompt
-- Leave a minute for quick questions before moving to Round 1
+![Let's Play](../images/slide-lets-play.png)
+
+![Large Language Models (LLMs)](../images/slide-llms.png)
+
+![What is Prompt Engineering?](../images/slide-prompt-engineering.png)
+
+![The Shift in Software Development](../images/CodertoArchitect.png)
 
 ---
+
+### Quick intro to Bob: how it works, what it can build
+
+![Introducing Bob](../images/slide-bob.png)
 
 ### 🎮 Round 1: Team Game Challenge! (20 minutes)
 
