@@ -45,10 +45,10 @@ Think of Bob as a super-smart assistant who can turn your ideas into real projec
 
 | Segment | Time |
 | :--- | :--- |
-| Intro to AI & Live Demo | 15 minutes |
+| Intro to AI & Live Demo | 20 minutes |
 | Round 1: Team Game Challenge | 20 minutes |
 | Round 2: Creative Challenge | 20 minutes |
-| Demonstration & Discussion | 30 minutes |
+| Team Showcase & Discussion | 30 minutes |
 | **Total** | **90 minutes** |
 
 ---
@@ -75,7 +75,7 @@ Think of Bob as a super-smart assistant who can turn your ideas into real projec
 
 ## Workshop Activities
 
-### 🎙️ Intro to AI & Live Demo (15 minutes)
+### 🎙️ Intro to AI & Live Demo (20 minutes)
 
 Kick off the workshop with a quick introduction to what AI is, how it's different from a regular chatbot, and what makes Bob special. Finish with a live demo so students can see Bob in action before the team rounds begin.
 
@@ -238,9 +238,9 @@ Add the scoring system from the game to the trivia quiz.
 
 ---
 
-## 🎤 Demonstration & Discussion (30 minutes)
+## 🎤 Team Showcase & Discussion (30 minutes)
 
-This is where it all comes together! Teams share their what they created, what they learned, and what they'd do next.
+This is where it all comes together! Teams share what they created, what they learned, and what they'd do next.
 
 
 ### Discussion
@@ -297,7 +297,7 @@ This is where it all comes together! Teams share their what they created, what t
 
 ### 🎨 Prompt Writing Formula
 
-1. **Start with what you want:** "Bob, create a..."
+1. **Start with what you want:** "Create a..."
 2. **Describe the main feature:** "where..."
 3. **List specific details:** Use bullet points
 4. **Add style preferences:** Colors, animations, mood
@@ -323,34 +323,6 @@ Create a fast-paced clicking game where:
 
 Save it in a folder called "circle-clicker"
 ```
-
----
-
-## What You Learned Today
-
-### About Bob's Superpowers 🦸
-
-- **Bob can CREATE** - Makes new projects from scratch
-- **Bob can READ** - Looks at existing code to understand it
-- **Bob can IMPROVE** - Makes changes without breaking things
-- **Bob can EXPLAIN** - Tells you what the code does
-- **Bob works step-by-step** - Breaks big tasks into small steps
-
-### About AI
-
-- AI can create real things, not just answer questions
-- AI can read and understand code that already exists
-- AI can make careful changes to improve projects
-- AI is a tool that makes creating easier and more fun
-- AI follows your instructions to build what you imagine
-
-### About Creating
-
-- You can make websites and games without knowing how to code
-- Your ideas are the most important part
-- You can improve things that already exist
-- Technology can help bring your imagination to life
-- Creating things is fun and rewarding!
 
 ---
 
@@ -415,7 +387,7 @@ Save it in a folder called "circle-clicker"
 ## Take the Ideas Home!
 
 ### 💡 Things to Think About
-Even though you don't have Bob at home, you learned important skills today:
+Whether or not you have access to Bob at home, you learned important skills today:
 - How to describe ideas clearly and specifically
 - How to break big ideas into smaller parts
 - How to think about what makes something interactive and fun
@@ -455,7 +427,7 @@ Even though you don't have Bob at home, you learned important skills today:
 
 - Test Bob and ensure it's working properly
 - Have the projector/screen ready and visible to all students
-- Prepare the virtual-pet and fun-facts-site folders for Round 2
+- Prepare example project ideas and backup prompts for Round 2
 - Print or prepare team assignment cards
 - Have backup prompts ready in case teams struggle
 
@@ -588,7 +560,7 @@ Even though you don't have Bob at home, you learned important skills today:
 
 **If time runs short:**
 
-- Prioritize Round 1 and Round 3 (creation rounds)
+- Prioritize Round 1 and Round 2 (creation rounds)
 - Combine team presentations (show 2 projects back-to-back)
 - Save detailed testing for after the workshop
 - Focus on the "wow" moments
