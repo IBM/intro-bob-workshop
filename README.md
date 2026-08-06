@@ -6,7 +6,7 @@ This repository contains hands-on workshops for learning how to work with IBM Bo
 
 ## 🎯 Workshop Overview
 
-These workshops demonstrate how IBM Bob transforms work through practical exercises. Choose the workshop that fits your experience level:
+These workshops demonstrate how IBM Bob transforms work through practical exercises for students, professionals, educators, and mixed external audiences.
 
 ### 🎓 TechTrek Workshop (90 minutes)
 **Fun with AI: Create Cool Stuff with Bob!**
@@ -14,7 +14,7 @@ These workshops demonstrate how IBM Bob transforms work through practical exerci
 Team-based demonstration format where students create prompts and watch Bob build games, websites, and interactive projects. No coding experience needed!
 
 ### 🚀 High School Workshop (90 minutes)
-**Introduction to Agentic AI with IBM Bob**
+**From Design Thinking to Agentic AI - EDT Edition**
 
 Hands-on introduction to agentic AI where students create interactive projects, analyze code, and explore real-world applications.
 
@@ -22,6 +22,16 @@ Hands-on introduction to agentic AI where students create interactive projects, 
 **Accelerate Your Work with Agentic AI**
 
 Professional development workshop with guided demonstrations and personalized exploration. Learn Bob's capabilities through real examples, then apply them to your own work challenges.
+
+### 🌐 External Audience Workshop (60 minutes guided workshop + 30-minute presentation)
+**Meet Bob: Agentic AI in Action**
+
+Mixed-audience workshop for developers, managers, executives, and college-level educators. Participants learn what makes Bob agentic, complete role-based exercises, and explore practical uses of AI-assisted work.
+
+### 🧪 Student Concierge Follow-On Lab (30–45 minutes)
+**Build a Student Concierge App (SJSU Edition)**
+
+Optional SJSU-specific follow-on lab for student or developer audiences who want a longer, more technical application-building exercise.
 
 ## 📚 View the Workshops
 
@@ -41,8 +51,13 @@ Visit the workshop website: **[https://ibm.github.io/intro-bob-workshop](https:/
 │   ├── README.md                  # Workshop overview and introduction
 │   ├── pre-work/                  # Prerequisites and setup
 │   ├── lab-1/                     # TechTrek Workshop
-│   ├── lab-2/                     # High School Workshop
+│   ├── lab-2/                     # High School Workshop (legacy)
+│   ├── lab-2-edt/                 # High School Workshop (EDT Edition)
 │   ├── lab-3/                     # IBM Employee Workshop
+│   ├── lab-4/                     # Take Your Child to Work Day
+│   ├── lab-5/                     # IBM PM Workshop
+│   ├── lab-6/                     # External Audience Workshop
+│   ├── lab-6b/                    # Student Concierge follow-on lab
 │   ├── resources/                 # Additional resources and guides
 │   └── images/                    # Images and screenshots
 ├── data/                          # Sample data files (if needed)
@@ -132,8 +147,12 @@ Bob represents the future of AI-assisted development and productivity.
 1. Start with [Pre-work](docs/pre-work/README.md) to set up your environment
 2. Choose your workshop:
    - [TechTrek Workshop](docs/lab-1/README.md)
-   - [High School Workshop](docs/lab-2/README.md)
+   - [High School Workshop (EDT Edition)](docs/lab-2-edt/README.md)
    - [IBM Employee Workshop](docs/lab-3/README.md)
+   - [Take Your Child to Work Day](docs/lab-4/README.md)
+   - [IBM PM Workshop](docs/lab-5/README.md)
+   - [External Audience Workshop](docs/lab-6/README.md)
+   - [Student Concierge Follow-On Lab](docs/lab-6b/README.md)
 3. Explore [Additional Resources](docs/resources/RESOURCES.md) to learn more
 
 ## 🙏 Acknowledgments
@@ -145,8 +164,8 @@ Bob represents the future of AI-assisted development and productivity.
 
 ## 📊 Workshop Statistics
 
-- **3 Workshop Tracks**: TechTrek, High School, IBM Employee
-- **210 Minutes**: Total workshop content
+- **7 Workshop Labs**: Student, employee, PM, family, and external-audience formats
+- **420–435 Minutes**: Total workshop content including the optional follow-on lab
 - **Hands-on Learning**: Interactive exercises with real projects
 - **No Prerequisites**: Workshops designed for all skill levels
 
