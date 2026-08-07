@@ -103,7 +103,8 @@ Participants choose the track that fits their role. Each track takes approximate
 
 **Objective:** Experience Bob's ability to scaffold a working, testable project from a clear prompt — then iterate on it.
 
-> 🆕 **Before starting Exercise A1:** Click **New Task** in Bob to clear the context window from Part 1. This ensures Bob isn't influenced by the previous request.
+!!! note "Before starting Exercise A1"
+    Click **New Task** in Bob to clear the context window from Part 1. This ensures Bob isn't influenced by the previous request.
 
 #### Exercise A1: Scaffold a REST API with Tests
 
@@ -144,7 +145,8 @@ Add a Jest test file to the task-api project that tests:
 
 ---
 
-> 🆕 **Before starting Exercise A2:** Click **New Task** in Bob to clear the context window from Exercise A1. This ensures Bob isn't influenced by the previous request.
+!!! note "Before starting Exercise A2"
+    Click **New Task** in Bob to clear the context window from Exercise A1. This ensures Bob isn't influenced by the previous request.
 
 #### Exercise A2: Data Analysis with Python (Data Science Option)
 
@@ -195,7 +197,8 @@ Add a matplotlib visualization to analyze_sales.py that:
 
 **Objective:** Experience Bob producing polished, structured business artifacts from a short brief — the kind of work that normally takes hours.
 
-> 🆕 **Before starting Exercise B1:** Click **New Task** in Bob to clear the context window from Part 1. This ensures Bob isn't influenced by the previous request.
+!!! note "Before starting Exercise B1"
+    Click **New Task** in Bob to clear the context window from Part 1. This ensures Bob isn't influenced by the previous request.
 
 #### Exercise B1: Write a One-Page Product Brief
 
@@ -237,7 +240,8 @@ Format as a markdown table and save as "user-stories.md"
 
 ---
 
-> 🆕 **Before starting Exercise B2:** Click **New Task** in Bob to clear the context window from Exercise B1. This ensures Bob isn't influenced by the previous request.
+!!! note "Before starting Exercise B2"
+    Click **New Task** in Bob to clear the context window from Exercise B1. This ensures Bob isn't influenced by the previous request.
 
 #### Exercise B2: Build an Interactive Feedback Dashboard
 
@@ -278,7 +282,8 @@ Give me the file path to open it in my browser.
 
 **Objective:** See how Bob can accelerate course design, assignment creation, research scaffolding, and academic document production.
 
-> 🆕 **Before starting Exercise C1:** Click **New Task** in Bob to clear the context window from Part 1. This ensures Bob isn't influenced by the previous request.
+!!! note "Before starting Exercise C1"
+    Click **New Task** in Bob to clear the context window from Part 1. This ensures Bob isn't influenced by the previous request.
 
 #### Exercise C1: Design a Course Module
 
@@ -323,7 +328,8 @@ Format as a markdown list and save as "exam-questions.md"
 
 ---
 
-> 🆕 **Before starting Exercise C2:** Click **New Task** in Bob to clear the context window from Exercise C1. This ensures Bob isn't influenced by the previous request.
+!!! note "Before starting Exercise C2"
+    Click **New Task** in Bob to clear the context window from Exercise C1. This ensures Bob isn't influenced by the previous request.
 
 #### Exercise C2: Research Literature Summary
 
@@ -362,9 +368,11 @@ Save it as "literature-review-draft.md"
 
 ## Part 3: Participant-Driven Activity (20 minutes)
 
-> 🆕 **Before starting Part 3:** Click **New Task** in Bob to clear the context window from your track exercise. You're starting something new — a clean context gives Bob a fresh start.
+!!! note "Before starting Part 3"
+    Click **New Task** in Bob to clear the context window from your track exercise. You're starting something new — a clean context gives Bob a fresh start.
 
-> **Facilitator framing:** In this workshop, participants are using Bob as an agentic AI system to build artifacts for them. If you want to connect this more directly to the event theme of "building your own agents," position this section as a lightweight agent-design exercise: participants can define a role, instructions, and output style that make Bob behave like *their* agent for a domain they care about.
+!!! tip "Facilitator framing"
+    In this workshop, participants are using Bob as an agentic AI system to build artifacts for them. If you want to connect this more directly to the event theme of "building your own agents," position this section as a lightweight agent-design exercise: participants can define a role, instructions, and output style that make Bob behave like *their* agent for a domain they care about.
 
 Now it's your turn. Use what you just learned to ask Bob to build something that **interests you** — a sample, a proof-of-concept, or a fun mock-up in a domain you care about. It doesn't have to be real or production-ready; the goal is to see how far Bob can take an idea you find genuinely interesting.
 
@@ -530,14 +538,3 @@ The workshop is successful if participants leave with:
 - A concrete mental model of the difference between agentic AI and a chatbot
 - At least one artifact they actually want to keep or adapt
 - A clear sense of where to use Bob in their own work next week
-
----
-
-> Facilitator note: The former optional "Student Concierge App (SJSU Edition)" deep-dive now lives in [Optional Lab: Student Concierge App (SJSU Edition)](../lab-6b/README.md) for student or developer audiences who want a longer follow-on exercise.
-
----
-
-*Workshop created for IBM Bob — Meet Bob: Agentic AI in Action*
-*Version 1.0 — Designed for mixed external audiences (developers, PMs, executives, and educators)*
-*Duration: 60 minutes (following a 30-minute presentation)*
-*Last Updated: 2026*
