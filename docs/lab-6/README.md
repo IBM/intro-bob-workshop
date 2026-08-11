@@ -523,7 +523,7 @@ You don't — without reviewing it. The agent is a strong starting point, not a 
 **"Can Bob connect to the internet or my company's systems?"**
 Not by default. Bob works with local files and tools. Integrations with external systems require configuration.
 
-**"What's the difference between Bob and ChatGPT?"**
+**"What makes Bob different from a general-purpose chat tool?"**
 Bob is an *agentic* AI — it doesn't just answer questions. It follows a Plan → Act → Evaluate → Output loop: it decides what steps to take, uses tools to carry them out, checks whether the result is complete, and either delivers the output or tries again. General-purpose chat tools can answer questions about code; Bob is embedded in your IDE and acts directly on your workspace — reading, writing, and running files as part of its reasoning loop. The agentic behaviour isn't a feature you configure; it's how Bob works by default.
 
 ---
