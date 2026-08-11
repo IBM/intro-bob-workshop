@@ -165,27 +165,38 @@ Build a Python report comparison agent. The agent should:
      referencing some of the same items (some now completed, some still open,
      some new)
 
-2. Then write a Python script called "agent.py" in the same folder that:
-   - Reads both report files
-   - Compares them item by item
-   - Classifies each item as: COMPLETED, STILL PENDING, or NEW ISSUE
-   - If fewer than 2 actionable items are found, re-reads the reports with
-     looser matching and tries again (retry loop)
-   - Builds a list of reasoning steps as it works — one entry per item —
-     capturing exactly what it checked and why it made each decision
-     (e.g., "Checking 'API auth module'... found in both reports, marked done
-     this month → COMPLETED")
-   - If the retry loop fires, records that decision as a reasoning step too
-     (e.g., "Only 1 actionable item found — re-running with looser matching...")
-   - Generates a self-contained HTML file called "report.html" that:
+2. Then write a Python script called "agent.py" in the same folder that
+   implements a genuine Plan → Act → Evaluate → Output loop:
+
+   PLAN: For each item found in the reports, decide what needs to be checked.
+
+   ACT: Classify each item as COMPLETED, STILL PENDING, or NEW ISSUE by calling
+   the Ollama API (http://localhost:11434/api/generate, model "llama3") with a
+   short prompt that passes in the item text and asks for a one-word classification
+   and a one-sentence reason. If Ollama is not running (connection refused), fall
+   back to keyword matching and record "[fallback: Ollama unavailable]" in the
+   trace for that item.
+
+   EVALUATE: After classifying all items, check whether fewer than 2 actionable
+   items (STILL PENDING or NEW ISSUE) were found. If so, retry the ACT step with
+   a broader prompt that asks the model to be more inclusive, and record the
+   retry decision in the trace (e.g., "Only 1 actionable item found — retrying
+   with broader criteria...").
+
+   OUTPUT: Build a list of execution trace entries as the loop runs — one entry
+   per item — recording: the item text, the classification, the model's reason
+   (or fallback note), and whether it came from a retry. Then generate a
+   self-contained HTML file called "report.html" that:
      - Opens automatically in the default browser when the script finishes
-     - Has two sections side by side: an "Agent Reasoning" panel on the left
-       and the final results on the right
-     - The Agent Reasoning panel replays the reasoning steps one at a time
+     - Has two sections side by side: a "Decision/Execution Trace" panel on the
+       left and the final results on the right
+     - The Decision/Execution Trace panel replays the trace entries one at a time
        using a CSS animation (each step fades in 0.4 s after the previous),
-       so the audience watches the agent think through every item in sequence
-     - If the retry loop fired, its step appears highlighted in amber in the
-       reasoning panel so it stands out as the self-correction moment
+       so the audience watches each classification decision appear in sequence
+     - Each trace entry shows: the item name, the classification badge, and the
+       model's one-sentence reason (or fallback note in italics)
+     - If the retry loop fired, its entry appears highlighted in amber so it
+       stands out as the self-correction moment
      - The results panel shows a summary card (total / completed / pending /
        new issues) and a color-coded table: green for COMPLETED, amber for
        STILL PENDING, red for NEW ISSUE
@@ -194,9 +205,11 @@ Build a Python report comparison agent. The agent should:
      - Uses clean, professional styling — no external libraries or CDN links,
        fully self-contained
 
-3. Include a short README.md explaining what the agent does and how to run it.
+3. Include a short README.md explaining what the agent does, how to run it,
+   and how to start Ollama locally if needed (`ollama run llama3`).
 
-Use only Python standard library — no pip installs required.
+Use only Python standard library for everything except the Ollama HTTP call
+(use urllib.request — no pip installs required).
 Save everything in a folder called "report-agent".
 ```
 
@@ -213,14 +226,15 @@ In the VS Code integrated terminal, run these as two separate commands:
     python agent.py
     ```
 
-`report.html` will open in your browser automatically. Watch the left panel — the agent's reasoning steps appear one by one as if it's thinking in real time.
+`report.html` will open in your browser automatically. Watch the left panel — each classification decision appears one by one, with the model's reason, as the agent works through the reports.
 
 **What to observe:**
 
-- The **left panel animates the agent's reasoning** step by step — this is the Plan → Act → Evaluate loop made visible, not just a final result
-- If the retry fired, watch for the **amber highlight** mid-sequence: that's the self-correction moment, the thing that makes it an agent rather than a script
-- The **right panel** shows the color-coded classification table and follow-up brief — the structured artifact the agent produced
-- Bob wrote the classification logic, the retry loop, the reasoning trace, *and* the animated HTML from a single natural-language description
+- The **left panel is a Decision/Execution Trace** — each entry shows the item, the classification, and the model's stated reason. This is the Act step happening at runtime, not pre-computed output
+- If Ollama wasn't running, entries marked *[fallback: Ollama unavailable]* show the keyword-matching path — a concrete illustration of graceful degradation
+- If the retry fired, watch for the **amber highlight**: the agent evaluated its own output, decided it wasn't good enough, and re-ran — that's the Evaluate step made visible
+- The **right panel** shows the color-coded classification table and follow-up brief — the Output step: the structured artifact the agent produced after reasoning through every item
+- Bob wrote the Ollama integration, the retry loop, the fallback path, the execution trace, *and* the animated HTML from a single natural-language description
 
 **Follow-up prompt (if time allows):**
 
@@ -233,7 +247,7 @@ between the two reports.
 
 **Discussion points:**
 
-- At what point in the reasoning panel did you see the agent *evaluate* its own output before continuing?
+- At what point in the Decision/Execution Trace did you see the agent *evaluate* its own output before continuing?
 - How would you extend this agent to pull reports from a real system (Jira, Confluence, email)?
 - What parts of this output would you trust immediately, and what would you verify before sending to a stakeholder?
 - How does building this — the logic, the retry loop, and the animated report — compare to writing it from scratch without Bob?
@@ -501,7 +515,7 @@ Invite 3–4 participants to share:
 Then open for Q&A. Common questions to be ready for:
 
 **"Is this safe to use at my company?"**
-Bob runs locally inside VS Code. Your prompts and files stay on your machine unless your organization's policy specifies otherwise. Always check your company's AI usage guidelines before using any AI tool with proprietary information.
+The Bob extension runs inside VS Code on your machine, but your prompts are sent to a remote model endpoint to generate responses — they do not stay local. How that data is handled depends on which model your organisation has configured and the terms of your enterprise agreement with that provider. Always check your company's AI usage guidelines before using any AI tool with proprietary information.
 
 **"How do I know if the output is correct?"**
 You don't — without reviewing it. The agent is a strong starting point, not a final decision. Always apply your domain expertise to validate what the agent produces before acting on it.
@@ -510,7 +524,7 @@ You don't — without reviewing it. The agent is a strong starting point, not a 
 Not by default. Bob works with local files and tools. Integrations with external systems require configuration.
 
 **"What's the difference between Bob and ChatGPT?"**
-Bob is an *agentic* AI — it doesn't just answer questions. It follows a Plan → Act → Evaluate → Output loop: it decides what steps to take, uses tools to carry them out, checks whether the result is complete, and either delivers the output or tries again. ChatGPT responds to a single message; Bob reasons through a multi-step task and takes real action on your files.
+Bob is an *agentic* AI — it doesn't just answer questions. It follows a Plan → Act → Evaluate → Output loop: it decides what steps to take, uses tools to carry them out, checks whether the result is complete, and either delivers the output or tries again. General-purpose chat tools can answer questions about code; Bob is embedded in your IDE and acts directly on your workspace — reading, writing, and running files as part of its reasoning loop. The agentic behaviour isn't a feature you configure; it's how Bob works by default.
 
 ---
 
