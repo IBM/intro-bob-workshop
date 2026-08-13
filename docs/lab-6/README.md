@@ -1,17 +1,17 @@
 # IBM Bob Workshop for the Silicon Valley Leadership Group
 ## Meet Bob: Agentic AI in Action
 
-### Workshop Overview
+## Workshop Overview
 
-This workshop introduces IBM Bob — an agentic AI assistant — to audiences outside IBM. Whether you write code, lead a team, or teach at a university, you'll leave with a concrete sense of what agentic AI can do and how it differs from a regular chatbot.
+This workshop introduces IBM Bob — an agentic AI assistant — to audiences outside IBM. Whether you write code, lead a team, or teach at a university, you'll leave having built your own agent and experienced first-hand how AI can move beyond single prompts to plan, reason through data, and produce structured results autonomously.
 
-The session combines a brief whole-group exercise that everyone does together, followed by three parallel guided tracks where participants choose the path most relevant to their role. The workshop closes with a participant-driven activity and group discussion.
+The session opens with a whole-group demonstration, then branches into three role-based tracks where each participant builds an agent relevant to their work. The workshop closes with a participant-driven agent design activity and group discussion.
 
 **Duration:** 60 minutes guided workshop (following a 30-minute presentation)
 
 **Target Audience:** Mixed — software developers, product managers, executives, and college-level educators/professors
 
-**Prerequisites:** None. Laptop with Bob access and VS Code with the Bob extension.
+**Prerequisites:** None. Laptop with Bob access and VS Code with the Bob extension. Don't have Bob yet? [Download the free trial at bob.ibm.com/download](https://bob.ibm.com/download).
 
 **Materials Needed:** Laptop with Bob access, VS Code with Bob extension, projector for shared demos
 
@@ -52,11 +52,26 @@ The session combines a brief whole-group exercise that everyone does together, f
 
 ---
 
+## How an Agent Thinks
+
+Every agent — no matter how complex — follows the same four-step loop. Understanding this loop is what separates agentic AI from a simple chatbot.
+
+| Stage | What it does | Monthly-report example |
+| :--- | :--- | :--- |
+| **Plan** | Decides what to do and in what order | "I need to read last month's report, then this month's, then compare them line by line." |
+| **Act** | Uses a tool or reads/writes a file to carry out one step | Reads both report files from disk. |
+| **Evaluate** | Checks whether the result is complete or needs more work | Reviews each item and labels it: *completed*, *still pending*, or *new issue*. |
+| **Output** | Delivers the final result — or loops back if something is missing | Writes a follow-up action brief listing every open item with an owner and due date. |
+
+The loop can run once or dozens of times before the agent is satisfied it has answered the question. That self-checking behavior — *evaluate and retry* — is the key difference between an agent and a one-shot prompt.
+
+---
+
 ## Part 1: Warm-Up — Whole-Group Exercise (10 minutes)
 
 Everyone does this together. The goal is a quick, impressive demonstration that shows the whole room what Bob is capable of before participants branch into their own tracks.
 
-### Exercise: "Build Me a Dashboard"
+### Exercise 1: "Build Me a Dashboard"
 
 **Objective:** See Bob go from a plain-language description to a working, interactive file in a single prompt.
 
@@ -89,6 +104,36 @@ Then give me the file path so I can open it in my browser.
 - How long would that have taken to build manually?
 - What would you change about it?
 
+### Exercise 2: Iterate on the Dashboard
+
+The first prompt got you something working. Now see what happens when you ask Bob to improve it. Try one of the prompts below — or write your own.
+
+**Example follow-up prompts:**
+
+```
+Can you add a filter so I can show only the Engineering department?
+```
+
+```
+Add a slider that filters out anyone with a performance score below a certain level.
+```
+
+```
+Make the bar chart color-coded — green for scores above 7, yellow for 5–7, red for below 5.
+```
+
+```
+Add a search box so I can look up an employee by name.
+```
+
+**What to observe:**
+
+- Bob reads and understands the file it already created — you don't need to re-explain it
+- A single follow-up sentence produces a targeted, working change
+- The rest of the dashboard stays intact; Bob only touches what it needs to
+
+**Facilitator note:** Let a participant call out one change they want to see and run it live. This demonstrates that the first output is just a starting point — not a finished product you hand off and walk away from.
+
 ---
 
 ## Part 2: Guided Track Exercises (20 minutes)
@@ -101,93 +146,111 @@ Participants choose the track that fits their role. Each track takes approximate
 
 **Audience:** Software engineers, architects, DevOps practitioners, data engineers
 
-**Objective:** Experience Bob's ability to scaffold a working, testable project from a clear prompt — then iterate on it.
+**Objective:** Use Bob to build a fully runnable Python agent that reads two monthly reports, compares them, and produces a structured follow-up brief — demonstrating the Plan → Act → Evaluate → Output loop in live, executable code.
 
 !!! note "Before starting Exercise A1"
     Click **New Task** in Bob to clear the context window from Part 1. This ensures Bob isn't influenced by the previous request.
 
-#### Exercise A1: Scaffold a REST API with Tests
+#### Exercise A1: Build a Report Comparison Agent
 
 **Task:**
 
 ```
-Create a small Node.js REST API for a task management service:
-- Express.js framework
-- Endpoints: GET /tasks, POST /tasks, PUT /tasks/:id, DELETE /tasks/:id
-- In-memory storage (no database needed)
-- Basic input validation (task must have a title)
-- Error handling middleware
-- A README with setup and test instructions
+Build a Python report comparison agent. The agent should:
 
-Save it in a folder called "task-api"
+1. First, create two plain-text files in a folder called "report-agent":
+   - "report_last_month.txt" — a fictional project status report for last month
+     with 8 items (mix of completed work, ongoing tasks, and blockers)
+   - "report_this_month.txt" — a fictional status report for this month
+     referencing some of the same items (some now completed, some still open,
+     some new)
+
+2. Then write a Python script called "agent.py" in the same folder that
+   implements a genuine Plan → Act → Evaluate → Output loop:
+
+   PLAN: For each item found in the reports, decide what needs to be checked.
+
+   ACT: Classify each item as COMPLETED, STILL PENDING, or NEW ISSUE by calling
+   the Ollama API (http://localhost:11434/api/generate, model "llama3") with a
+   short prompt that passes in the item text and asks for a one-word classification
+   and a one-sentence reason. If Ollama is not running (connection refused), fall
+   back to keyword matching and record "[fallback: Ollama unavailable]" in the
+   trace for that item.
+
+   EVALUATE: After classifying all items, check whether fewer than 2 actionable
+   items (STILL PENDING or NEW ISSUE) were found. If so, retry the ACT step with
+   a broader prompt that asks the model to be more inclusive, and record the
+   retry decision in the trace (e.g., "Only 1 actionable item found — retrying
+   with broader criteria...").
+
+   OUTPUT: Build a list of execution trace entries as the loop runs — one entry
+   per item — recording: the item text, the classification, the model's reason
+   (or fallback note), and whether it came from a retry. Then generate a
+   self-contained HTML file called "report.html" that:
+     - Opens automatically in the default browser when the script finishes
+     - Has two sections side by side: a "Decision/Execution Trace" panel on the
+       left and the final results on the right
+     - The Decision/Execution Trace panel replays the trace entries one at a time
+       using a CSS animation (each step fades in 0.4 s after the previous),
+       so the audience watches each classification decision appear in sequence
+     - Each trace entry shows: the item name, the classification badge, and the
+       model's one-sentence reason (or fallback note in italics)
+     - If the retry loop fired, its entry appears highlighted in amber so it
+       stands out as the self-correction moment
+     - The results panel shows a summary card (total / completed / pending /
+       new issues) and a color-coded table: green for COMPLETED, amber for
+       STILL PENDING, red for NEW ISSUE
+     - Includes a "Follow-up Action Brief" below the table listing only
+       STILL PENDING and NEW ISSUE items, each with a suggested next step
+     - Uses clean, professional styling — no external libraries or CDN links,
+       fully self-contained
+
+3. Include a short README.md explaining what the agent does, how to run it,
+   and how to start Ollama locally if needed (`ollama run llama3`).
+
+Use only Python standard library for everything except the Ollama HTTP call
+(use urllib.request — no pip installs required).
+Save everything in a folder called "report-agent".
 ```
+
+**Run it:**
+
+In the VS Code integrated terminal, run these as two separate commands:
+
+1. Navigate into the folder:
+    ```bash
+    cd report-agent
+    ```
+2. Run the script:
+    ```bash
+    python agent.py
+    ```
+
+`report.html` will open in your browser automatically. Watch the left panel — each classification decision appears one by one, with the model's reason, as the agent works through the reports.
 
 **What to observe:**
 
-- Bob creates a multi-file project with sensible structure
-- Bob includes validation and error handling without being told exactly how
-- Bob generates a README you could actually hand to a teammate
+- The **left panel is a Decision/Execution Trace** — each entry shows the item, the classification, and the model's stated reason. This is the Act step happening at runtime, not pre-computed output
+- If Ollama wasn't running, entries marked *[fallback: Ollama unavailable]* show the keyword-matching path — a concrete illustration of graceful degradation
+- If the retry fired, watch for the **amber highlight**: the agent evaluated its own output, decided it wasn't good enough, and re-ran — that's the Evaluate step made visible
+- The **right panel** shows the color-coded classification table and follow-up brief — the Output step: the structured artifact the agent produced after reasoning through every item
+- Bob wrote the Ollama integration, the retry loop, the fallback path, the execution trace, *and* the animated HTML from a single natural-language description
 
 **Follow-up prompt (if time allows):**
 
 ```
-Add a Jest test file to the task-api project that tests:
-- Creating a task returns 201 with the new task
-- Getting all tasks returns an array
-- Deleting a non-existent task returns 404
+Add a confidence score (0–100) to each reasoning step and each row
+in the results table. Show it as a small color-matched badge.
+The score should reflect how clearly the item's status changed
+between the two reports.
 ```
 
 **Discussion points:**
 
-- How much of the output would you use as-is in a real project?
-- Where would you review most carefully before shipping?
-- How does this change the "first hour" of a new feature or service?
-
----
-
-!!! note "Before starting Exercise A2"
-    Click **New Task** in Bob to clear the context window from Exercise A1. This ensures Bob isn't influenced by the previous request.
-
-#### Exercise A2: Data Analysis with Python (Data Science Option)
-
-**Audience:** Data engineers, data scientists, analysts with Python experience
-
-**Task:**
-
-```
-Create a Python data analysis project:
-- Generate a sample CSV file called "sales_data.csv" with 50 rows and columns:
-  Region, Product, Units Sold, Unit Price, Sale Date
-- Write a Python script called "analyze_sales.py" that:
-  - Loads the CSV with pandas
-  - Calculates total revenue per region
-  - Finds the top-selling product by units
-  - Computes month-over-month revenue trend
-  - Outputs a summary report to "sales_summary.txt"
-- Include a requirements.txt and instructions to run the analysis
-
-Save everything in a folder called "sales-analysis"
-```
-
-**What to observe:**
-
-- Bob generates realistic sample data alongside the analysis code
-- Bob infers the right pandas operations from natural language
-- Bob creates runnable code with installation instructions included
-
-**Follow-up prompt (if time allows):**
-
-```
-Add a matplotlib visualization to analyze_sales.py that:
-- Creates a bar chart of revenue by region
-- Saves it as "revenue_by_region.png"
-```
-
-**Discussion points:**
-
-- How does this compare to writing the same analysis from scratch?
-- What would you validate before trusting the output in a real analysis?
-- How could this accelerate exploratory data analysis on real datasets?
+- At what point in the Decision/Execution Trace did you see the agent *evaluate* its own output before continuing?
+- How would you extend this agent to pull reports from a real system (Jira, Confluence, email)?
+- What parts of this output would you trust immediately, and what would you verify before sending to a stakeholder?
+- How does building this — the logic, the retry loop, and the animated report — compare to writing it from scratch without Bob?
 
 ---
 
@@ -195,84 +258,67 @@ Add a matplotlib visualization to analyze_sales.py that:
 
 **Audience:** PMs, product owners, directors, VPs, executives, business analysts
 
-**Objective:** Experience Bob producing polished, structured business artifacts from a short brief — the kind of work that normally takes hours.
+**Objective:** Direct Bob to build and run a project status comparison agent — no code required. You define the agent's role through natural language; Bob handles the implementation and execution inside VS Code. You experience the agentic loop through the decisions the agent makes on your behalf.
 
 !!! note "Before starting Exercise B1"
     Click **New Task** in Bob to clear the context window from Part 1. This ensures Bob isn't influenced by the previous request.
 
-#### Exercise B1: Write a One-Page Product Brief
+!!! tip "You are the agent designer, not the coder"
+    In this track you write the prompts that define what the agent does. Bob builds it, runs it, and brings you the result. Your job is to evaluate what the agent decided and refine its instructions — the same skills you use every day as a PM.
+
+#### Exercise B1: Build a Status Report Comparison Agent
 
 **Task:**
 
 ```
-Write a one-page product brief for the following:
+I want to build an agent that compares monthly project status reports and
+tells me what to follow up on. Please:
 
-Product: An AI-powered meeting summarizer for enterprise teams
-- Listens to or reads meeting transcripts
-- Generates action items, decisions made, and open questions
-- Integrates with Slack and email
-- Aimed at managers and team leads
+1. Create two fictional project status reports as plain-text files:
+   - "status_june.txt" — last month's report with 8 project items
+     (a mix of completed milestones, ongoing work, and risks/blockers)
+   - "status_july.txt" — this month's report referencing the same project
+     (some items resolved, some still open, some new issues added)
 
-Include:
-- Problem statement (2–3 sentences)
-- Target user persona
-- Top 3 value propositions
-- Success metrics (KPIs)
-- Key risks and open questions
+2. Build a Python agent called "status_agent.py" that:
+   - Reads both reports
+   - Compares them and classifies each item as: DONE, STILL OPEN, or NEW ISSUE
+   - Explains its reasoning for each classification in plain English
+   - Produces a clean follow-up action brief saved as "action_brief.txt"
+     with only the STILL OPEN and NEW ISSUE items, each with a suggested owner
+     and suggested next step
 
-Keep it concise and executive-ready. Save it as "meeting-summarizer-brief.md"
+3. Run the agent and show me the action_brief.txt when it's done.
+
+Save everything in a folder called "status-agent".
 ```
 
 **What to observe:**
 
-- Bob structures the brief using standard PM sections without being told the exact format
-- Bob infers realistic metrics and personas from the product description
-- The output is ready to share with engineering or design partners
+- Watch Bob's narration as it builds the agent — this is the **Plan** stage made visible
+- The agent's reasoning explanation is the **Evaluate** stage: it is checking its own classifications before committing them to the brief
+- `action_brief.txt` is a business artifact the running agent produced autonomously — not written by Bob in chat, but generated by code that reasoned through the data
+- Notice what the agent inferred *without being told*: owner suggestions, next-step wording, item grouping
 
-**Follow-up prompt (if time allows):**
-
-```
-Now write 5 user stories for the meeting summarizer in
-"As a [persona], I want [goal], so that [benefit]" format.
-Add 3 acceptance criteria for each story.
-Format as a markdown table and save as "user-stories.md"
-```
-
----
-
-!!! note "Before starting Exercise B2"
-    Click **New Task** in Bob to clear the context window from Exercise B1. This ensures Bob isn't influenced by the previous request.
-
-#### Exercise B2: Build an Interactive Feedback Dashboard
-
-**Task:**
+**Follow-up prompts (if time allows):**
 
 ```
-Create a sample CSV file called "customer-feedback.csv" with 20 rows of made-up
-customer feedback data. Include columns: Date, Customer Segment, Product Area,
-Sentiment (Positive/Neutral/Negative), and Feedback Summary.
-
-Then build a self-contained HTML dashboard called "feedback-dashboard.html" that:
-- Shows all feedback in a filterable table (filter by Segment, Product Area, Sentiment)
-- Shows a pie chart breaking down sentiment
-- Shows a count card: total feedback, % positive, % negative
-- Highlights Negative sentiment rows in red
-- Requires no external libraries — fully self-contained
-
-Give me the file path to open it in my browser.
+Now show me the action brief as a formatted table in chat — columns for
+Item, Status, Suggested Owner, and Next Step.
 ```
 
-**What to observe:**
-
-- Bob generates realistic mock data AND the dashboard in one pass
-- Bob wires the filters, chart, and summary cards together automatically
-- The result is a shareable, browser-ready artifact with no setup
+```
+Re-run the status agent but this time only include items that have been
+STILL OPEN for more than one reporting period. Add a "Priority" field to
+each item in action_brief.txt: High if it's a blocker or risk, Medium otherwise.
+```
 
 **Discussion points:**
 
-- What kinds of real data would you drop into a dashboard like this?
-- How does this change how you prepare for stakeholder reviews?
-- Where does human PM judgment still matter most?
+- What did the agent decide that you would have decided differently? Why?
+- How would this change your weekly status review process?
+- Where does human PM judgment still own the decision — and where is the agent genuinely useful?
+- What would you need to trust before sending the agent's output directly to a stakeholder?
 
 ---
 
@@ -280,89 +326,103 @@ Give me the file path to open it in my browser.
 
 **Audience:** University faculty, instructors, curriculum designers, academic researchers
 
-**Objective:** See how Bob can accelerate course design, assignment creation, research scaffolding, and academic document production.
+**Objective:** Direct Bob to build and run a student submission review agent — no code required. You define the evaluation criteria through natural language; Bob builds the agent and runs it. You experience the agentic loop through the triage decisions it makes, and decide where your instructor judgment still needs to take over.
 
 !!! note "Before starting Exercise C1"
     Click **New Task** in Bob to clear the context window from Part 1. This ensures Bob isn't influenced by the previous request.
 
-#### Exercise C1: Design a Course Module
+!!! tip "The agent triages — you decide"
+    This agent does not grade. It reads student responses against the rubric you define, flags what needs attention, and hands the decision back to you. Your expertise is still the final word.
+
+#### Exercise C1: Build a Student Submission Review Agent
 
 **Task:**
 
 ```
-Design a one-week undergraduate course module on the following topic:
+I want to build an agent that helps me triage student short-answer responses
+before I read them. Please:
 
-Course: Introduction to Artificial Intelligence
-Module: "Agentic AI — When AI Takes Action"
-Level: Sophomore/Junior undergraduate
-Duration: One week (3 hours of class time + 2 hours of self-study)
+1. Generate 5 fictional student responses (2–4 paragraphs each) to the
+   following prompt:
+   "Describe one real-world example of agentic AI and explain what makes
+   it different from a traditional AI assistant."
+   Save them as "student_1.txt" through "student_5.txt" in a folder
+   called "review-agent". Make the responses vary in quality — some strong,
+   some that miss key concepts, one that is off-topic.
 
-Include:
-- Learning objectives (4–5, written as measurable outcomes)
-- Lecture outline (2 x 75-minute sessions with topics and time allocations)
-- One in-class activity with instructions
-- One take-home assignment with a grading rubric (3 criteria, 4-point scale)
-- A list of 5 recommended readings or resources (real or plausible)
+2. Build a Python agent called "review_agent.py" that:
+   - Reads each student response file
+   - Evaluates it against this rubric:
+       * Criterion 1: Identifies a real and plausible real-world example (0–2 points)
+       * Criterion 2: Correctly explains what makes agentic AI different (0–2 points)
+       * Criterion 3: Writing is clear and on-topic (0–1 point)
+   - Classifies each submission as: STRONG, NEEDS REVISION, or NEEDS INSTRUCTOR ATTENTION
+   - Flags any submission it is uncertain about with "[REVIEW RECOMMENDED]"
+   - Builds a reasoning trace as it works — one entry per student — capturing
+     what it found against each criterion and why it made the classification
+   - Generates a self-contained HTML file called "triage_report.html" that:
+     - Opens automatically in the default browser when the script finishes
+     - Has two sections side by side: an "Agent Reasoning" panel on the left
+       and the triage results on the right
+     - The Agent Reasoning panel replays the reasoning steps one at a time
+       using a CSS animation (each step fades in 0.4s after the previous),
+       so you can watch the agent evaluate each student in sequence
+     - Any step where the agent flags uncertainty appears highlighted in amber
+       so the self-correction moment stands out
+     - The results panel shows a summary card at the top (total submissions,
+       how many STRONG, NEEDS REVISION, NEEDS INSTRUCTOR ATTENTION)
+     - Below the summary, a color-coded table — one row per student:
+       green for STRONG, amber for NEEDS REVISION, red for NEEDS INSTRUCTOR ATTENTION
+     - Each red row shows a visible "REVIEW RECOMMENDED" badge if flagged
+     - Each row includes the total score and a one-sentence agent note
+     - Uses clean, professional styling — no external libraries or CDN links,
+       fully self-contained
 
-Save it as "ai-agents-module.md"
+3. Include a short README.md explaining what the agent does and how to run it.
+
+Use only Python standard library — no pip installs required.
+Save everything in a folder called "review-agent".
 ```
+
+**Run it:**
+
+In the VS Code integrated terminal, run these as two separate commands:
+
+1. Navigate into the folder:
+    ```bash
+    cd review-agent
+    ```
+2. Run the script:
+    ```bash
+    python review_agent.py
+    ```
+
+`triage_report.html` will open in your browser automatically. Watch the left panel — the agent works through each student one at a time before the final triage table appears on the right.
 
 **What to observe:**
 
-- Bob structures the module using standard instructional design conventions
-- Bob writes measurable learning objectives without extra prompting
-- Bob creates a complete, usable rubric that could go directly into a syllabus
+- The **left panel animates the reasoning** per student — watch the agent apply each rubric criterion in sequence before committing to a classification
+- The **amber highlight** marks where the agent flagged its own uncertainty — this is the Evaluate stage made visible, the agent recognizing the limits of its confidence
+- The **REVIEW RECOMMENDED badge** on red rows tells you exactly where your reading time is most needed before you open a single document
+- The color-coded table gives you a scannable triage view of the whole class at a glance
+- Notice how the rubric you wrote in plain English was interpreted and applied consistently — you specified the criteria, not the algorithm
 
 **Follow-up prompt (if time allows):**
 
 ```
-Write 10 multiple-choice exam questions for the "Agentic AI" module.
-For each question include:
-- The question stem
-- Four answer choices (A–D)
-- The correct answer
-- A one-sentence explanation of why it is correct
-
-Format as a markdown list and save as "exam-questions.md"
+Re-run the review agent with a revised rubric: add a fourth criterion —
+"Criterion 4: Response demonstrates original thinking beyond the lecture
+slides (0–2 points)."
+Update the classification thresholds accordingly and regenerate
+triage_report.html.
 ```
-
----
-
-!!! note "Before starting Exercise C2"
-    Click **New Task** in Bob to clear the context window from Exercise C1. This ensures Bob isn't influenced by the previous request.
-
-#### Exercise C2: Research Literature Summary
-
-**Task:**
-
-```
-Act as a research assistant. Write a structured literature review section
-on the following topic for a computer science research paper:
-
-Topic: Large Language Models as autonomous agents — capabilities, limitations,
-and emerging challenges in tool use and multi-step reasoning.
-
-Include:
-- A 3–4 paragraph narrative synthesis (not a list of summaries)
-- At least 8 plausible in-text citations in APA format
-- A "Research Gaps" subsection (3–4 sentences identifying open questions)
-- A formatted reference list at the end
-
-Target audience: Peer reviewers at an ACM or IEEE conference.
-Save it as "literature-review-draft.md"
-```
-
-**What to observe:**
-
-- Bob writes in academic register without switching to a casual tone
-- Bob structures citations and the reference list in the correct format
-- The output is a genuine starting point for a real literature review section
 
 **Discussion points:**
 
-- How would you verify Bob's citations before submitting?
-- Where is this most useful — early-stage drafting, or polishing a draft you've written?
-- How do you frame AI-assisted writing for your students in terms of academic integrity?
+- Which classifications would you have made differently? What does that tell you about the rubric?
+- Where did the agent add the REVIEW RECOMMENDED flag, and do you agree with those choices?
+- How would you explain this kind of AI-assisted triage to students — and to your department?
+- What is the risk of over-trusting a triage agent in an academic context? How do you guard against it?
 
 ---
 
@@ -371,66 +431,75 @@ Save it as "literature-review-draft.md"
 !!! note "Before starting Part 3"
     Click **New Task** in Bob to clear the context window from your track exercise. You're starting something new — a clean context gives Bob a fresh start.
 
-!!! tip "Facilitator framing"
-    In this workshop, participants are using Bob as an agentic AI system to build artifacts for them. If you want to connect this more directly to the event theme of "building your own agents," position this section as a lightweight agent-design exercise: participants can define a role, instructions, and output style that make Bob behave like *their* agent for a domain they care about.
+Now it's your turn. Design and build your own agent — one that solves a problem you actually have, or one you've always wanted to automate. It doesn't need to be production-ready; the goal is to go through the full design loop yourself.
 
-Now it's your turn. Use what you just learned to ask Bob to build something that **interests you** — a sample, a proof-of-concept, or a fun mock-up in a domain you care about. It doesn't have to be real or production-ready; the goal is to see how far Bob can take an idea you find genuinely interesting.
+### Your Agent Design Canvas
+
+Before you prompt Bob, answer these four questions. Write them down or just keep them in mind — they are the skeleton of your prompt.
+
+| Question | Your answer |
+| :--- | :--- |
+| **Role** — What is this agent's job? | e.g., "An agent that reviews my team's weekly updates" |
+| **Inputs** — What does it read? | e.g., "Five plain-text update files, one per team member" |
+| **Decision** — What does it classify or decide? | e.g., "Flag items that are blocked or overdue" |
+| **Output** — What artifact does it produce? | e.g., "A summary table with action items and owners" |
 
 ### Instructions
 
-- **5 minutes:** Pick a topic or idea you're curious about — something from your field, a hobby project, or a "what if" scenario. See the examples below for inspiration.
-- **10 minutes:** Work with Bob to build a sample artifact around that idea.
-- **5 minutes:** Review the result. Ask Bob to revise one thing. Note what surprised you — good or bad.
-
-### The One Rule
-
-The artifact should be something that excites or interests you personally — not a work deliverable. Think POC, sample, or demo.
+- **5 minutes:** Fill in the canvas above for a problem that interests you. See the examples below for inspiration.
+- **10 minutes:** Turn your canvas into a prompt and ask Bob to build and run the agent.
+- **5 minutes:** Review the output. Ask Bob to adjust one thing the agent decided — change a threshold, add a criterion, or change the output format. Note what changed.
 
 ### Prompt-Writing Tips
 
-- Start with context: describe the idea and why it's interesting to you
-- Specify the output format (markdown, HTML, JSON, Python, etc.)
-- Include a fictional or sample audience so Bob can tune the tone
-- Give Bob a file name to save to — it helps Bob know the scope
-- If you want to make it feel like "your" agent, start by defining its role and working style (for example: "You are my policy analyst for higher education" or "Act as my startup product strategist")
+- Lead with the agent's role: *"Build an agent that…"*
+- Specify the inputs explicitly — tell Bob what files to create as sample data
+- Describe the decision in terms of categories or classifications the agent should produce
+- Ask Bob to show its reasoning, not just the final output
+- Ask Bob to run the agent and show you the result — don't just ask for the code
 
 ### Example Starting Points by Role
 
 **For developers:**
 ```
-Create a sample [language] script/service that [something you've always wanted to prototype].
-Include [tests / documentation / sample data]. Save in "[folder-name]"
+Build an agent that reads [N] sample [log files / pull request descriptions / test results]
+and classifies each as [needs attention / looks good / needs review].
+Have it print a reasoning trace and save a summary to "[filename]".
+Save everything in "[folder-name]".
 ```
-*Example: "Build a sample Python script that tracks the score of my fantasy football league
-using mock data. Include a README. Save in 'fantasy-tracker/'"*
+*Example: "Build an agent that reads 5 sample pull request descriptions and classifies each as
+Ready to Merge, Needs Changes, or Needs Architect Review. Print the reasoning for each and
+save a summary to 'pr-triage.txt'. Save in 'pr-agent/'."*
 
 **For PMs and execs:**
 ```
-Write a fictional [PRD / competitive brief / roadmap / status summary] for
-[an imaginary product you'd love to exist]. Audience: [sample team / mock exec board].
-Save as "[filename].md"
+Build an agent that reads [N] sample [status updates / meeting notes / customer feedback items]
+and produces a [prioritized action list / risk summary / follow-up brief].
+Have it explain why it flagged each item. Save the output to "[filename]".
 ```
-*Example: "Write a one-page product brief for a fictional app that recommends hiking trails
-based on your mood. Audience: a small startup team. Save as 'trail-mood-brief.md'"*
+*Example: "Build an agent that reads 4 sample customer feedback entries and classifies each as
+Quick Win, Needs Investigation, or Escalate. Explain each classification and save a brief to
+'feedback-triage.txt'."*
 
 **For professors:**
 ```
-Create a sample [syllabus section / assignment / rubric / discussion prompt / exam question set]
-for a fictional or aspirational [course name] course. Level: [undergraduate / graduate].
-Topic: [something in your field you find fascinating]. Save as "[filename].md"
+Build an agent that reads [N] sample [student reflections / discussion posts / assignment drafts]
+and evaluates each against this rubric: [your criteria].
+Classify each as [Strong / Needs Revision / Needs Attention] and save a triage report to "[filename]".
 ```
-*Example: "Design a sample week-3 module for a fictional course on the ethics of AI in healthcare,
-for undergraduates. Include a discussion prompt and a short assignment. Save as 'ai-ethics-week3.md'"*
+*Example: "Build an agent that reads 4 sample student discussion posts on AI ethics and evaluates
+each for: (1) clarity of argument, (2) use of evidence, (3) originality. Classify each and save a
+triage report to 'discussion-triage.txt'."*
 
 ### Facilitator Discussion Prompts
 
-Once participants have their artifacts, bring the room back together and ask:
+Once participants have their agents, bring the room back together and ask:
 
-- What idea did you pick, and why?
-- How close was Bob's first draft to what you imagined?
-- What did Bob get right without extra guidance?
-- What would you still change, and why?
-- Can you see yourself using Bob this way for real projects in the future?
+- What agent did you design, and what problem does it solve?
+- What decision did the agent make that surprised you — or that you disagreed with?
+- What would you need to change in the agent's instructions to get a better result?
+- Where does the agent save you time, and where does your judgment still matter?
+- Would you actually use this agent in your work? What would make it trustworthy enough?
 
 ---
 
@@ -438,55 +507,55 @@ Once participants have their artifacts, bring the room back together and ask:
 
 Invite 3–4 participants to share:
 
-- What they asked Bob to build
-- What surprised them about the output
-- One thing Bob did that they did *not* expect
-- Whether they'd use or adapt the result in real work
+- What agent they designed, and what problem it was meant to solve
+- A decision the agent made that surprised them — or that they would have made differently
+- One place where the agent was genuinely useful, and one place where they would not trust it without review
+- Whether they'd actually use or adapt the agent in their real work
 
 Then open for Q&A. Common questions to be ready for:
 
 **"Is this safe to use at my company?"**
-Bob runs locally inside VS Code. Your prompts and files stay on your machine unless your organization's policy specifies otherwise. Always check your company's AI usage guidelines before using any AI tool with proprietary information.
+The Bob extension runs inside VS Code on your machine, but your prompts are sent to a remote model endpoint to generate responses — they do not stay local. How that data is handled depends on which model your organisation has configured and the terms of your enterprise agreement with that provider. Always check your company's AI usage guidelines before using any AI tool with proprietary information.
 
 **"How do I know if the output is correct?"**
-You don't — without reviewing it. Bob is a strong starting point, not a final product. Always apply your domain expertise to validate what Bob produces, especially for code, data analysis, and citations.
+You don't — without reviewing it. The agent is a strong starting point, not a final decision. Always apply your domain expertise to validate what the agent produces before acting on it.
 
 **"Can Bob connect to the internet or my company's systems?"**
 Not by default. Bob works with local files and tools. Integrations with external systems require configuration.
 
-**"What's the difference between Bob and ChatGPT?"**
-Bob is an *agentic* AI — it uses tools to read files, write files, run searches, and execute multi-step tasks inside your development environment. ChatGPT is a conversational model that responds to messages but does not autonomously take action on your system.
+**"What makes Bob different from a general-purpose chat tool?"**
+Bob is an *agentic* AI — it doesn't just answer questions. It follows a Plan → Act → Evaluate → Output loop: it decides what steps to take, uses tools to carry them out, checks whether the result is complete, and either delivers the output or tries again. General-purpose chat tools can answer questions about code; Bob is embedded in your IDE and acts directly on your workspace — reading, writing, and running files as part of its reasoning loop. The agentic behaviour isn't a feature you configure; it's how Bob works by default.
 
 ---
 
 ## Key Takeaways
 
-This workshop aligns with the Silicon Valley Leadership Group's Agentic AI Task Force focus on practical, responsible adoption. Bob demonstrates how agentic AI can increase individual and team productivity, while reinforcing the need for human review, clear usage boundaries, and organizational policies for security, privacy, and accountability.
+This workshop aligns with the Silicon Valley Leadership Group's Agentic AI Task Force focus on practical, responsible adoption. Participants leave having built agents that plan, act, evaluate, and output — and having experienced first-hand where those agents add genuine value and where human judgment still owns the decision.
 
 ### For Everyone
 
-- **Agentic AI executes** — it doesn't just suggest, it creates tangible artifacts
-- **Natural language is the interface** — no special syntax, no commands to memorize
-- **First drafts are strong starting points** — always review, refine, and apply your expertise
-- **Iteration is fast** — ask Bob to revise, extend, or explain anything it produces
+- **Agents don't just respond — they reason** — the Plan → Act → Evaluate → Output loop is what separates an agent from a chatbot
+- **Natural language is the interface** — you define the agent's role, inputs, and decisions in plain English; no code required for most tracks
+- **The agent's output is a starting point** — always review what it decided before acting on it
+- **Iteration is fast** — adjusting one instruction in the agent's definition changes every decision it makes
 
 ### For Developers
 
-- Bob accelerates the "first hour" of any new feature, service, or script
-- Focus shifts from writing boilerplate to reviewing and refining architecture
-- Bob handles the mechanical work; you handle the judgment calls
+- Bob can scaffold a fully runnable agent from a natural language description — the reasoning loop is visible in the code and in the terminal output
+- Focus shifts from writing classification and comparison logic from scratch to reviewing and refining agent behavior
+- The hardest part of agent design is not the code — it is defining the right decision criteria clearly enough for an agent to apply them consistently
 
 ### For PMs and Executives
 
-- Common artifacts — PRDs, briefs, user stories, dashboards — are minutes away, not hours
-- Bob is a force multiplier for stakeholder communication and cross-functional alignment
-- Human judgment on strategy, priorities, and customer insight remains irreplaceable
+- An agent that reads, compares, and classifies report data can compress hours of weekly status review into minutes
+- The value of the agent is in the decisions it surfaces — your job is to evaluate those decisions, not to produce them
+- Human judgment on strategy, priorities, and stakeholder context remains irreplaceable — agents triage, humans decide
 
 ### For Professors and Educators
 
-- Course design, assignments, rubrics, and literature scaffolding can be drafted rapidly
-- Bob can handle the structural and formulaic elements so you focus on the intellectual content
-- AI literacy discussions — including how and when to use tools like Bob — are themselves a teaching opportunity
+- A triage agent applies a rubric consistently across every submission — that consistency is its main value, not its judgment
+- AI-assisted triage tells you where to spend your reading time; it does not replace reading
+- Explaining how and why you use AI tools to students is itself a meaningful teaching moment about responsible AI adoption
 
 ---
 
@@ -494,17 +563,17 @@ This workshop aligns with the Silicon Valley Leadership Group's Agentic AI Task 
 
 ### Do's ✅
 
-- **Give Bob context** — tell it who you are, what the artifact is for, and who the audience is
-- **Specify the output format** — markdown, HTML, Python, JSON, table, email, etc.
-- **Ask Bob to explain its choices** — it will tell you why it structured something a particular way
-- **Iterate** — treat Bob's first response as a draft and ask for revisions
+- **Define the agent's decision clearly** — the more precisely you describe what the agent should classify or decide, the more consistent its output will be
+- **Ask Bob to show its reasoning** — tell the agent to print or log why it made each decision, not just what it decided
+- **Specify inputs explicitly** — tell Bob what sample files to create so the agent has something concrete to work with
+- **Iterate on the agent's instructions** — treat the first run as a calibration; adjust one criterion at a time and re-run
 
 ### Don'ts ❌
 
-- **Don't skip review** — Bob can make mistakes; always apply your expertise before using the output
+- **Don't skip review** — agents can make consistent mistakes; always apply your expertise before acting on the output
 - **Don't include sensitive data** — avoid putting confidential, proprietary, or personal data in prompts
-- **Don't over-specify** — you don't need to tell Bob every implementation detail; give it the goal and let it work
-- **Don't treat it as a replacement** — Bob amplifies your expertise; it doesn't substitute for it
+- **Don't treat the agent's output as a final decision** — agents classify and surface; humans decide and act
+- **Don't over-specify the implementation** — describe what the agent should decide, not how to write the code; give Bob the goal and let it work
 
 ---
 
@@ -514,27 +583,43 @@ This workshop aligns with the Silicon Valley Leadership Group's Agentic AI Task 
 
 - Verify all participants have Bob installed and working in VS Code before the session starts
 - Test the warm-up dashboard prompt yourself in advance — confirm it works in your environment
+- For Track A (developers): confirm Python is available on their machines (`python --version` or `python3 --version` in the terminal)
 - Have the track exercise prompts available in a shared document so participants can copy-paste rather than type
 - Identify which participants are likely in each track (ask in advance if possible)
-- Have 2–3 backup prompts ready for the participant-driven activity in case anyone is stuck
+- Have 2–3 backup agent ideas ready for Part 3 in case anyone is stuck on what to build
 
 ### Timing Tips
 
 - The warm-up exercise (Part 1) is the most important segment — don't rush it and don't skip opening the result in a browser
-- During track exercises, circulate and help anyone who is stuck on setup rather than content
-- For the participant-driven activity, give a 5-minute warning so participants can wrap up before the group discussion
-- The Q&A segment is flexible — expand it if energy is high, use it to do a second participant demo if energy is low
+- During Track A, circulate and help anyone whose terminal is not working — the exercise depends on running the script
+- During Tracks B and C, remind participants they do not need to read or understand the code — they are evaluating the agent's decisions
+- For Part 3, give a 5-minute warning so participants can wrap up before the group discussion
+- The Q&A segment is flexible — expand it if energy is high, use it to do a second participant agent demo if energy is low
 
 ### Managing Mixed Ability
 
-- Encourage developers who finish early to attempt the data science variant (Exercise A2), add tests to their API, or spend extra time shaping Part 3 into a role-based "my agent" workflow
-- For participants who are less technical, steer them toward the dashboard exercise (B2) — it's visually impressive with minimal technical knowledge required
-- Remind everyone that the strength of the *prompt* matters more than technical background
+- Encourage developers who finish Track A early to add the confidence scoring follow-up, or start designing their Part 3 agent
+- For participants who are less technical, remind them that Tracks B and C require no code knowledge — their job is to evaluate the agent's decisions, which is a judgment skill they already have
+- Remind everyone that the agent design canvas (role / inputs / decision / output) works for any level of technical background
 
 ### Success Criteria
 
-The workshop is successful if participants leave with:
+The workshop is successful if participants leave able to:
 
-- A concrete mental model of the difference between agentic AI and a chatbot
-- At least one artifact they actually want to keep or adapt
-- A clear sense of where to use Bob in their own work next week
+- Articulate the difference between a one-shot prompt and an agent with a Plan → Act → Evaluate → Output loop
+- Describe at least one agent they could build for a real problem in their own work
+- Explain where an agent adds value and where human judgment still owns the decision
+
+---
+
+## Advanced Optional Lab: Data Science Lab
+
+Want to go deeper? Work through the full step-by-step data science lab built by the IBM Bob field team. You'll discover how to use Bob to:
+
+Perform data analysis
+Create interactive dashboards using Jupyter notebooks
+Build web applications with Streamlit
+
+👉 [IBM Bob Data Science Lab (step-by-step)](https://github.ibm.com/code-assistant/bob-field-demos/blob/master/datascience-lab/lab/step-by-step-lab.md)
+
+This is a great next step if you finished the track exercises early, or want to continue exploring after the workshop.
