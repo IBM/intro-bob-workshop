@@ -180,7 +180,7 @@ Once the command finishes, your current workspace will have the custom skills di
 
 #### Exercise A1: Build a Report Comparison Agent
 
-**Task:**
+**Task — type this into Bob:**
 
 ```
 /agent-with-bob-shell create an agent application that compares monthly
@@ -193,13 +193,17 @@ this workspace.
 
 **Run it:**
 
-In the VS Code integrated terminal, run these as two separate commands:
+Wait for Bob to finish generating all files before running anything. When Bob is done, open the Bob IDE integrated terminal and run these as three separate commands:
 
 1. Navigate into the folder:
     ```bash
     cd monthly-report-agent
     ```
-2. Run the script:
+2. Set your Bob API key:
+    ```bash
+    export BOB_API_KEY="bob_..."
+    ```
+3. Run the script:
     ```bash
     python server.py
     ```
@@ -208,11 +212,12 @@ Follow the on-screen instructions to open the app (typically running on `http://
 
 **What to observe:**
 
-- **Interactive Web Interface:** Instead of a static file, Bob has generated a fully interactive web application with standard styling, enabling a smoother user experience.
-- **Sample Report Files Created:** Verify that the two sample status reports (e.g. `reports/january.md` and `reports/february.md`) were successfully created inside the `monthly-report-agent` folder.
-- **Dynamic Comparison via File Upload:** Drag and drop or upload these two generated report files into the web interface's upload boxes and click "Run Analysis" to perform the comparison.
-- **Analysis and Follow-up Actions:** The web UI clearly classifies each status item (Completed, Pending, or New) and generates clear, actionable follow-up recommendations.
-- **End-to-End Delivery:** Bob designed the comparison logic, built the routing and styling for the web interface, and created the sample data files starting from a single, simple prompt.
+- **Sample Report Files Created:** Verify that `january.md` and `february.md` were generated inside the `monthly-report-agent/reports/` folder before you run the app.
+- **Upload and Run:** Drag `january.md` into the **Older Report** box and `february.md` into the **Newer Report** box, then click **Run Analysis**.
+- **Agent Progress Panel:** Watch the PLAN → ACT → EVAL loop run live — the panel shows each iteration, the files Bob read (`january.md`, `february.md`), and the output file it wrote (`follow-up-brief.md`).
+- **Structured Follow-Up Brief:** The results panel renders three sections: an Executive Summary, a Month-over-Month Metric Comparison table with trend indicators, and numbered Follow-Up Action Items each with a rationale and owner role.
+- **Copy and Download:** Use the **Copy Markdown** or **Download** buttons to export the brief directly from the web UI.
+- **End-to-End Delivery:** Bob planned, acted, evaluated, and delivered a complete follow-up brief — all from a single plain-English prompt.
 
 **Follow-up prompt (if time allows):**
 
@@ -243,7 +248,7 @@ to the web interface so I can quickly find specific items in the list.
 
 #### Exercise B1: Build a Status Report Comparison Agent
 
-**Task:**
+**Task — type this into Bob:**
 
 ```
 /agent-with-bob-shell create an agent application that compares two fictional project status reports as plain-text files:
@@ -256,12 +261,31 @@ The application should provide a web interface for a better user experience.
 Put the whole project under a folder called `project-report-agent` in this workspace.
 ```
 
+**Run it:**
+
+Wait for Bob to finish generating all files before running anything. When Bob is done, open the Bob IDE integrated terminal and run these as three separate commands:
+
+1. Navigate into the folder:
+    ```bash
+    cd project-report-agent
+    ```
+2. Set your Bob API key:
+    ```bash
+    export BOB_API_KEY="bob_..."
+    ```
+3. Run the script:
+    ```bash
+    python server.py
+    ```
+
+Follow the on-screen instructions to open the app (typically running on `http://127.0.0.1:5001`).
+
 **What to observe:**
 
-- **How Bob Plans in Chat:** Watch Bob's thought process as it details exactly how it will build the application based on your natural language request.
-- **Automated Mock Data:** Notice how Bob automatically writes realistic project status files (`status_june.txt` and `status_july.txt`) so you have sample data for testing right away.
-- **Visual Interface Design:** Observe how Bob designs and builds a clean web dashboard with upload areas, status badges (Done, Still Open, New Issue), and clear comparison tables.
-- **Zero-Code Delivery:** You didn't have to write code, configure servers, or build pages. Bob handled the implementation end-to-end and handed you a fully interactive business tool.
+- **Sample Files Ready to Use:** Bob generated `status_june.txt` and `status_july.txt` inside the `project-report-agent` folder. If a **Use sample reports (June & July)** button appears, click it to load them instantly; otherwise drag and drop the files into the upload zones manually.
+- **Agent Progress Panel:** Watch the PLAN → ACT → EVAL loop run live. The PLAN step explains its reasoning before acting; the TOOLS table shows Bob reading both files and writing `comparison_report.md`; the EVAL step confirms the output is complete.
+- **Structured Comparison Report:** The results panel renders a structured report covering the key changes between the two months — expect sections such as an executive summary, a status change table, metric comparisons, and prioritised action items, though the exact structure may vary across runs.
+- **Zero-Code Delivery:** You described the requirement in plain English — Bob wrote the code, generated the sample data, and delivered a complete interactive business tool without you touching a file.
 
 **Follow-up prompts (if time allows):**
 
@@ -271,16 +295,14 @@ total number of items, how many are completed, and how many are still open.
 ```
 
 ```
-Add a search bar and an option to filter by status (Completed, Open, New)
-so I can find specific project items instantly.
+Add a search bar and an option to filter by status so I can find specific
+project items instantly.
 ```
 
 **Discussion points:**
 
-- **AI Decision Making:** Did the agent classify items correctly based on the monthly reports? What did it catch or assume that you would have evaluated differently?
-- **Workflow Efficiency:** How would having an interactive comparison dashboard like this change your team's weekly or monthly status review process?
-- **Human vs. AI Ownership:** Where does human project manager judgment still need to own the final decision—and where is the agent genuinely saving you time?
-- **Trust and Adoption:** What kind of accuracy or safeguards would you need before trusting this tool to generate draft updates directly for VPs or external stakeholders?
+- **Agent vs. Direct Prompt:** Try asking Bob directly to compare the two reports without using the agent skill. How does the output differ from what the agent produced? What does the loop — Plan → Act → Evaluate — add that a single prompt cannot?
+- **Format Resilience:** What happens if the two reports are written in completely different formats — does the agent still work? Try it and see.
 
 ---
 
@@ -298,7 +320,7 @@ so I can find specific project items instantly.
 
 #### Exercise C1: Build a Student Submission Review Agent
 
-**Task:**
+**Task — type this into Bob:**
 
 ```
 /agent-with-bob-shell I want to build an agent that helps me triage student short-answer responses
@@ -330,25 +352,31 @@ Put the whole project under a folder called `review-agent` in this workspace.
 
 **Run it:**
 
-In the VS Code integrated terminal, run these as two separate commands:
+Wait for Bob to finish generating all files before running anything. When Bob is done, open the Bob IDE integrated terminal and run these as three separate commands:
 
 1. Navigate into the folder:
     ```bash
     cd review-agent
     ```
-2. Run the script:
+2. Set your Bob API key:
+    ```bash
+    export BOB_API_KEY="bob_..."
+    ```
+3. Run the script:
     ```bash
     python server.py
     ```
 
-Follow the on-screen instructions to open the app (typically running on `http://127.0.0.1:5001`).
+Follow the on-screen instructions to open the app (typically running on `http://127.0.0.1:5050`).
 
 **What to observe:**
 
-- **Automated Triage Assistant:** Observe how Bob designs and builds a clean grading dashboard, letting you easily review and organize student responses visually.
-- **Realistic Sample Material:** Verify that the 5 fictional student essays (`student_1.txt` to `student_5.txt`) varying in quality were successfully created inside the `review-agent` folder.
-- **Identify Actionable Submissions:** Note where the agent flags submissions as `NEEDS INSTRUCTOR ATTENTION` or `[REVIEW RECOMMENDED]`, helping you instantly see where your direct feedback is most needed.
-- **No-Code Implementation:** You designed a fully functional teaching tool with natural language—letting Bob manage folders, write comparison scripts, and build interactive webpages.
+- **Sample Submissions Ready:** Verify that `student_1.txt` through `student_5.txt` varying in quality were generated inside the `review-agent` folder before you run the app.
+- **Run the Triage:** Look for a button or controls to start the analysis and run it against the generated student files.
+- **Live Progress Stream:** Watch each student processed in sequence — the PLAN step explains the rubric approach before acting, the TOOLS table shows the files read and written, and the EVAL step confirms the trace entry is complete.
+- **Triage Summary Table:** After all students are processed, a summary table shows each student's score (e.g. 5/5, 3/5, 0/5) and classification: **STRONG**, **NEEDS REVISION**, or **NEEDS INSTRUCTOR ATTENTION**. Students the agent is uncertain about are also flagged **REVIEW RECOMMENDED**.
+- **Reasoning Trace:** Each student has an expandable reasoning trace showing per-criterion scores (C1, C2, C3) with justifications — so you can see exactly why the agent made each classification.
+- **No-Code Implementation:** You described a rubric and a triage workflow in plain English — Bob generated the student files, scored them using the agent loop, and built the interactive dashboard without you writing a line of code.
 
 **Follow-up prompt (if time allows):**
 
@@ -359,9 +387,9 @@ directly from the browser and have them analyzed.
 
 **Discussion points:**
 
-- **Assessing AI Judgment:** Did the agent's web dashboard score the student essays correctly? Where did your professional grading judgment disagree with the AI's triage?
-- **Academic Safeguards:** What is the risk of over-trusting an AI triage tool when grading or providing academic feedback? How do you guard against it?
-- **Transparency and Communication:** How would you explain this kind of AI-assisted grading and triage system to your students and your academic department?
+- **Agent vs. Direct Prompt:** Try asking Bob directly to score one of the student responses without using the agent skill. How does the output differ? What does the Plan → Act → Evaluate loop add?
+- **Rubric Disagreement:** Pick one student the agent scored and read the reasoning trace. Do you agree with the classification? Where would your professional judgment differ — and why?
+- **Format Resilience:** What happens if a student submits a response in a completely different format or language? Try it and see.
 
 ---
 
