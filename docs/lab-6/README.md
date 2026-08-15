@@ -54,14 +54,14 @@ The session opens with a whole-group demonstration, then branches into three rol
 
 Every agent — no matter how complex — follows the same four-step loop. Understanding this loop is what separates agentic AI from a simple chatbot.
 
-| Stage | What it does | Monthly-report example |
+| Stage | What it does | [Monthly-report example](#exercise-a1-build-a-report-comparison-agent) |
 | :--- | :--- | :--- |
-| **Plan** | Decides what to do and in what order | "I need to read last month's report, then this month's, then compare them line by line." |
-| **Act** | Uses a tool or reads/writes a file to carry out one step | Reads both report files from disk. |
-| **Evaluate** | Checks whether the result is complete or needs more work | Reviews each item and labels it: *completed*, *still pending*, or *new issue*. |
-| **Output** | Delivers the final result — or loops back if something is missing | Writes a follow-up action brief listing every open item with an owner and due date. |
+| **Plan** | Decides what to do and in what order — describes the single next action without executing it | "I need to read `january.md` and `february.md`, then compare them item by item. I will not execute this yet." |
+| **Act** | Uses a tool or reads/writes a file to carry out exactly one step of the plan | Reads `january.md` and `february.md` from disk and writes the structured comparison output to a file. |
+| **Evaluate** | Checks whether the goal is fully achieved; returns `done: true` or `done: false` with a reason and the next state to feed back into Plan | Reviews the comparison output and confirms every status item is labelled *Completed*, *Pending*, or *New*. If anything is missing, sets `done: false` and describes what still needs to be done. |
+| **Output** | Delivers the final result — or loops back into Plan if Evaluate said the work is incomplete | Writes a follow-up action brief (rendered in the web UI) listing every open item; if the brief is incomplete, the loop restarts at Plan. |
 
-The loop can run once or dozens of times before the agent is satisfied it has answered the question. That self-checking behavior — *evaluate and retry* — is the key difference between an agent and a one-shot prompt.
+The loop can run once or dozens of times before the agent is satisfied it has answered the question. That self-checking behavior — *evaluate and retry* — is the key difference between an agent and a chatbot that responds once and stops.
 
 ---
 
