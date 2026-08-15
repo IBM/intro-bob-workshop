@@ -147,6 +147,26 @@ Participants choose the track that fits their role. Each track takes approximate
     
     *If you are interested in how custom skills work or want to learn how we wrote this skill to help others ease into agentic AI, you can explore the [Custom Skill Definition](https://github.com/ibm/intro-bob-workshop/blob/master/.bob/skills/agent-with-bob-shell/SKILL.md) and [Examples](https://github.com/ibm/intro-bob-workshop/blob/master/.bob/skills/agent-with-bob-shell/EXAMPLES.md).*
 
+### 🚀 Step-by-Step Workspace Skill Setup
+
+To use the workshop's custom skills (such as `agent-with-bob-shell`) in Bob, your active workspace folder needs to contain the `.bob` directory.
+
+You can download and extract **only** the `.bob/` folder directly into your current workspace with a single terminal command:
+
+**On macOS / Linux:**
+Open the integrated terminal in your current workspace and run:
+```bash
+curl -L https://github.com/ibm/intro-bob-workshop/archive/refs/heads/main.tar.gz | tar -xz --strip-components=1 "intro-bob-workshop-main/.bob"
+```
+
+**On Windows (PowerShell):**
+Open PowerShell in your current workspace and run:
+```powershell
+Invoke-WebRequest -Uri "https://github.com/ibm/intro-bob-workshop/archive/refs/heads/main.zip" -OutFile "temp.zip"; Expand-Archive -Path "temp.zip" -DestinationPath "temp_extracted"; Move-Item -Path "temp_extracted\intro-bob-workshop-main\.bob" -Destination ".bob"; Remove-Item -Recurse -Force "temp.zip", "temp_extracted"
+```
+
+Once the command finishes, your current workspace will have the custom skills directory ready, and you can immediately start prompting your code agent!
+
 ---
 
 ### 🖥️ Track A: Software Developers
