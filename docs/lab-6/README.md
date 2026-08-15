@@ -11,9 +11,7 @@ The session opens with a whole-group demonstration, then branches into three rol
 
 **Target Audience:** Mixed — software developers, product managers, executives, and college-level educators/professors
 
-**Prerequisites:** None. Laptop with Bob access and VS Code with the Bob extension. Don't have Bob yet? [Download the free trial at bob.ibm.com/download](https://bob.ibm.com/download).
-
-**Materials Needed:** Laptop with Bob access, VS Code with Bob extension, projector for shared demos
+**Prerequisites:** None. Laptop with Bob access and Bob IDE. Don't have Bob yet? [Download the free trial at bob.ibm.com/download](https://bob.ibm.com/download).
 
 ---
 
@@ -140,6 +138,15 @@ Add a search box so I can look up an employee by name.
 
 Participants choose the track that fits their role. Each track takes approximately 20 minutes.
 
+!!! info "Learn Agentic AI Concepts—By Having Bob Build Them for You!"
+    The core purpose of this workshop is two-fold: introducing **Bob as a powerful code agent** (your automated developer teammate), and learning **how real-world AI agents actually work** (how they plan, reason, and take action).
+    
+    Instead of spending your time writing tedious boilerplate code or configuring complex development environments to build an agent, you will design the agent's role and rules in plain English. Bob will then act as your developer—instantly translating your high-level ideas into a fully running, interactive agent application that you can take home!
+    
+    To make this experience simple and accessible, we will use a custom skill we have prepared for you (like `agent-with-bob-shell`). This skill empowers Bob to act as a highly capable software engineer, letting you focus on **conceptual agent design**—defining the rules, triaging the reasoning, and observing the core agentic loop (Plan → Act → Evaluate → Output) in action.
+    
+    *If you are interested in how custom skills work or want to learn how we wrote this skill to help others ease into agentic AI, you can explore the [Custom Skill Definition](https://github.com/ibm/intro-bob-workshop/blob/master/.bob/skills/agent-with-bob-shell/SKILL.md) and [Examples](https://github.com/ibm/intro-bob-workshop/blob/master/.bob/skills/agent-with-bob-shell/EXAMPLES.md).*
+
 ---
 
 ### 🖥️ Track A: Software Developers
@@ -156,61 +163,12 @@ Participants choose the track that fits their role. Each track takes approximate
 **Task:**
 
 ```
-Build a Python report comparison agent. The agent should:
-
-1. First, create two plain-text files in a folder called "report-agent":
-   - "report_last_month.txt" — a fictional project status report for last month
-     with 8 items (mix of completed work, ongoing tasks, and blockers)
-   - "report_this_month.txt" — a fictional status report for this month
-     referencing some of the same items (some now completed, some still open,
-     some new)
-
-2. Then write a Python script called "agent.py" in the same folder that
-   implements a genuine Plan → Act → Evaluate → Output loop:
-
-   PLAN: For each item found in the reports, decide what needs to be checked.
-
-   ACT: Classify each item as COMPLETED, STILL PENDING, or NEW ISSUE by calling
-   the Ollama API (http://localhost:11434/api/generate, model "llama3") with a
-   short prompt that passes in the item text and asks for a one-word classification
-   and a one-sentence reason. If Ollama is not running (connection refused), fall
-   back to keyword matching and record "[fallback: Ollama unavailable]" in the
-   trace for that item.
-
-   EVALUATE: After classifying all items, check whether fewer than 2 actionable
-   items (STILL PENDING or NEW ISSUE) were found. If so, retry the ACT step with
-   a broader prompt that asks the model to be more inclusive, and record the
-   retry decision in the trace (e.g., "Only 1 actionable item found — retrying
-   with broader criteria...").
-
-   OUTPUT: Build a list of execution trace entries as the loop runs — one entry
-   per item — recording: the item text, the classification, the model's reason
-   (or fallback note), and whether it came from a retry. Then generate a
-   self-contained HTML file called "report.html" that:
-     - Opens automatically in the default browser when the script finishes
-     - Has two sections side by side: a "Decision/Execution Trace" panel on the
-       left and the final results on the right
-     - The Decision/Execution Trace panel replays the trace entries one at a time
-       using a CSS animation (each step fades in 0.4 s after the previous),
-       so the audience watches each classification decision appear in sequence
-     - Each trace entry shows: the item name, the classification badge, and the
-       model's one-sentence reason (or fallback note in italics)
-     - If the retry loop fired, its entry appears highlighted in amber so it
-       stands out as the self-correction moment
-     - The results panel shows a summary card (total / completed / pending /
-       new issues) and a color-coded table: green for COMPLETED, amber for
-       STILL PENDING, red for NEW ISSUE
-     - Includes a "Follow-up Action Brief" below the table listing only
-       STILL PENDING and NEW ISSUE items, each with a suggested next step
-     - Uses clean, professional styling — no external libraries or CDN links,
-       fully self-contained
-
-3. Include a short README.md explaining what the agent does, how to run it,
-   and how to start Ollama locally if needed (`ollama run llama3`).
-
-Use only Python standard library for everything except the Ollama HTTP call
-(use urllib.request — no pip installs required).
-Save everything in a folder called "report-agent".
+/agent-with-bob-shell create an agent application that compares monthly
+project status reports and tells me what to follow up on. Also generate
+two sample monthly project status reports I can use for testing. The
+application should provide a web interface for a better user experience.
+Put the whole project under a folder called `monthly-report-agent` in
+this workspace.
 ```
 
 **Run it:**
@@ -219,38 +177,35 @@ In the VS Code integrated terminal, run these as two separate commands:
 
 1. Navigate into the folder:
     ```bash
-    cd report-agent
+    cd monthly-report-agent
     ```
 2. Run the script:
     ```bash
-    python agent.py
+    python server.py
     ```
 
-`report.html` will open in your browser automatically. Watch the left panel — each classification decision appears one by one, with the model's reason, as the agent works through the reports.
+Follow the on-screen instructions to open the app (typically running on `http://127.0.0.1:5001`).
 
 **What to observe:**
 
-- The **left panel is a Decision/Execution Trace** — each entry shows the item, the classification, and the model's stated reason. This is the Act step happening at runtime, not pre-computed output
-- If Ollama wasn't running, entries marked *[fallback: Ollama unavailable]* show the keyword-matching path — a concrete illustration of graceful degradation
-- If the retry fired, watch for the **amber highlight**: the agent evaluated its own output, decided it wasn't good enough, and re-ran — that's the Evaluate step made visible
-- The **right panel** shows the color-coded classification table and follow-up brief — the Output step: the structured artifact the agent produced after reasoning through every item
-- Bob wrote the Ollama integration, the retry loop, the fallback path, the execution trace, *and* the animated HTML from a single natural-language description
+- **Interactive Web Interface:** Instead of a static file, Bob has generated a fully interactive web application with standard styling, enabling a smoother user experience.
+- **Sample Report Files Created:** Verify that the two sample status reports (e.g. `reports/january.md` and `reports/february.md`) were successfully created inside the `monthly-report-agent` folder.
+- **Dynamic Comparison via File Upload:** Drag and drop or upload these two generated report files into the web interface's upload boxes and click "Run Analysis" to perform the comparison.
+- **Analysis and Follow-up Actions:** The web UI clearly classifies each status item (Completed, Pending, or New) and generates clear, actionable follow-up recommendations.
+- **End-to-End Delivery:** Bob designed the comparison logic, built the routing and styling for the web interface, and created the sample data files starting from a single, simple prompt.
 
 **Follow-up prompt (if time allows):**
 
 ```
-Add a confidence score (0–100) to each reasoning step and each row
-in the results table. Show it as a small color-matched badge.
-The score should reflect how clearly the item's status changed
-between the two reports.
+Add a search bar and status filter (e.g. Completed, Pending, New)
+to the web interface so I can quickly find specific items in the list.
 ```
 
 **Discussion points:**
 
-- At what point in the Decision/Execution Trace did you see the agent *evaluate* its own output before continuing?
-- How would you extend this agent to pull reports from a real system (Jira, Confluence, email)?
-- What parts of this output would you trust immediately, and what would you verify before sending to a stakeholder?
-- How does building this — the logic, the retry loop, and the animated report — compare to writing it from scratch without Bob?
+- What makes this application a genuine AI agent rather than a typical script or a simple LLM wrapper? (Hint: Think about the agent's tool-use, planning, and decision-making capabilities.)
+- How does having Bob automatically generate sample status files speed up your prototyping and testing cycle?
+- How do specialized skills (like `agent-with-bob-shell`) change how we package and share repeatable agentic workflows or development tasks with others?
 
 ---
 
@@ -258,67 +213,54 @@ between the two reports.
 
 **Audience:** PMs, product owners, directors, VPs, executives, business analysts
 
-**Objective:** Direct Bob to build and run a project status comparison agent — no code required. You define the agent's role through natural language; Bob handles the implementation and execution inside VS Code. You experience the agentic loop through the decisions the agent makes on your behalf.
+**Objective:** Direct Bob to build and launch an interactive web application that compares project status reports — no coding required. Using Bob's custom skill (`agent-with-bob-shell`), you define what you need in plain English, and watch Bob build, run, and host the dashboard on your behalf.
 
 !!! note "Before starting Exercise B1"
     Click **New Task** in Bob to clear the context window from Part 1. This ensures Bob isn't influenced by the previous request.
 
-!!! tip "You are the agent designer, not the coder"
-    In this track you write the prompts that define what the agent does. Bob builds it, runs it, and brings you the result. Your job is to evaluate what the agent decided and refine its instructions — the same skills you use every day as a PM.
+!!! tip "You are the product owner, not the developer"
+    In this track, you write requirements in plain English. Bob acts as your engineering partner—writing the code, creating the reports, and launching the application. Your job is to evaluate the resulting web app and request refinements, just like reviewing a product prototype with your engineering team.
 
 #### Exercise B1: Build a Status Report Comparison Agent
 
 **Task:**
 
 ```
-I want to build an agent that compares monthly project status reports and
-tells me what to follow up on. Please:
-
-1. Create two fictional project status reports as plain-text files:
+/agent-with-bob-shell create an agent application that compares two fictional project status reports as plain-text files:
    - "status_june.txt" — last month's report with 8 project items
      (a mix of completed milestones, ongoing work, and risks/blockers)
    - "status_july.txt" — this month's report referencing the same project
-     (some items resolved, some still open, some new issues added)
+     (some items resolved, some still open, some new issues added).
 
-2. Build a Python agent called "status_agent.py" that:
-   - Reads both reports
-   - Compares them and classifies each item as: DONE, STILL OPEN, or NEW ISSUE
-   - Explains its reasoning for each classification in plain English
-   - Produces a clean follow-up action brief saved as "action_brief.txt"
-     with only the STILL OPEN and NEW ISSUE items, each with a suggested owner
-     and suggested next step
-
-3. Run the agent and show me the action_brief.txt when it's done.
-
-Save everything in a folder called "status-agent".
+The application should provide a web interface for a better user experience.
+Put the whole project under a folder called `project-report-agent` in this workspace.
 ```
 
 **What to observe:**
 
-- Watch Bob's narration as it builds the agent — this is the **Plan** stage made visible
-- The agent's reasoning explanation is the **Evaluate** stage: it is checking its own classifications before committing them to the brief
-- `action_brief.txt` is a business artifact the running agent produced autonomously — not written by Bob in chat, but generated by code that reasoned through the data
-- Notice what the agent inferred *without being told*: owner suggestions, next-step wording, item grouping
+- **How Bob Plans in Chat:** Watch Bob's thought process as it details exactly how it will build the application based on your natural language request.
+- **Automated Mock Data:** Notice how Bob automatically writes realistic project status files (`status_june.txt` and `status_july.txt`) so you have sample data for testing right away.
+- **Visual Interface Design:** Observe how Bob designs and builds a clean web dashboard with upload areas, status badges (Done, Still Open, New Issue), and clear comparison tables.
+- **Zero-Code Delivery:** You didn't have to write code, configure servers, or build pages. Bob handled the implementation end-to-end and handed you a fully interactive business tool.
 
 **Follow-up prompts (if time allows):**
 
 ```
-Now show me the action brief as a formatted table in chat — columns for
-Item, Status, Suggested Owner, and Next Step.
+Add a summary card at the top of the webpage that shows key stats:
+total number of items, how many are completed, and how many are still open.
 ```
 
 ```
-Re-run the status agent but this time only include items that have been
-STILL OPEN for more than one reporting period. Add a "Priority" field to
-each item in action_brief.txt: High if it's a blocker or risk, Medium otherwise.
+Add a search bar and an option to filter by status (Completed, Open, New)
+so I can find specific project items instantly.
 ```
 
 **Discussion points:**
 
-- What did the agent decide that you would have decided differently? Why?
-- How would this change your weekly status review process?
-- Where does human PM judgment still own the decision — and where is the agent genuinely useful?
-- What would you need to trust before sending the agent's output directly to a stakeholder?
+- **AI Decision Making:** Did the agent classify items correctly based on the monthly reports? What did it catch or assume that you would have evaluated differently?
+- **Workflow Efficiency:** How would having an interactive comparison dashboard like this change your team's weekly or monthly status review process?
+- **Human vs. AI Ownership:** Where does human project manager judgment still need to own the final decision—and where is the agent genuinely saving you time?
+- **Trust and Adoption:** What kind of accuracy or safeguards would you need before trusting this tool to generate draft updates directly for VPs or external stakeholders?
 
 ---
 
@@ -326,7 +268,7 @@ each item in action_brief.txt: High if it's a blocker or risk, Medium otherwise.
 
 **Audience:** University faculty, instructors, curriculum designers, academic researchers
 
-**Objective:** Direct Bob to build and run a student submission review agent — no code required. You define the evaluation criteria through natural language; Bob builds the agent and runs it. You experience the agentic loop through the triage decisions it makes, and decide where your instructor judgment still needs to take over.
+**Objective:** Direct Bob to build and launch an interactive student triage web dashboard — no coding required. Using Bob's custom skill (`agent-with-bob-shell`), you define the evaluation rubric in plain English, and watch Bob build and run a visual triage application that highlights which student submissions need your direct attention.
 
 !!! note "Before starting Exercise C1"
     Click **New Task** in Bob to clear the context window from Part 1. This ensures Bob isn't influenced by the previous request.
@@ -339,9 +281,10 @@ each item in action_brief.txt: High if it's a blocker or risk, Medium otherwise.
 **Task:**
 
 ```
-I want to build an agent that helps me triage student short-answer responses
-before I read them. Please:
+/agent-with-bob-shell I want to build an agent that helps me triage student short-answer responses
+before I read them.
 
+Please:
 1. Generate 5 fictional student responses (2–4 paragraphs each) to the
    following prompt:
    "Describe one real-world example of agentic AI and explain what makes
@@ -350,7 +293,7 @@ before I read them. Please:
    called "review-agent". Make the responses vary in quality — some strong,
    some that miss key concepts, one that is off-topic.
 
-2. Build a Python agent called "review_agent.py" that:
+2. The agent should:
    - Reads each student response file
    - Evaluates it against this rubric:
        * Criterion 1: Identifies a real and plausible real-world example (0–2 points)
@@ -360,28 +303,9 @@ before I read them. Please:
    - Flags any submission it is uncertain about with "[REVIEW RECOMMENDED]"
    - Builds a reasoning trace as it works — one entry per student — capturing
      what it found against each criterion and why it made the classification
-   - Generates a self-contained HTML file called "triage_report.html" that:
-     - Opens automatically in the default browser when the script finishes
-     - Has two sections side by side: an "Agent Reasoning" panel on the left
-       and the triage results on the right
-     - The Agent Reasoning panel replays the reasoning steps one at a time
-       using a CSS animation (each step fades in 0.4s after the previous),
-       so you can watch the agent evaluate each student in sequence
-     - Any step where the agent flags uncertainty appears highlighted in amber
-       so the self-correction moment stands out
-     - The results panel shows a summary card at the top (total submissions,
-       how many STRONG, NEEDS REVISION, NEEDS INSTRUCTOR ATTENTION)
-     - Below the summary, a color-coded table — one row per student:
-       green for STRONG, amber for NEEDS REVISION, red for NEEDS INSTRUCTOR ATTENTION
-     - Each red row shows a visible "REVIEW RECOMMENDED" badge if flagged
-     - Each row includes the total score and a one-sentence agent note
-     - Uses clean, professional styling — no external libraries or CDN links,
-       fully self-contained
 
-3. Include a short README.md explaining what the agent does and how to run it.
-
-Use only Python standard library — no pip installs required.
-Save everything in a folder called "review-agent".
+The application should provide a web interface for a better user experience.
+Put the whole project under a folder called `review-agent` in this workspace.
 ```
 
 **Run it:**
@@ -394,35 +318,30 @@ In the VS Code integrated terminal, run these as two separate commands:
     ```
 2. Run the script:
     ```bash
-    python review_agent.py
+    python server.py
     ```
 
-`triage_report.html` will open in your browser automatically. Watch the left panel — the agent works through each student one at a time before the final triage table appears on the right.
+Follow the on-screen instructions to open the app (typically running on `http://127.0.0.1:5001`).
 
 **What to observe:**
 
-- The **left panel animates the reasoning** per student — watch the agent apply each rubric criterion in sequence before committing to a classification
-- The **amber highlight** marks where the agent flagged its own uncertainty — this is the Evaluate stage made visible, the agent recognizing the limits of its confidence
-- The **REVIEW RECOMMENDED badge** on red rows tells you exactly where your reading time is most needed before you open a single document
-- The color-coded table gives you a scannable triage view of the whole class at a glance
-- Notice how the rubric you wrote in plain English was interpreted and applied consistently — you specified the criteria, not the algorithm
+- **Automated Triage Assistant:** Observe how Bob designs and builds a clean grading dashboard, letting you easily review and organize student responses visually.
+- **Realistic Sample Material:** Verify that the 5 fictional student essays (`student_1.txt` to `student_5.txt`) varying in quality were successfully created inside the `review-agent` folder.
+- **Identify Actionable Submissions:** Note where the agent flags submissions as `NEEDS INSTRUCTOR ATTENTION` or `[REVIEW RECOMMENDED]`, helping you instantly see where your direct feedback is most needed.
+- **No-Code Implementation:** You designed a fully functional teaching tool with natural language—letting Bob manage folders, write comparison scripts, and build interactive webpages.
 
 **Follow-up prompt (if time allows):**
 
 ```
-Re-run the review agent with a revised rubric: add a fourth criterion —
-"Criterion 4: Response demonstrates original thinking beyond the lecture
-slides (0–2 points)."
-Update the classification thresholds accordingly and regenerate
-triage_report.html.
+Add a text input box to the web interface so I can add new student responses
+directly from the browser and have them analyzed.
 ```
 
 **Discussion points:**
 
-- Which classifications would you have made differently? What does that tell you about the rubric?
-- Where did the agent add the REVIEW RECOMMENDED flag, and do you agree with those choices?
-- How would you explain this kind of AI-assisted triage to students — and to your department?
-- What is the risk of over-trusting a triage agent in an academic context? How do you guard against it?
+- **Assessing AI Judgment:** Did the agent's web dashboard score the student essays correctly? Where did your professional grading judgment disagree with the AI's triage?
+- **Academic Safeguards:** What is the risk of over-trusting an AI triage tool when grading or providing academic feedback? How do you guard against it?
+- **Transparency and Communication:** How would you explain this kind of AI-assisted grading and triage system to your students and your academic department?
 
 ---
 
@@ -515,7 +434,7 @@ Invite 3–4 participants to share:
 Then open for Q&A. Common questions to be ready for:
 
 **"Is this safe to use at my company?"**
-The Bob extension runs inside VS Code on your machine, but your prompts are sent to a remote model endpoint to generate responses — they do not stay local. How that data is handled depends on which model your organisation has configured and the terms of your enterprise agreement with that provider. Always check your company's AI usage guidelines before using any AI tool with proprietary information.
+Bob IDE runs on your machine, but your prompts are sent to a remote model endpoint to generate responses — they do not stay local. How that data is handled depends on which model your organisation has configured and the terms of your enterprise agreement with that provider. Always check your company's AI usage guidelines before using any AI tool with proprietary information.
 
 **"How do I know if the output is correct?"**
 You don't — without reviewing it. The agent is a strong starting point, not a final decision. Always apply your domain expertise to validate what the agent produces before acting on it.
