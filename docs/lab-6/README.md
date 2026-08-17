@@ -165,7 +165,11 @@ Open PowerShell in your current workspace and run:
 Invoke-WebRequest -Uri "https://github.com/ibm/intro-bob-workshop/archive/refs/heads/main.zip" -OutFile "temp.zip"; Expand-Archive -Path "temp.zip" -DestinationPath "temp_extracted"; Move-Item -Path "temp_extracted\intro-bob-workshop-main\.bob" -Destination ".bob"; Remove-Item -Recurse -Force "temp.zip", "temp_extracted"
 ```
 
-Once the command finishes, your current workspace will have the custom skills directory ready, and you can immediately start prompting your code agent!
+#### Verify
+
+After installing, **restart Bob IDE** (or start a new Bob Shell session) so it picks up the skill files.
+
+Then check **Settings → Skills** — you should see `agent-with-bob-shell` listed.
 
 ---
 
