@@ -28,6 +28,11 @@ Professional development workshop with guided demonstrations and personalized ex
 
 Mixed-audience workshop for developers, managers, executives, and college-level educators. Participants learn what makes Bob agentic, complete role-based exercises, and explore practical uses of AI-assisted work.
 
+### ⚡ IBM Bob Power User Workshop (55–60 minutes)
+**Tips, Tools, and Team Workflows**
+
+For IBM employees with prior Bob experience who want to go deeper. Covers rules, skills, MCP, and Bob Shell — with exercises for dashboards, repo analysis, skill creation, and team workflow design.
+
 ### 🧪 Student Concierge Follow-On Lab (30–45 minutes)
 **Build a Student Concierge App (SJSU Edition)**
 
@@ -58,6 +63,7 @@ Visit the workshop website: **[https://ibm.github.io/intro-bob-workshop](https:/
 │   ├── lab-5/                     # IBM PM Workshop
 │   ├── lab-6/                     # External Audience Workshop
 │   ├── lab-6b/                    # Student Concierge follow-on lab
+│   ├── lab-7/                     # IBM Bob Power User Workshop
 │   ├── resources/                 # Additional resources and guides
 │   └── images/                    # Images and screenshots
 ├── data/                          # Sample data files (if needed)
@@ -152,6 +158,7 @@ Bob represents the future of AI-assisted development and productivity.
    - [Take Your Child to Work Day](docs/lab-4/README.md)
    - [IBM PM Workshop](docs/lab-5/README.md)
    - [External Audience Workshop](docs/lab-6/README.md)
+   - [IBM Bob Power User Workshop](docs/lab-7/README.md)
    - [Student Concierge Follow-On Lab](docs/lab-6b/README.md)
 3. Explore [Additional Resources](docs/resources/RESOURCES.md) to learn more
 
@@ -164,8 +171,8 @@ Bob represents the future of AI-assisted development and productivity.
 
 ## 📊 Workshop Statistics
 
-- **7 Workshop Labs**: Student, employee, PM, family, and external-audience formats
-- **420–435 Minutes**: Total workshop content including the optional follow-on lab
+- **8 Workshop Labs**: Student, employee, PM, family, external-audience, and power-user formats
+- **475–495 Minutes**: Total workshop content including the optional follow-on lab
 - **Hands-on Learning**: Interactive exercises with real projects
 - **No Prerequisites**: Workshops designed for all skill levels
 

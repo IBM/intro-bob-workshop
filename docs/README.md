@@ -52,6 +52,13 @@ Mixed-audience workshop for developers, managers, executives, and college-level 
 
 [Start External Audience Workshop →](lab-6/README.md)
 
+#### ⚡ IBM Bob Power User Workshop (55–60 minutes)
+**Tips, Tools, and Team Workflows**
+
+For IBM employees who have used Bob before and want to go deeper. Covers global and project rules, skills, MCP, and Bob Shell — with hands-on exercises for building a dashboard, analyzing a GitHub repo, creating a skill, and designing a team workflow.
+
+[Start Power User Workshop →](lab-7/README.md)
+
 #### 🧪 Optional Lab (30–45 minutes)
 **Student Concierge App (SJSU Edition)**
 
@@ -81,6 +88,7 @@ Each workshop is designed to be:
 | [Lab 4: Take Your Child to Work Day](lab-4/README.md) | Parent-child AI adventure (30 minutes) |
 | [Lab 5: IBM PM Workshop](lab-5/README.md) | Accelerate PM work with agentic AI (60 minutes) |
 | [Lab 6: Silicon Valley Leadership Group Workshop](lab-6/README.md) | Mixed-audience workshop for developers, PMs, executives, and educators (60 minutes guided workshop + 30-minute presentation) |
+| [Lab 7: IBM Bob Power User Workshop](lab-7/README.md) | Advanced tips, tools, and team workflows for IBM employees with prior Bob experience (55–60 minutes) |
 | [Optional Lab: Student Concierge App (SJSU Edition)](lab-6b/README.md) | Optional SJSU-specific follow-on lab for student or developer audiences (30–45 minutes) |
 
 ## What You'll Learn
@@ -145,6 +153,11 @@ These workshops have been tested with:
 - Bob access configured in VS Code
 - Laptop for hands-on exercises
 - Mixed technical backgrounds are supported
+
+### IBM Bob Power User Workshop
+- Bob IDE installed and working
+- Prior Bob experience (Lab 3 or equivalent)
+- Terminal access for Bob Shell exercises
 
 ## Getting Started
 
