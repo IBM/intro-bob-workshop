@@ -1,0 +1,3490 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Learn how to work with IBM Bob, an agentic AI assistant, through hands-on workshops for students and professionals">
+      
+      
+        <meta name="author" content="IBM Developer">
+      
+      
+        <link rel="canonical" href="https://ibm.github.io/intro-bob-workshop/lab-7/">
+      
+      
+        <link rel="prev" href="../lab-6/">
+      
+      
+        <link rel="next" href="../lab-6b/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Lab 7. IBM Bob Power User Workshop - IBM Bob Workshops</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"IBM Plex Sans";--md-code-font:"IBM Plex Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ibm-bob-workshop-power-user-techniques" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="IBM Bob Workshops" class="md-header__button md-logo" aria-label="IBM Bob Workshops" data-md-component="logo">
+      
+  <img src="../images/ibm-blue-background.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IBM Bob Workshops
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lab 7. IBM Bob Power User Workshop
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ibm/intro-bob-workshop" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    intro-bob-workshop
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
+          
+  
+  
+  Welcome
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../pre-work/" class="md-tabs__link">
+          
+  
+  
+  Workshops
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../resources/RESOURCES/" class="md-tabs__link">
+          
+  
+  
+  References
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="IBM Bob Workshops" class="md-nav__button md-logo" aria-label="IBM Bob Workshops" data-md-component="logo">
+      
+  <img src="../images/ibm-blue-background.png" alt="logo">
+
+    </a>
+    IBM Bob Workshops
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ibm/intro-bob-workshop" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    intro-bob-workshop
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Welcome
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About the Workshops
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pre-work/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 0. Pre-work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1. TechTrek Workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-2-edt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2. High School Workshop (EDT Edition)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3. IBM Employee Workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 4. Take Your Child to Work Day
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 5. IBM PM Workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 6. Silicon Valley Leadership Group Workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 7. IBM Bob Power User Workshop
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 7. IBM Bob Power User Workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-tips-tools-and-team-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Tips, Tools, and Team Workflows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Tips, Tools, and Team Workflows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workshop-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workshop Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workshop-agenda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workshop Agenda
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-tips-and-techniques-maximizing-bob-10-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 1: Tips and Techniques: Maximizing Bob (10 minutes)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1: Tips and Techniques: Maximizing Bob (10 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tip-1-always-start-a-new-project-in-its-own-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tip 1: Always Start a New Project in Its Own Folder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip-2-global-and-project-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tip 2: Global and Project Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip-3-how-to-use-and-create-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tip 3: How to Use and Create Skills
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip-4-how-to-use-and-create-mcp-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tip 4: How to Use and Create MCP Servers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip-5-intro-to-bob-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tip 5: Intro to Bob Shell
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip-6-misc-power-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tip 6: Misc Power Tips
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-1-build-an-interactive-dashboard-10-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 1: Build an Interactive Dashboard (10 minutes)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercise 1: Build an Interactive Dashboard (10 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Prompt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterate-improve-the-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Iterate: Improve the Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-2-analyze-a-github-repository-10-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2: Analyze a GitHub Repository (10 minutes)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercise 2: Analyze a GitHub Repository (10 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-a-use-the-workshop-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option A: Use the Workshop Repo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-b-analyze-your-own-teams-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option B: Analyze Your Own Team's Repository
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-c-analyze-a-public-open-source-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option C: Analyze a Public Open Source Project
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-3-create-your-own-skill-10-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 3: Create Your Own Skill (10 minutes)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercise 3: Create Your Own Skill (10 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Task
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-1-ibm-code-review-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1: IBM Code Review Checklist
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-client-facing-technical-proposal-writer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2: Client-Facing Technical Proposal Writer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-commit-message-and-pr-description-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 3: Commit Message and PR Description Generator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-your-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Your Skill
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-build-your-own-workshop-1520-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 2: Build Your Own Workshop (15–20 minutes)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2: Build Your Own Workshop (15–20 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-to-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What to Build
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group-share-out-5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Group Share-Out (5 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Takeaways
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Takeaways">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rules-and-context-shape-everything" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rules and Context Shape Everything
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skills-are-shareable-expertise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skills Are Shareable Expertise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcp-turns-bob-into-a-system-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP Turns Bob Into a System Tool
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bob-shell-is-the-bridge-to-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bob Shell Is the Bridge to Automation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fresh-context-is-fast-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fresh Context Is Fast Context
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-for-power-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices for Power Users
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices for Power Users">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Do's ✅
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#donts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Don'ts ❌
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-6b/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Optional Lab. Student Concierge App (SJSU Edition)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-6c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Optional Lab. Agentic App with Bob Shell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workshops
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Workshops
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pre-work/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 0. Pre-work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1. TechTrek Workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-2-edt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2. High School Workshop (EDT Edition)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3. IBM Employee Workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 4. Take Your Child to Work Day
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 5. IBM PM Workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 6. Silicon Valley Leadership Group Workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 7. IBM Bob Power User Workshop
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 7. IBM Bob Power User Workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-tips-tools-and-team-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Tips, Tools, and Team Workflows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Tips, Tools, and Team Workflows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workshop-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workshop Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workshop-agenda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workshop Agenda
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-tips-and-techniques-maximizing-bob-10-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 1: Tips and Techniques: Maximizing Bob (10 minutes)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1: Tips and Techniques: Maximizing Bob (10 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tip-1-always-start-a-new-project-in-its-own-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tip 1: Always Start a New Project in Its Own Folder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip-2-global-and-project-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tip 2: Global and Project Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip-3-how-to-use-and-create-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tip 3: How to Use and Create Skills
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip-4-how-to-use-and-create-mcp-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tip 4: How to Use and Create MCP Servers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip-5-intro-to-bob-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tip 5: Intro to Bob Shell
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip-6-misc-power-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tip 6: Misc Power Tips
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-1-build-an-interactive-dashboard-10-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 1: Build an Interactive Dashboard (10 minutes)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercise 1: Build an Interactive Dashboard (10 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Prompt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterate-improve-the-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Iterate: Improve the Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-2-analyze-a-github-repository-10-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2: Analyze a GitHub Repository (10 minutes)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercise 2: Analyze a GitHub Repository (10 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-a-use-the-workshop-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option A: Use the Workshop Repo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-b-analyze-your-own-teams-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option B: Analyze Your Own Team's Repository
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-c-analyze-a-public-open-source-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option C: Analyze a Public Open Source Project
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-3-create-your-own-skill-10-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 3: Create Your Own Skill (10 minutes)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercise 3: Create Your Own Skill (10 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Task
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-1-ibm-code-review-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1: IBM Code Review Checklist
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-client-facing-technical-proposal-writer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2: Client-Facing Technical Proposal Writer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-commit-message-and-pr-description-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 3: Commit Message and PR Description Generator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-your-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Your Skill
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-build-your-own-workshop-1520-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 2: Build Your Own Workshop (15–20 minutes)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2: Build Your Own Workshop (15–20 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-to-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What to Build
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group-share-out-5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Group Share-Out (5 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Takeaways
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Takeaways">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rules-and-context-shape-everything" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rules and Context Shape Everything
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skills-are-shareable-expertise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skills Are Shareable Expertise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcp-turns-bob-into-a-system-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP Turns Bob Into a System Tool
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bob-shell-is-the-bridge-to-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bob Shell Is the Bridge to Automation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fresh-context-is-fast-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fresh Context Is Fast Context
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-for-power-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices for Power Users
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices for Power Users">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Do's ✅
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#donts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Don'ts ❌
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-6b/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Optional Lab. Student Concierge App (SJSU Edition)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-6c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Optional Lab. Agentic App with Bob Shell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    References
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    References
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Additional Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/CONTRIBUTORS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/MKDOCS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MkDocs Cheatsheet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/ADMIN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Admin Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-tips-tools-and-team-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Tips, Tools, and Team Workflows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Tips, Tools, and Team Workflows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workshop-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workshop Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workshop-agenda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workshop Agenda
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-tips-and-techniques-maximizing-bob-10-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 1: Tips and Techniques: Maximizing Bob (10 minutes)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1: Tips and Techniques: Maximizing Bob (10 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tip-1-always-start-a-new-project-in-its-own-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tip 1: Always Start a New Project in Its Own Folder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip-2-global-and-project-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tip 2: Global and Project Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip-3-how-to-use-and-create-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tip 3: How to Use and Create Skills
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip-4-how-to-use-and-create-mcp-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tip 4: How to Use and Create MCP Servers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip-5-intro-to-bob-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tip 5: Intro to Bob Shell
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip-6-misc-power-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tip 6: Misc Power Tips
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-1-build-an-interactive-dashboard-10-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 1: Build an Interactive Dashboard (10 minutes)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercise 1: Build an Interactive Dashboard (10 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Prompt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterate-improve-the-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Iterate: Improve the Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-2-analyze-a-github-repository-10-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2: Analyze a GitHub Repository (10 minutes)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercise 2: Analyze a GitHub Repository (10 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-a-use-the-workshop-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option A: Use the Workshop Repo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-b-analyze-your-own-teams-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option B: Analyze Your Own Team's Repository
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-c-analyze-a-public-open-source-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option C: Analyze a Public Open Source Project
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-3-create-your-own-skill-10-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 3: Create Your Own Skill (10 minutes)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercise 3: Create Your Own Skill (10 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Task
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-1-ibm-code-review-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1: IBM Code Review Checklist
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-client-facing-technical-proposal-writer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2: Client-Facing Technical Proposal Writer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-commit-message-and-pr-description-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 3: Commit Message and PR Description Generator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-your-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Your Skill
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-build-your-own-workshop-1520-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 2: Build Your Own Workshop (15–20 minutes)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2: Build Your Own Workshop (15–20 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-to-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What to Build
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group-share-out-5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Group Share-Out (5 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Takeaways
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Takeaways">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rules-and-context-shape-everything" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rules and Context Shape Everything
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skills-are-shareable-expertise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skills Are Shareable Expertise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcp-turns-bob-into-a-system-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP Turns Bob Into a System Tool
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bob-shell-is-the-bridge-to-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bob Shell Is the Bridge to Automation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fresh-context-is-fast-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fresh Context Is Fast Context
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-for-power-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices for Power Users
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices for Power Users">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Do's ✅
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#donts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Don'ts ❌
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+  
+  
+
+
+<h1 id="ibm-bob-workshop-power-user-techniques">IBM Bob Workshop: Power User Techniques<a class="headerlink" href="#ibm-bob-workshop-power-user-techniques" title="Permanent link">&para;</a></h1>
+<h2 id="advanced-tips-tools-and-team-workflows">Advanced Tips, Tools, and Team Workflows<a class="headerlink" href="#advanced-tips-tools-and-team-workflows" title="Permanent link">&para;</a></h2>
+<h3 id="workshop-overview">Workshop Overview<a class="headerlink" href="#workshop-overview" title="Permanent link">&para;</a></h3>
+<p>This hands-on workshop is designed for IBM employees who have already met Bob and want to go deeper. You'll learn the techniques that separate a power user from a casual one: rules, skills, MCP integrations, and Bob Shell. Then you'll apply them in a series of timed exercises you can take directly back to your team.</p>
+<p><strong>Duration:</strong> 55–60 minutes</p>
+<p><strong>Target Audience:</strong> IBM employees who have used Bob before and want to maximize its value for their team</p>
+<p><strong>Prerequisites:</strong> Bob IDE installed, basic familiarity with Bob chat (Lab 3 or equivalent)</p>
+<p><strong>Materials Needed:</strong> Laptop with Bob access, VS Code with Bob extension, terminal access</p>
+<hr />
+<p><img src="../images/Slide1.png" width="720" alt="Slide 1"></p>
+<p><br></p>
+<p><img src="../images/Slide2.png" width="720" alt="Slide 2"></p>
+<p><br></p>
+<p><img src="../images/Slide3.png" width="720" alt="Slide 3"></p>
+<p><br></p>
+<p><img src="../images/Slide4.png" width="720" alt="Slide 4"></p>
+<p><br></p>
+<p><img src="../images/Slide5.png" width="720" alt="Slide 5"></p>
+<p><br></p>
+<p><img src="../images/Slide6.png" width="720" alt="Slide 6"></p>
+<hr />
+<h2 id="workshop-agenda">Workshop Agenda<a class="headerlink" href="#workshop-agenda" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Segment</th>
+<th style="text-align: left;">Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Part 1: Tips and Techniques: Maximizing Bob</td>
+<td style="text-align: left;">10 minutes</td>
+</tr>
+<tr>
+<td style="text-align: left;">Exercise 1: Build an Interactive Dashboard</td>
+<td style="text-align: left;">10 minutes</td>
+</tr>
+<tr>
+<td style="text-align: left;">Exercise 2: Analyze a GitHub Repository</td>
+<td style="text-align: left;">10 minutes</td>
+</tr>
+<tr>
+<td style="text-align: left;">Exercise 3: Create Your Own Skill</td>
+<td style="text-align: left;">10 minutes</td>
+</tr>
+<tr>
+<td style="text-align: left;">Part 2: Build Your Own Workshop</td>
+<td style="text-align: left;">15–20 minutes</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Total</strong></td>
+<td style="text-align: left;"><strong>55–60 minutes</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="part-1-tips-and-techniques-maximizing-bob-10-minutes">Part 1: Tips and Techniques: Maximizing Bob (10 minutes)<a class="headerlink" href="#part-1-tips-and-techniques-maximizing-bob-10-minutes" title="Permanent link">&para;</a></h2>
+<p>This section covers the configuration and workflow patterns that make Bob significantly more powerful. Each topic takes 1–2 minutes and sets up the exercises that follow.</p>
+<hr />
+<h3 id="tip-1-always-start-a-new-project-in-its-own-folder">Tip 1: Always Start a New Project in Its Own Folder<a class="headerlink" href="#tip-1-always-start-a-new-project-in-its-own-folder" title="Permanent link">&para;</a></h3>
+<p>Every project should live in its own dedicated folder. Bob uses the folder as its workspace boundary — it reads project rules, loads MCP servers, and scopes all file operations to that folder.</p>
+<p><strong>Create a folder and open it in VS Code:</strong></p>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>my-project<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>my-project<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>code<span class="w"> </span>.
+</code></pre></div>
+<p><strong>Grant trust so Bob has full access:</strong></p>
+<p>When you open a new folder, Bob will prompt you to trust it. You have three options:</p>
+<ul>
+<li><strong>Trust folder</strong>: grants full access to this folder only</li>
+<li><strong>Trust parent folder</strong>: automatically trusts all subdirectories — useful if you keep all your projects under one directory like <code>~/projects/</code></li>
+<li><strong>Don't trust</strong>: Bob runs in restricted safe mode (no project rules, no MCP servers, no auto-approval)</li>
+</ul>
+<p>Without trust, Bob operates with significant restrictions — project rules are ignored, MCP servers won't connect, and tool auto-approval is disabled. Always trust folders containing your own code.</p>
+<div class="admonition tip">
+<p class="admonition-title">Trust decisions are saved</p>
+<p>Your choice is stored in <code>~/.bob/trustedFolders.json</code> so you are only asked once per folder.</p>
+</div>
+<hr />
+<h3 id="tip-2-global-and-project-rules">Tip 2: Global and Project Rules<a class="headerlink" href="#tip-2-global-and-project-rules" title="Permanent link">&para;</a></h3>
+<p>Bob reads rules before every conversation, letting you set context once rather than repeating it in every prompt. Rules use a <strong>directory-based</strong> approach — place any number of <code>.md</code> files inside the rules directory and Bob loads them all.</p>
+<p><strong>Global rules</strong> apply to every Bob conversation on your machine:</p>
+<ul>
+<li>Location: <code>~/.bob/rules/</code> (directory of <code>.md</code> files)</li>
+<li>Use for: personal preferences, coding style, output format, tone, language</li>
+</ul>
+<p><strong>Project rules</strong> apply only when Bob is open in a specific workspace:</p>
+<ul>
+<li>Location: <code>.bob/rules/</code> at the root of your project</li>
+<li>Use for: tech stack, architecture decisions, team conventions, DO NOT CHANGE sections</li>
+</ul>
+<p><strong>Example project rules setup:</strong></p>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>.bob/rules
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="gh"># .bob/rules/stack.md</span>
+
+<span class="gu">## Stack</span>
+<span class="k">-</span><span class="w"> </span>Backend: Node.js 20 + Express
+<span class="k">-</span><span class="w"> </span>Frontend: React 18 + TypeScript
+<span class="k">-</span><span class="w"> </span>Database: PostgreSQL 15 (never use MongoDB)
+
+<span class="gu">## Conventions</span>
+<span class="k">-</span><span class="w"> </span>All API responses must use { data, error, meta } envelope
+<span class="k">-</span><span class="w"> </span>Always add JSDoc to exported functions
+<span class="k">-</span><span class="w"> </span>Tests go in <span class="gs">__tests__</span>/ next to the source file
+
+<span class="gu">## Do Not Change</span>
+<span class="k">-</span><span class="w"> </span>Do not modify /src/auth/ (compliance boundary)
+<span class="k">-</span><span class="w"> </span>Do not update package-lock.json manually
+</code></pre></div>
+<p><strong>Try it now:</strong> Create a <code>.bob/rules/</code> directory in your project, add a <code>.md</code> file describing your stack or preferences, and Bob will pick it up automatically.</p>
+<div class="admonition tip">
+<p class="admonition-title">Rules compound: the more precise they are, the more consistent Bob's output</p>
+<p>Project rules layer on top of global rules. Teams that share a <code>.bob/rules/</code> directory in their repo get consistent Bob behavior across every developer's machine automatically.</p>
+</div>
+<hr />
+<h3 id="tip-3-how-to-use-and-create-skills">Tip 3: How to Use and Create Skills<a class="headerlink" href="#tip-3-how-to-use-and-create-skills" title="Permanent link">&para;</a></h3>
+<p>Skills are reusable instruction sets that Bob can activate on demand. They let you package deep expertise (a framework, a workflow, a coding pattern) into a single slash command.</p>
+<p><strong>Using a built-in skill:</strong></p>
+<div class="highlight"><pre><span></span><code>/agent-with-bob-shell build a report comparison agent for our weekly standups
+</code></pre></div>
+<p><strong>Why skills matter:</strong></p>
+<ul>
+<li>Encode your team's best practices once, reuse across every project</li>
+<li>Share via your repo's <code>.bob/skills/</code> directory so everyone on the team gets the same behavior</li>
+<li>Build domain-specific skills for your client, technology, or workflow</li>
+</ul>
+<p><strong>Creating a skill</strong> (three files, one folder):</p>
+<div class="highlight"><pre><span></span><code>.bob/skills/my-skill/
+├── SKILL.md       ← The skill instructions Bob reads
+└── EXAMPLES.md    ← (Optional) examples to guide Bob's output
+</code></pre></div>
+<p><strong>Minimal <code>SKILL.md</code> structure:</strong></p>
+<div class="highlight"><pre><span></span><code>---
+name: my-skill
+<span class="gu">description: What this skill does and when to activate it</span>
+<span class="gu">---</span>
+
+<span class="gh"># My Skill</span>
+
+<span class="gu">## When to use</span>
+...
+
+<span class="gu">## Instructions</span>
+...
+</code></pre></div>
+<p><strong>Ask Bob to help you create a skill:</strong></p>
+<div class="highlight"><pre><span></span><code>Help me create a Bob skill called "ibm-review-checklist" that reminds
+Bob to check for IBM coding standards, security patterns, and
+documentation requirements whenever it reviews or creates code.
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">New task / New context</p>
+<p>Before activating a skill, click <strong>New Task</strong> to start a fresh context window. Skills work best when Bob's context isn't cluttered with a prior conversation. A small context is also a faster context, so Bob can focus on what you actually need.</p>
+</div>
+<hr />
+<h3 id="tip-4-how-to-use-and-create-mcp-servers">Tip 4: How to Use and Create MCP Servers<a class="headerlink" href="#tip-4-how-to-use-and-create-mcp-servers" title="Permanent link">&para;</a></h3>
+<p>MCP (Model Context Protocol) connects Bob to external tools and data sources (databases, APIs, file systems, internal services) through a standardized interface.</p>
+<p><strong>Built-in MCP servers Bob supports:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Server</th>
+<th style="text-align: left;">What it gives Bob</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>filesystem</code></td>
+<td style="text-align: left;">Read/write access to directories you specify</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>github</code></td>
+<td style="text-align: left;">Search repos, read issues, open PRs</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>brave-search</code></td>
+<td style="text-align: left;">Live web search results</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>postgres</code></td>
+<td style="text-align: left;">Query a PostgreSQL database directly</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>slack</code></td>
+<td style="text-align: left;">Read channels, post messages</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Enable an MCP server</strong> via Bob Settings → MCP Servers, or by editing <code>.bob/mcp.json</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"servers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"github"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"npx"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"args"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"-y"</span><span class="p">,</span><span class="w"> </span><span class="s2">"@modelcontextprotocol/server-github"</span><span class="p">],</span>
+<span class="w">      </span><span class="nt">"env"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"GITHUB_TOKEN"</span><span class="p">:</span><span class="w"> </span><span class="s2">"${GITHUB_TOKEN}"</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Creating a custom MCP server</strong> is useful when you have an internal API, a proprietary data source, or a workflow tool that Bob should be able to call:</p>
+<div class="highlight"><pre><span></span><code>Ask Bob: "Help me create a custom MCP server that exposes our
+internal Jira instance so Bob can read tickets and update status."
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">MCP is how Bob becomes a team tool, not just a personal one</p>
+<p>When your team runs a shared MCP server pointing at your project's database, issue tracker, or documentation, every developer's Bob instance can query the same live data. That turns Bob from a personal code assistant into a project-aware team tool.</p>
+</div>
+<hr />
+<h3 id="tip-5-intro-to-bob-shell">Tip 5: Intro to Bob Shell<a class="headerlink" href="#tip-5-intro-to-bob-shell" title="Permanent link">&para;</a></h3>
+<p>Bob Shell (<code>bob</code>) is the command-line version of Bob. It lets you call Bob from scripts, automation pipelines, and other programs without the IDE.</p>
+<p><strong>Authentication: SSO vs API key</strong></p>
+<p>Bob Shell supports two ways to authenticate:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;">SSO / IBMid</th>
+<th style="text-align: left;">API Key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>How</strong></td>
+<td style="text-align: left;">Browser login (same as bob.ibm.com)</td>
+<td style="text-align: left;"><code>BOBSHELL_API_KEY</code> environment variable</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Best for</strong></td>
+<td style="text-align: left;">Regular interactive use on your own machine</td>
+<td style="text-align: left;">Automation, CI/CD, scripts, cron jobs</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Setup</strong></td>
+<td style="text-align: left;">Run <code>bob</code> and a browser window opens automatically</td>
+<td style="text-align: left;">Generate a key and export it in your shell profile</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Prompt</strong></td>
+<td style="text-align: left;">Once per session (or when your session expires)</td>
+<td style="text-align: left;">Never — fully non-interactive</td>
+</tr>
+</tbody>
+</table>
+<p>For most users just getting started, <strong>SSO is the default</strong> — install Bob Shell, run <code>bob</code>, log in once in the browser, and you're done. Only set up an API key if you need Bob Shell to run unattended without a browser.</p>
+<p><strong>Install:</strong></p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">macOS / Linux</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://bob.ibm.com/download/bobshell.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
+</code></pre></div>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Windows</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nb">Set-ExecutionPolicy</span> <span class="n">Bypass</span> <span class="n">-Scope</span> <span class="k">Process</span><span class="p">;</span> <span class="nb">irm </span><span class="n">-Uri</span> <span class="s2">"https://bob.ibm.com/download/bobshell.ps1"</span> <span class="p">|</span> <span class="nb">iex</span>
+</code></pre></div>
+</div>
+</div>
+<p><strong>Set your API key (so it persists across sessions):</strong></p>
+<ol>
+<li>Go to <a href="https://bob.ibm.com">bob.ibm.com</a> and log in</li>
+<li>Open your subscription instance and navigate to the <strong>API key management</strong> section</li>
+<li>Create a new API key, set the type to <strong>Inference</strong>, and copy the value — you will not be able to view it again after creation</li>
+<li>
+<p>Add it to your shell profile so it is set automatically on every login:</p>
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">macOS / Linux</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="c1"># Add to ~/.zshrc or ~/.bashrc</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s1">'export BOBSHELL_API_KEY="your-api-key-here"'</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+<span class="nb">source</span><span class="w"> </span>~/.zshrc
+</code></pre></div>
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Windows</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="c"># Set permanently for your user account</span>
+<span class="no">[System.Environment]</span><span class="p">::</span><span class="n">SetEnvironmentVariable</span><span class="p">(</span><span class="s1">'BOBSHELL_API_KEY'</span><span class="p">,</span> <span class="s1">'your-api-key-here'</span><span class="p">,</span> <span class="s1">'User'</span><span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+</li>
+<li>
+<p>Once <code>BOBSHELL_API_KEY</code> is set, Bob Shell picks it up automatically — no extra flag needed:</p>
+<div class="highlight"><pre><span></span><code>bob<span class="w"> </span>-p<span class="w"> </span><span class="s2">"Hello"</span>
+</code></pre></div>
+</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Never commit your API key to version control</p>
+<p>Store it only in your shell profile or a secrets manager, never in a file that gets pushed to a repo.</p>
+</div>
+<p><strong>Common Bob Shell commands:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Ask Bob a question from the terminal</span>
+bob<span class="w"> </span>-p<span class="w"> </span><span class="s2">"Summarize the changes in the last 5 git commits"</span>
+
+<span class="c1"># Use a specific mode (ask = no file edits, safe for analysis)</span>
+bob<span class="w"> </span>-p<span class="w"> </span><span class="s2">"What are the top 3 risks in this codebase?"</span><span class="w"> </span>-m<span class="w"> </span>ask
+
+<span class="c1"># Pass a file as context using @ mention</span>
+bob<span class="w"> </span>-p<span class="w"> </span><span class="s2">"Generate a one-paragraph summary of @README.md"</span>
+
+<span class="c1"># Ask Bob to output structured JSON</span>
+bob<span class="w"> </span>-p<span class="w"> </span><span class="s2">"List the public API endpoints in src/ and return the result as JSON"</span>
+</code></pre></div>
+<p><strong>Where Bob Shell shines:</strong></p>
+<ul>
+<li><strong>CI/CD pipelines:</strong> automated code review on every pull request</li>
+<li><strong>Pre-commit hooks:</strong> enforce standards before code is committed</li>
+<li><strong>Report generation:</strong> scheduled summaries of project health</li>
+<li><strong>Agentic applications:</strong> embed Bob as the reasoning engine in your own Python or Node.js app (see Lab 6c)</li>
+</ul>
+<p><strong>Quick Bob Shell demo:</strong></p>
+<div class="highlight"><pre><span></span><code>bob<span class="w"> </span>-p<span class="w"> </span><span class="s2">"Look at the files in this directory and tell me what this project does in 2 sentences."</span>
+</code></pre></div>
+<hr />
+<h3 id="tip-6-misc-power-tips">Tip 6: Misc Power Tips<a class="headerlink" href="#tip-6-misc-power-tips" title="Permanent link">&para;</a></h3>
+<p><strong>Start with a New Task for every distinct job.</strong> Bob's context window is finite. A fresh task means Bob focuses on exactly what you need now, and it's faster.</p>
+<p><strong>Be the product owner, not the implementer.</strong> Describe <em>what</em> you want and the <em>criteria for success</em>, not the implementation steps. Bob handles the implementation; your job is to specify clearly.</p>
+<p><strong>Ask for a plan before execution on big tasks:</strong></p>
+<div class="highlight"><pre><span></span><code>Before you start, describe your plan for restructuring this service.
+Don't make any changes yet. I want to review the approach first.
+</code></pre></div>
+<p><strong>Iterate with follow-ups rather than re-prompting:</strong></p>
+<p><div class="highlight"><pre><span></span><code>Good. Now add input validation to the POST endpoint.
+</code></pre></div>
+is better than re-explaining the whole context.</p>
+<p><strong>Use Bob to review Bob's own output:</strong></p>
+<div class="highlight"><pre><span></span><code>You just generated that API. Now review it as a senior engineer
+and identify any security or edge-case issues.
+</code></pre></div>
+<p><strong>Ask Bob to explain its reasoning:</strong></p>
+<div class="highlight"><pre><span></span><code>Explain why you chose that architecture. What alternatives did you consider?
+</code></pre></div>
+<hr />
+<h2 id="exercise-1-build-an-interactive-dashboard-10-minutes">Exercise 1: Build an Interactive Dashboard (10 minutes)<a class="headerlink" href="#exercise-1-build-an-interactive-dashboard-10-minutes" title="Permanent link">&para;</a></h2>
+<p>This exercise mirrors the warm-up from Lab 6: Bob goes from a plain-language description to a working, interactive file in a single prompt.</p>
+<div class="admonition note">
+<p class="admonition-title">Start a New Task before this exercise</p>
+<p>Click <strong>New Task</strong> in Bob to start fresh. This keeps context small and focused.</p>
+</div>
+<h3 id="the-prompt">The Prompt<a class="headerlink" href="#the-prompt" title="Permanent link">&para;</a></h3>
+<p>Type this into Bob:</p>
+<div class="highlight"><pre><span></span><code>Create a self-contained interactive HTML dashboard that:
+- Shows 6 made-up IBM employees with their name, department, performance score (1–10),
+  and a current project name
+- Displays the data as a sortable, searchable table
+- Has a bar chart showing average scores by department
+- Includes a summary card showing total headcount, average score, top performer,
+  and how many employees are on active projects
+- Uses IBM's color palette (IBM Blue #0f62fe, white, light gray)
+- No external libraries, fully self-contained
+
+Save it as "ibm-team-dashboard.html"
+Then tell me the file path so I can open it in my browser.
+</code></pre></div>
+<p><strong>What to observe:</strong></p>
+<ul>
+<li>Bob creates a complete, working HTML file in a single pass</li>
+<li>No setup, no server, no install. Opens directly in a browser.</li>
+<li>Bob narrates every decision it makes</li>
+</ul>
+<p><strong>Open the file in your browser.</strong> If you're doing this as a group, project it so everyone can see it.</p>
+<hr />
+<h3 id="iterate-improve-the-dashboard">Iterate: Improve the Dashboard<a class="headerlink" href="#iterate-improve-the-dashboard" title="Permanent link">&para;</a></h3>
+<p>Once the dashboard works, try at least one follow-up prompt. The goal is to see how Bob reads the file it already created and makes a targeted, working change without breaking anything else.</p>
+<p><strong>Pick one (or write your own):</strong></p>
+<div class="highlight"><pre><span></span><code>Add a filter dropdown so I can show only one department at a time.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Color-code the performance score column: green for 8–10, yellow for 5–7, red for below 5.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Add a slider that hides employees with a score below the threshold I set.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Add a dark mode toggle button in the top-right corner.
+</code></pre></div>
+<p><strong>Discussion (2 minutes):</strong></p>
+<ul>
+<li>How long would this have taken to build manually?</li>
+<li>What would you use a dashboard like this for on your team?</li>
+<li>What one change would make it immediately useful in your actual work?</li>
+</ul>
+<hr />
+<h2 id="exercise-2-analyze-a-github-repository-10-minutes">Exercise 2: Analyze a GitHub Repository (10 minutes)<a class="headerlink" href="#exercise-2-analyze-a-github-repository-10-minutes" title="Permanent link">&para;</a></h2>
+<p>Use Bob to analyze a public GitHub repository, the same way you might analyze a client's codebase, a vendor library, or your own team's project before a code review.</p>
+<div class="admonition note">
+<p class="admonition-title">Start a New Task before this exercise</p>
+<p>Click <strong>New Task</strong> to keep this context separate from the dashboard exercise.</p>
+</div>
+<h3 id="option-a-use-the-workshop-repo">Option A: Use the Workshop Repo<a class="headerlink" href="#option-a-use-the-workshop-repo" title="Permanent link">&para;</a></h3>
+<p>The simplest path is to analyze this workshop's own repo:</p>
+<div class="highlight"><pre><span></span><code>Clone https://github.com/ibm/intro-bob-workshop into a local folder
+called `intro-bob-workshop` in the current directory using:
+git clone https://github.com/ibm/intro-bob-workshop intro-bob-workshop
+
+Then give me:
+1. A high-level overview of what this project is and what it does
+2. The technology stack (languages, frameworks, tools)
+3. The overall structure: what's in each major directory
+4. Three observations about what's done well
+5. Three things you'd improve or flag for review
+
+Format your response as a structured report I could share with my team.
+</code></pre></div>
+<h3 id="option-b-analyze-your-own-teams-repository">Option B: Analyze Your Own Team's Repository<a class="headerlink" href="#option-b-analyze-your-own-teams-repository" title="Permanent link">&para;</a></h3>
+<p>If you have access to a relevant repo (internal or public), use that instead:</p>
+<div class="highlight"><pre><span></span><code>Clone (or examine, if already local) [YOUR REPO URL or PATH].
+
+Give me:
+1. A high-level overview of the project's purpose and scope
+2. The technology stack and key dependencies
+3. The top 3 code quality observations, both good and bad
+4. Any security patterns or anti-patterns you notice
+5. What a new developer would need to know to contribute in their first week
+
+Format as an onboarding brief.
+</code></pre></div>
+<h3 id="option-c-analyze-a-public-open-source-project">Option C: Analyze a Public Open Source Project<a class="headerlink" href="#option-c-analyze-a-public-open-source-project" title="Permanent link">&para;</a></h3>
+<p>Pick any public repository you're curious about. If you need an example, try the Qiskit quantum computing SDK: <a href="https://github.com/Qiskit/qiskit">https://github.com/Qiskit/qiskit</a></p>
+<div class="highlight"><pre><span></span><code>Examine the public repository at [PUBLIC REPO URL].
+
+Produce a technical due-diligence summary covering:
+- Purpose and maturity level
+- Technology choices and dependencies
+- Code quality indicators (test coverage hints, documentation quality, error handling)
+- Maintenance health (recent commits, open issues pattern)
+- Whether you'd recommend adopting this library, and why
+
+Keep it to one page.
+</code></pre></div>
+<p><strong>Discussion (2 minutes):</strong></p>
+<ul>
+<li>What did Bob find that surprised you?</li>
+<li>How could this kind of analysis fit into your team's code review or vendor evaluation process?</li>
+<li>What additional context (rules, project knowledge) would have made the analysis sharper?</li>
+</ul>
+<hr />
+<h2 id="exercise-3-create-your-own-skill-10-minutes">Exercise 3: Create Your Own Skill (10 minutes)<a class="headerlink" href="#exercise-3-create-your-own-skill-10-minutes" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Start a New Task before this exercise</p>
+<p>Click <strong>New Task</strong> to give Bob a clean slate for this exercise.</p>
+</div>
+<p>In this exercise, you'll use Bob to help you build a reusable skill: a packaged instruction set that you or your team can activate with a single slash command.</p>
+<h3 id="the-task">The Task<a class="headerlink" href="#the-task" title="Permanent link">&para;</a></h3>
+<p>Choose one of the three examples below, or bring your own idea. The goal is to leave with a skill file you could commit to your team's repo today.</p>
+<hr />
+<h3 id="example-1-ibm-code-review-checklist">Example 1: IBM Code Review Checklist<a class="headerlink" href="#example-1-ibm-code-review-checklist" title="Permanent link">&para;</a></h3>
+<p>A structured checklist Bob follows whenever it reviews or generates code for IBM client projects. Security, documentation, error handling, and IBM conventions all in one slash command.</p>
+<div class="highlight"><pre><span></span><code>Help me create a Bob skill called "ibm-code-review" that gives Bob a structured
+checklist to follow whenever it reviews or generates code for IBM client projects.
+
+Store it at .bob/skills/ibm-code-review/SKILL.md
+
+The skill should check for:
+- Security: no hardcoded credentials, proper input validation, no SQL injection patterns
+- Documentation: all public functions have JSDoc or docstrings
+- Error handling: all async operations have error handling
+- IBM conventions: responses use standard envelope format, logging uses structured JSON
+- Tests: at least one test per new function
+
+Include a EXAMPLES.md with two examples: one for reviewing existing code
+and one for generating new code with the skill active.
+</code></pre></div>
+<p><strong>Test it:</strong></p>
+<p>First, make sure the <code>ibm-team-dashboard.html</code> file from Exercise 1 is in your current workspace. Then run:</p>
+<div class="highlight"><pre><span></span><code>/ibm-code-review ibm-team-dashboard.html
+</code></pre></div>
+<hr />
+<h3 id="example-2-client-facing-technical-proposal-writer">Example 2: Client-Facing Technical Proposal Writer<a class="headerlink" href="#example-2-client-facing-technical-proposal-writer" title="Permanent link">&para;</a></h3>
+<p>A skill that gives Bob a standard structure and tone for IBM technical proposals, RFPs, and solution briefs. Every proposal follows the same sections and stays business-appropriate without having to re-explain the format each time.</p>
+<div class="highlight"><pre><span></span><code>Help me create a Bob skill called "ibm-proposal-writer" that structures and
+writes IBM client-facing technical proposals and solution briefs.
+
+Store it at .bob/skills/ibm-proposal-writer/SKILL.md
+
+The skill should:
+- Always produce these sections in order: Executive Summary, Business Challenge,
+  Proposed Solution, Architecture Overview, Why IBM, Next Steps
+- Keep language business-appropriate: no internal IBM jargon or acronyms
+  without definition
+- Tie every technical recommendation back to a stated client business outcome
+- Use confident, active voice. Avoid hedging phrases like "might" or "could potentially"
+- Keep the Executive Summary to 3 sentences maximum
+
+Include a EXAMPLES.md with two examples: one for a cloud migration proposal
+and one for an AI/data modernization engagement.
+</code></pre></div>
+<p><strong>Test it:</strong>
+<div class="highlight"><pre><span></span><code>/ibm-proposal-writer Write a one-page solution brief for a client who wants
+to modernize their on-premise data warehouse to a cloud-native architecture.
+</code></pre></div></p>
+<hr />
+<h3 id="example-3-commit-message-and-pr-description-generator">Example 3: Commit Message and PR Description Generator<a class="headerlink" href="#example-3-commit-message-and-pr-description-generator" title="Permanent link">&para;</a></h3>
+<p>A skill that enforces your team's exact git commit conventions and PR description template, including properly signed commits using <code>git commit -S -s</code> for GPG signing and Developer Certificate of Origin sign-off.</p>
+<div class="highlight"><pre><span></span><code>Help me create a Bob skill called "git-commit-helper" that writes properly
+formatted git commit messages and pull request descriptions for my team.
+
+Store it at .bob/skills/git-commit-helper/SKILL.md
+
+The skill should:
+- Follow Conventional Commits format: &lt;type&gt;(&lt;scope&gt;): &lt;short summary&gt;
+  Types: feat, fix, docs, chore, refactor, test, ci
+- Prefix commit messages with the Jira ticket if provided (e.g. PROJ-1234: feat: ...)
+- Keep the subject line under 72 characters
+- Always use signed commits. The final git command must use both -S (GPG sign)
+  and -s (DCO sign-off), for example:
+    git commit -S -s -m "feat(auth): add OAuth2 token refresh"
+- For PR descriptions, always include these sections:
+    ## What changed
+    ## Why
+    ## How to test
+    ## Screenshots (if UI change)
+- Never include "WIP" or "TODO" in a commit message without a Jira ticket reference
+
+Include a EXAMPLES.md with two examples: one for a feature commit with a Jira
+ticket and one for a documentation-only change.
+</code></pre></div>
+<p><strong>Test it:</strong>
+<div class="highlight"><pre><span></span><code>/git-commit-helper I just added input validation to the user registration
+endpoint and fixed a bug where empty email addresses were accepted.
+Jira ticket: AUTH-892
+</code></pre></div></p>
+<p>Bob should produce the formatted commit message and the full <code>git commit -S -s -m "..."</code> command ready to copy and run.</p>
+<hr />
+<h3 id="test-your-skill">Test Your Skill<a class="headerlink" href="#test-your-skill" title="Permanent link">&para;</a></h3>
+<p>Once Bob creates the skill files, activate it with the slash command shown in your chosen example and verify the output matches your expectations.</p>
+<p><strong>Discussion (2 minutes):</strong></p>
+<ul>
+<li>What skill would have the highest impact on your team's daily Bob usage?</li>
+<li>How would you distribute a skill to your whole team? (Hint: commit <code>.bob/skills/</code> to your repo)</li>
+<li>What's the difference between a rule and a skill? When would you use each?</li>
+</ul>
+<hr />
+<h2 id="part-2-build-your-own-workshop-1520-minutes">Part 2: Build Your Own Workshop (15–20 minutes)<a class="headerlink" href="#part-2-build-your-own-workshop-1520-minutes" title="Permanent link">&para;</a></h2>
+<p>This is the open activity. You've seen Bob's power-user features. Now use Bob the way <em>you</em> actually need it to work for you and your team.</p>
+<div class="admonition note">
+<p class="admonition-title">Start a New Task before Part 2</p>
+<p>Click <strong>New Task</strong> to begin with a completely fresh context.</p>
+</div>
+<h3 id="what-to-build">What to Build<a class="headerlink" href="#what-to-build" title="Permanent link">&para;</a></h3>
+<p>This session is intentionally open. Choose the direction that creates the most value for your actual work.</p>
+<hr />
+<h4 id="direction-a-build-something-useful-right-now">Direction A: Build Something Useful Right Now<a class="headerlink" href="#direction-a-build-something-useful-right-now" title="Permanent link">&para;</a></h4>
+<p>Use Bob to create a real deliverable you could use or share within the next week.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>A working prototype of a feature your team has been putting off</li>
+<li>A CI/CD pipeline configuration for your project</li>
+<li>A full test suite for an existing module</li>
+<li>A technical document, RFC, or architecture decision record</li>
+<li>A client-facing proof-of-concept or demo</li>
+</ul>
+<p><strong>Approach:</strong></p>
+<ol>
+<li>Open a new task</li>
+<li>Set the context (paste your project rules, describe the system)</li>
+<li>Make your request with clear success criteria</li>
+<li>Iterate at least twice based on what Bob produces</li>
+<li>Have Bob review its own output and suggest improvements</li>
+</ol>
+<hr />
+<h4 id="direction-b-set-up-bob-for-your-team">Direction B: Set Up Bob for Your Team<a class="headerlink" href="#direction-b-set-up-bob-for-your-team" title="Permanent link">&para;</a></h4>
+<p>Use this session to configure Bob the right way for your team's workflow. Everything you create here can be committed and shared today.</p>
+<p><strong>Tasks to work through (pick 2–3):</strong></p>
+<ol>
+<li>Create a <code>.bob/RULES.md</code> for your project with your actual tech stack and conventions</li>
+<li>Create a skill for your most common Bob use case</li>
+<li>Configure an MCP server for a tool your team uses (GitHub, Jira, Slack, PostgreSQL)</li>
+<li>Create a custom mode for a specific role on your team (code reviewer, documentation writer, security auditor)</li>
+</ol>
+<p><strong>Starting prompts:</strong></p>
+<div class="highlight"><pre><span></span><code>Help me write a .bob/RULES.md for a project that uses [your stack].
+Include conventions for [specific area], standards for [specific area],
+and a DO NOT CHANGE section for [sensitive areas].
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Help me create a custom Bob mode for a "Security Auditor" role that focuses
+exclusively on identifying security vulnerabilities, never makes code changes,
+and always formats findings as a structured risk table.
+</code></pre></div>
+<hr />
+<h4 id="direction-c-build-a-team-ready-workflow">Direction C: Build a Team-Ready Workflow<a class="headerlink" href="#direction-c-build-a-team-ready-workflow" title="Permanent link">&para;</a></h4>
+<p>Design and prototype a Bob-powered workflow your team could adopt, turning a manual, repetitive process into something Bob handles autonomously.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><strong>PR review automation:</strong> Bob reviews every PR against your team's standards and posts a structured review comment</li>
+<li><strong>Weekly standup summarizer:</strong> Bob reads your team's Git log or Jira activity and generates a standup brief</li>
+<li><strong>Documentation auto-generator:</strong> Bob reads source code and keeps your API docs in sync</li>
+<li><strong>Onboarding accelerator:</strong> Bob reads a new developer's assigned ticket and generates a "how to get started" guide specific to that codebase area</li>
+</ul>
+<p><strong>Design questions to answer first:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Question</th>
+<th style="text-align: left;">Your answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">What's the repetitive task?</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">What does Bob read as input?</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">What does Bob produce as output?</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Who reviews or acts on the output?</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">What would make the output trustworthy?</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p>Then ask Bob to build it:</p>
+<div class="highlight"><pre><span></span><code>I want to automate [describe the workflow].
+
+Bob should read [inputs] and produce [outputs].
+The workflow will be triggered by [trigger].
+The audience for the output is [who].
+
+Please build a working prototype I can run today.
+Start with the most minimal version that demonstrates the core value.
+</code></pre></div>
+<hr />
+<h3 id="group-share-out-5-minutes">Group Share-Out (5 minutes)<a class="headerlink" href="#group-share-out-5-minutes" title="Permanent link">&para;</a></h3>
+<p>When time is called, be ready to share:</p>
+<ul>
+<li>What did you build or configure?</li>
+<li>What was the most useful thing Bob produced?</li>
+<li>What's one thing you'll use or share with your team this week?</li>
+<li>What would you build next if you had another hour?</li>
+</ul>
+<hr />
+<h2 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h2>
+<h3 id="rules-and-context-shape-everything">Rules and Context Shape Everything<a class="headerlink" href="#rules-and-context-shape-everything" title="Permanent link">&para;</a></h3>
+<p>The single biggest improvement most Bob users can make is writing a good <code>.bob/RULES.md</code>. Rules eliminate the need to re-explain your stack, conventions, and constraints in every conversation, and they keep Bob consistent across your whole team.</p>
+<h3 id="skills-are-shareable-expertise">Skills Are Shareable Expertise<a class="headerlink" href="#skills-are-shareable-expertise" title="Permanent link">&para;</a></h3>
+<p>A skill is a packaged workflow. When you encode a complex task (a review checklist, a proposal template, an agent loop) into a skill, you make it repeatable and shareable. The best skills on a team get used every day and improve over time.</p>
+<h3 id="mcp-turns-bob-into-a-system-tool">MCP Turns Bob Into a System Tool<a class="headerlink" href="#mcp-turns-bob-into-a-system-tool" title="Permanent link">&para;</a></h3>
+<p>Out-of-the-box, Bob knows your local files. With MCP, Bob knows your database, your issue tracker, your CI system, and your internal APIs. The more context Bob has, the more valuable its output.</p>
+<h3 id="bob-shell-is-the-bridge-to-automation">Bob Shell Is the Bridge to Automation<a class="headerlink" href="#bob-shell-is-the-bridge-to-automation" title="Permanent link">&para;</a></h3>
+<p>Once you've used Bob interactively to solve a problem, Bob Shell lets you put that same reasoning into a script, a pipeline, or an application. The gap between "I ask Bob to do this" and "Bob does this automatically" is smaller than you think.</p>
+<h3 id="fresh-context-is-fast-context">Fresh Context Is Fast Context<a class="headerlink" href="#fresh-context-is-fast-context" title="Permanent link">&para;</a></h3>
+<p>New Task is one of the most underused features. A small, focused context produces faster, more accurate results than a long conversation where Bob has to sort through everything it knows. Start fresh, stay focused.</p>
+<hr />
+<h2 id="best-practices-for-power-users">Best Practices for Power Users<a class="headerlink" href="#best-practices-for-power-users" title="Permanent link">&para;</a></h2>
+<h3 id="dos">Do's ✅<a class="headerlink" href="#dos" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Commit <code>.bob/</code> to your repo.</strong> Rules, skills, and MCP config become team assets, not individual ones.</li>
+<li><strong>Use New Task between distinct jobs.</strong> Context clarity is a performance multiplier.</li>
+<li><strong>Ask Bob to plan before it acts</strong> on large, multi-file changes. Review the plan first.</li>
+<li><strong>Iterate with follow-ups</strong> rather than re-prompting. Bob remembers the current context.</li>
+<li><strong>Have Bob review its own work.</strong> A self-critique pass often catches the most important issues.</li>
+<li><strong>Test Bob's output.</strong> Run the code, open the file, verify the result before sharing.</li>
+</ul>
+<h3 id="donts">Don'ts ❌<a class="headerlink" href="#donts" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Don't accumulate a massive context</strong> without starting a new task. Precision degrades as context grows.</li>
+<li><strong>Don't skip review</strong> for anything going to clients or production. Bob produces drafts, not final decisions.</li>
+<li><strong>Don't put sensitive data in prompts.</strong> Credentials, PII, and proprietary algorithms should never appear in a conversation.</li>
+<li><strong>Don't over-specify implementation.</strong> Give Bob the goal and constraints, and let it choose the approach.</li>
+<li><strong>Don't treat Bob's first output as final.</strong> The second and third iterations are usually where the real value appears.</li>
+</ul>
+<hr />
+<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Resource</th>
+<th style="text-align: left;">What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="https://bob.ibm.com/docs">Bob Documentation</a></td>
+<td style="text-align: left;">Official docs: rules, skills, MCP, Bob Shell</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://bob.ibm.com/docs/shell/getting-started/install-and-setup">Bob Shell Getting Started</a></td>
+<td style="text-align: left;">Install and authenticate Bob Shell</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://modelcontextprotocol.io/servers">MCP Server Registry</a></td>
+<td style="text-align: left;">Pre-built MCP servers for common tools</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="../lab-6c/">Lab 6c: Agentic App with Bob Shell</a></td>
+<td style="text-align: left;">Deep dive into building agents with Bob Shell</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://github.com/ibm/intro-bob-workshop">Workshop GitHub Repo</a></td>
+<td style="text-align: left;">All workshop materials including skills</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>Lab 7: IBM Bob Power User Workshop</em>
+<em>Duration: 55–60 minutes</em>
+<em>Target: IBM employees with prior Bob experience</em>
+<em>Last Updated: 2026</em></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026- IBM Developer
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ibm" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/ibmdeveloper" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M459.4 151.7c.3 4.5.3 9.1.3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53C87.4 130.8 165 172.4 252.1 176.9c-1.6-7.8-2.6-15.9-2.6-24C249.5 95.1 296.3 48 354.4 48c30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/company/ibm/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/user/developerworks" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M549.7 124.1c-6.2-23.7-24.8-42.3-48.3-48.6C458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5c-23.5 6.3-42 24.9-48.3 48.6C15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8C117.3 448 288.1 448 288.1 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6V175.2l142.7 81.2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://dev.to/ibmdeveloper" target="_blank" rel="noopener" title="dev.to" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M120.1 208.3c-3.9-2.9-7.8-4.3-11.6-4.3H91.1v104.5h17.4c3.9 0 7.8-1.4 11.6-4.3s5.8-7.3 5.8-13.1v-69.7c0-5.8-2-10.2-5.8-13.1M404.1 32H43.9C19.7 32 .1 51.6 0 75.8v360.4C.1 460.4 19.7 480 43.9 480h360.2c24.2 0 43.8-19.6 43.9-43.8V75.8c-.1-24.2-19.7-43.8-43.9-43.8M154.2 291.2c0 18.8-11.6 47.3-48.4 47.3H59.4V173h47.4c35.4 0 47.4 28.5 47.4 47.3zm100.7-88.7h-53.3v38.4h32.6v29.6h-32.6v38.4h53.3v29.6h-62.2c-11.2.3-20.4-8.5-20.7-19.7V193.7c-.3-11.1 8.6-20.4 19.7-20.7h63.2zm103.6 115.3c-13.2 30.7-36.8 24.6-47.4 0L272.6 173h32.6l29.7 113.7L364.5 173h32.6l-38.5 144.8z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

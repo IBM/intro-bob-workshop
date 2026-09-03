@@ -1,0 +1,2335 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Learn how to work with IBM Bob, an agentic AI assistant, through hands-on workshops for students and professionals">
+      
+      
+        <meta name="author" content="IBM Developer">
+      
+      
+        <link rel="canonical" href="https://ibm.github.io/intro-bob-workshop/lab-6c/">
+      
+      
+        <link rel="prev" href="../lab-6b/">
+      
+      
+        <link rel="next" href="../resources/RESOURCES/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Optional Lab. Agentic App with Bob Shell - IBM Bob Workshops</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"IBM Plex Sans";--md-code-font:"IBM Plex Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lab-6c-optional-build-an-agentic-report-analysis-app-with-bob-shell" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="IBM Bob Workshops" class="md-header__button md-logo" aria-label="IBM Bob Workshops" data-md-component="logo">
+      
+  <img src="../images/ibm-blue-background.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IBM Bob Workshops
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Optional Lab. Agentic App with Bob Shell
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ibm/intro-bob-workshop" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    intro-bob-workshop
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
+          
+  
+  
+  Welcome
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../pre-work/" class="md-tabs__link">
+          
+  
+  
+  Workshops
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../resources/RESOURCES/" class="md-tabs__link">
+          
+  
+  
+  References
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="IBM Bob Workshops" class="md-nav__button md-logo" aria-label="IBM Bob Workshops" data-md-component="logo">
+      
+  <img src="../images/ibm-blue-background.png" alt="logo">
+
+    </a>
+    IBM Bob Workshops
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ibm/intro-bob-workshop" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    intro-bob-workshop
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Welcome
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About the Workshops
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pre-work/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 0. Pre-work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1. TechTrek Workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-2-edt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2. High School Workshop (EDT Edition)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3. IBM Employee Workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 4. Take Your Child to Work Day
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 5. IBM PM Workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 6. Silicon Valley Leadership Group Workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 7. IBM Bob Power User Workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-6b/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Optional Lab. Student Concierge App (SJSU Edition)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Optional Lab. Agentic App with Bob Shell
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Optional Lab. Agentic App with Bob Shell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-start-authenticate-bob-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before You Start: Authenticate Bob Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-app-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the App Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-start-install-the-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before You Start: Install the Skill
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Before You Start: Install the Skill">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-a-clone-the-workshop-repository-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option A — Clone the workshop repository (recommended)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-b-download-just-the-skill-no-clone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option B — Download just the skill (no clone)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-c-already-have-the-repository-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option C — Already have the repository locally
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-generate-the-project-with-bob-10-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1 — Generate the Project with Bob (10 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-install-dependencies-and-run-5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2 — Install Dependencies and Run (5 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-run-your-first-analysis-10-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3 — Run Your First Analysis (10 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-read-the-generated-code-5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4 — Read the Generated Code (5 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-exercise-swap-in-your-own-reports-5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5 — Exercise: Swap in Your Own Reports (5 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-exercise-add-a-human-approval-gate-10-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6 — Exercise: Add a Human Approval Gate (10 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-you-built" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What You Built
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taking-it-further" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Taking It Further
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workshops
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Workshops
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pre-work/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 0. Pre-work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1. TechTrek Workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-2-edt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2. High School Workshop (EDT Edition)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3. IBM Employee Workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 4. Take Your Child to Work Day
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 5. IBM PM Workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 6. Silicon Valley Leadership Group Workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 7. IBM Bob Power User Workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-6b/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Optional Lab. Student Concierge App (SJSU Edition)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Optional Lab. Agentic App with Bob Shell
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Optional Lab. Agentic App with Bob Shell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-start-authenticate-bob-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before You Start: Authenticate Bob Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-app-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the App Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-start-install-the-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before You Start: Install the Skill
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Before You Start: Install the Skill">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-a-clone-the-workshop-repository-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option A — Clone the workshop repository (recommended)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-b-download-just-the-skill-no-clone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option B — Download just the skill (no clone)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-c-already-have-the-repository-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option C — Already have the repository locally
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-generate-the-project-with-bob-10-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1 — Generate the Project with Bob (10 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-install-dependencies-and-run-5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2 — Install Dependencies and Run (5 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-run-your-first-analysis-10-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3 — Run Your First Analysis (10 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-read-the-generated-code-5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4 — Read the Generated Code (5 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-exercise-swap-in-your-own-reports-5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5 — Exercise: Swap in Your Own Reports (5 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-exercise-add-a-human-approval-gate-10-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6 — Exercise: Add a Human Approval Gate (10 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-you-built" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What You Built
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taking-it-further" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Taking It Further
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    References
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    References
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Additional Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/CONTRIBUTORS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/MKDOCS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MkDocs Cheatsheet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/ADMIN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Admin Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-start-authenticate-bob-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before You Start: Authenticate Bob Shell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-app-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the App Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-start-install-the-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before You Start: Install the Skill
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Before You Start: Install the Skill">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-a-clone-the-workshop-repository-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option A — Clone the workshop repository (recommended)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-b-download-just-the-skill-no-clone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option B — Download just the skill (no clone)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-c-already-have-the-repository-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option C — Already have the repository locally
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-generate-the-project-with-bob-10-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1 — Generate the Project with Bob (10 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-install-dependencies-and-run-5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2 — Install Dependencies and Run (5 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-run-your-first-analysis-10-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3 — Run Your First Analysis (10 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-read-the-generated-code-5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4 — Read the Generated Code (5 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-exercise-swap-in-your-own-reports-5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5 — Exercise: Swap in Your Own Reports (5 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-exercise-add-a-human-approval-gate-10-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6 — Exercise: Add a Human Approval Gate (10 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-you-built" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What You Built
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taking-it-further" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Taking It Further
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="lab-6c-optional-build-an-agentic-report-analysis-app-with-bob-shell">Lab 6c (Optional): Build an Agentic Report Analysis App with Bob Shell<a class="headerlink" href="#lab-6c-optional-build-an-agentic-report-analysis-app-with-bob-shell" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">This is an optional extension of Lab 6</p>
+<p>Lab 6 introduced agentic AI concepts at a high level. This lab goes further —
+you use the <code>agent-with-bob-shell</code> skill to generate a <strong>complete, runnable
+agentic application</strong> from a single prompt, then explore and extend it.
+Skip this lab if you are short on time; come back to it as a self-paced exercise.</p>
+</div>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>In this lab you use IBM Bob Shell to <strong>generate a complete Python application from a single prompt</strong>. The application reads two monthly project status reports, compares them, and produces a structured follow-up brief — all through an agentic <strong>Plan → Act → Evaluate</strong> loop — and serves the whole experience through a browser UI.</p>
+<p>You do not write any code yourself. You write a prompt, Bob builds the project, and you run it.</p>
+<p>By the end you will understand the <strong>Plan → Act → Evaluate</strong> pattern hands-on and know how to use the <code>agent-with-bob-shell</code> skill to build agentic apps with Bob Shell as the reasoning engine.</p>
+<p><strong>Who this is for:</strong> Developers and technical practitioners who want to go deeper after Lab 6.</p>
+<p><strong>Time needed:</strong> 30–40 minutes</p>
+<p><strong>Prerequisites:</strong></p>
+<ul>
+<li>Completion of Lab 6 (or familiarity with agentic AI concepts)</li>
+<li>Bob Shell installed (<code>bob --version</code> prints a version number — if not, see <a href="https://bob.ibm.com/docs/shell/getting-started/install-and-setup">Installing Bob Shell</a>)</li>
+<li>Bob Shell authenticated with an API key — see <a href="#before-you-start-authenticate-bob-shell">Before You Start</a> below</li>
+<li>Python 3.9 or later (<code>python3 --version</code>)</li>
+<li>A terminal you are comfortable running commands in</li>
+</ul>
+<hr />
+<h2 id="before-you-start-authenticate-bob-shell">Before You Start: Authenticate Bob Shell<a class="headerlink" href="#before-you-start-authenticate-bob-shell" title="Permanent link">&para;</a></h2>
+<p><code>bob run</code> requires a <strong>BOB_API_KEY</strong> environment variable. This is different from the interactive <code>bob chat</code> command, which can use browser-based SSO.</p>
+<p><strong>Step 1 — Get your API key</strong></p>
+<ol>
+<li>Go to the <a href="https://bob.ibm.com">Bob web portal</a> and sign in with your IBMid</li>
+<li>Navigate to <strong>Account → API Keys</strong> and create a new key with <strong>Scope: Inference</strong></li>
+<li>Copy the key value immediately — you cannot view it again after closing the dialog</li>
+</ol>
+<p><strong>Step 2 — Set the environment variable</strong></p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Mac / Linux</label><div class="tabbed-content">
+<p>For this terminal session only:
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">BOB_API_KEY</span><span class="o">=</span><span class="s2">"your-api-key-here"</span>
+</code></pre></div></p>
+<p>To make it permanent, add it to your shell profile:
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s1">'export BOB_API_KEY="your-api-key-here"'</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc<span class="w">   </span><span class="c1"># or ~/.bashrc</span>
+<span class="nb">source</span><span class="w"> </span>~/.zshrc
+</code></pre></div></p>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Windows (PowerShell)</label><div class="tabbed-content">
+<p>For this session only:
+<div class="highlight"><pre><span></span><code><span class="nv">$env:BOB_API_KEY</span> <span class="p">=</span> <span class="s2">"your-api-key-here"</span>
+</code></pre></div></p>
+<p>To make it permanent:
+<div class="highlight"><pre><span></span><code><span class="no">[System.Environment]</span><span class="p">::</span><span class="n">SetEnvironmentVariable</span><span class="p">(</span><span class="s2">"BOB_API_KEY"</span><span class="p">,</span><span class="s2">"your-api-key-here"</span><span class="p">,</span><span class="s2">"User"</span><span class="p">)</span>
+</code></pre></div></p>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Never commit your API key to source control. Add <code>.env</code> to your <code>.gitignore</code> if you store the key in a file.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">General-scope API keys</p>
+<p>If your key has scope <strong>General</strong> rather than <strong>Inference</strong>, you must also pass
+<code>--team-id &lt;your-team-id&gt;</code> on every <code>bob run</code> call. The Inference-scoped key
+is simpler for this lab — use that if you can.</p>
+</div>
+<p><strong>Step 3 — Verify</strong></p>
+<div class="highlight"><pre><span></span><code>bob<span class="w"> </span>run<span class="w"> </span><span class="s2">"Say hello in one sentence."</span><span class="w"> </span>--log-level<span class="w"> </span>silent
+</code></pre></div>
+<p>You should see a single sentence reply. If you see <code>Error: Bob API key is required</code>, check that <code>BOB_API_KEY</code> is set in the current terminal session (<code>echo $BOB_API_KEY</code>).</p>
+<hr />
+<h2 id="how-the-app-works">How the App Works<a class="headerlink" href="#how-the-app-works" title="Permanent link">&para;</a></h2>
+<p>The application Bob builds follows a three-phase agentic loop, with Bob Shell handling each phase as a subprocess:</p>
+<pre class="mermaid"><code>flowchart LR
+    A([Goal]) --&gt; B[Plan\nbob run --mode ask]
+    B --&gt; C[Act\nbob run]
+    C --&gt; D[Evaluate\nbob run --mode ask]
+    D --&gt;|done: false| B
+    D --&gt;|done: true| E([Brief produced ✓])</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Phase</th>
+<th style="text-align: left;">What happens</th>
+<th style="text-align: left;">Bob Shell mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Plan</strong></td>
+<td style="text-align: left;">Decides the single next concrete step — describes it, does not execute</td>
+<td style="text-align: left;"><code>--mode ask</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Act</strong></td>
+<td style="text-align: left;">Carries out that step — reads both reports, writes the brief</td>
+<td style="text-align: left;"><em>(default agent)</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Evaluate</strong></td>
+<td style="text-align: left;">Checks whether the brief meets all quality criteria</td>
+<td style="text-align: left;"><code>--mode ask</code></td>
+</tr>
+</tbody>
+</table>
+<p>Your Python script is the <strong>orchestrator</strong> — it drives the loop, manages state, and passes context between phases.<br />
+Bob Shell is the <strong>execution engine</strong> — it reasons, uses file tools, and produces output.</p>
+<p>The browser UI wraps this loop with a Flask server and Server-Sent Events (SSE) — each phase streams to the browser as it completes, with no polling required.</p>
+<hr />
+<h2 id="before-you-start-install-the-skill">Before You Start: Install the Skill<a class="headerlink" href="#before-you-start-install-the-skill" title="Permanent link">&para;</a></h2>
+<p>This lab uses the <strong><code>agent-with-bob-shell</code></strong> skill. Skills are instruction sets stored as files that Bob reads before acting — this one teaches Bob how to build agentic Python apps with the Plan→Act→Evaluate pattern.</p>
+<p>The skill needs to be in a Bob skills directory <strong>before</strong> you run the prompt in Step 1. Choose the option that matches your situation.</p>
+<hr />
+<h3 id="option-a-clone-the-workshop-repository-recommended">Option A — Clone the workshop repository (recommended)<a class="headerlink" href="#option-a-clone-the-workshop-repository-recommended" title="Permanent link">&para;</a></h3>
+<p>Cloning gives you the skill, the slash command, and all lab materials in one step.</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/IBM/intro-bob-workshop.git
+<span class="nb">cd</span><span class="w"> </span>intro-bob-workshop
+</code></pre></div>
+<p>The skill is at <code>.bob/skills/agent-with-bob-shell/</code> inside the cloned folder. Open Bob IDE from this directory and it will be picked up automatically.</p>
+<hr />
+<h3 id="option-b-download-just-the-skill-no-clone">Option B — Download just the skill (no clone)<a class="headerlink" href="#option-b-download-just-the-skill-no-clone" title="Permanent link">&para;</a></h3>
+<p>If you don't want to clone the whole repo, download only the skill folder into your global Bob skills directory:</p>
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Mac / Linux</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>~/.bob/skills/agent-with-bob-shell
+<span class="nv">BASE</span><span class="o">=</span><span class="s2">"https://raw.githubusercontent.com/IBM/intro-bob-workshop/main/.bob/skills/agent-with-bob-shell"</span>
+curl<span class="w"> </span>-sSL<span class="w"> </span><span class="s2">"</span><span class="nv">$BASE</span><span class="s2">/SKILL.md"</span><span class="w">    </span>-o<span class="w"> </span>~/.bob/skills/agent-with-bob-shell/SKILL.md
+curl<span class="w"> </span>-sSL<span class="w"> </span><span class="s2">"</span><span class="nv">$BASE</span><span class="s2">/EXAMPLES.md"</span><span class="w"> </span>-o<span class="w"> </span>~/.bob/skills/agent-with-bob-shell/EXAMPLES.md
+mkdir<span class="w"> </span>-p<span class="w"> </span>~/.bob/skills/agent-with-bob-shell/references
+curl<span class="w"> </span>-sSL<span class="w"> </span><span class="s2">"</span><span class="nv">$BASE</span><span class="s2">/references/CODE.md"</span><span class="w">             </span>-o<span class="w"> </span>~/.bob/skills/agent-with-bob-shell/references/CODE.md
+curl<span class="w"> </span>-sSL<span class="w"> </span><span class="s2">"</span><span class="nv">$BASE</span><span class="s2">/references/PROMPT_TEMPLATES.md"</span><span class="w"> </span>-o<span class="w"> </span>~/.bob/skills/agent-with-bob-shell/references/PROMPT_TEMPLATES.md
+curl<span class="w"> </span>-sSL<span class="w"> </span><span class="s2">"</span><span class="nv">$BASE</span><span class="s2">/references/REFERENCE.md"</span><span class="w">        </span>-o<span class="w"> </span>~/.bob/skills/agent-with-bob-shell/references/REFERENCE.md
+</code></pre></div>
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Windows (PowerShell)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nv">$dest</span> <span class="p">=</span> <span class="s2">"$env:USERPROFILE\.bob\skills\agent-with-bob-shell"</span>
+<span class="nv">$base</span> <span class="p">=</span> <span class="s2">"https://raw.githubusercontent.com/IBM/intro-bob-workshop/main/.bob/skills/agent-with-bob-shell"</span>
+<span class="nb">New-Item</span> <span class="n">-ItemType</span> <span class="n">Directory</span> <span class="n">-Force</span> <span class="s2">"$dest\references"</span> <span class="p">|</span> <span class="nb">Out-Null</span>
+<span class="nb">Invoke-WebRequest</span> <span class="s2">"$base/SKILL.md"</span>                        <span class="n">-OutFile</span> <span class="s2">"$dest\SKILL.md"</span>
+<span class="nb">Invoke-WebRequest</span> <span class="s2">"$base/EXAMPLES.md"</span>                     <span class="n">-OutFile</span> <span class="s2">"$dest\EXAMPLES.md"</span>
+<span class="nb">Invoke-WebRequest</span> <span class="s2">"$base/references/CODE.md"</span>              <span class="n">-OutFile</span> <span class="s2">"$dest\references\CODE.md"</span>
+<span class="nb">Invoke-WebRequest</span> <span class="s2">"$base/references/PROMPT_TEMPLATES.md"</span>  <span class="n">-OutFile</span> <span class="s2">"$dest\references\PROMPT_TEMPLATES.md"</span>
+<span class="nb">Invoke-WebRequest</span> <span class="s2">"$base/references/REFERENCE.md"</span>         <span class="n">-OutFile</span> <span class="s2">"$dest\references\REFERENCE.md"</span>
+</code></pre></div>
+</div>
+</div>
+<hr />
+<h3 id="option-c-already-have-the-repository-locally">Option C — Already have the repository locally<a class="headerlink" href="#option-c-already-have-the-repository-locally" title="Permanent link">&para;</a></h3>
+<p>If you cloned the workshop repo earlier, the skill is already present at <code>.bob/skills/agent-with-bob-shell/</code>. Open Bob IDE from the repository root and it is ready to use — no extra steps needed.</p>
+<hr />
+<h3 id="verify">Verify<a class="headerlink" href="#verify" title="Permanent link">&para;</a></h3>
+<p>After installing, <strong>restart Bob IDE</strong> (or start a new Bob Shell session) so it picks up the skill files.</p>
+<p>Then check <strong>Settings → Skills</strong> — you should see <code>agent-with-bob-shell</code> listed.</p>
+<hr />
+<h2 id="step-1-generate-the-project-with-bob-10-minutes">Step 1 — Generate the Project with Bob (10 minutes)<a class="headerlink" href="#step-1-generate-the-project-with-bob-10-minutes" title="Permanent link">&para;</a></h2>
+<p>Open Bob Shell (or Bob IDE chat) from your working directory and run the following prompt. The <code>/agent-with-bob-shell</code> prefix tells Bob to activate the skill before building.</p>
+<div class="highlight"><pre><span></span><code>/agent-with-bob-shell create an agent application that compares monthly
+project status reports and tells me what to follow up on. Also generate
+two sample monthly project status reports I can use for testing. The
+application should provide a web interface for a better user experience.
+Put the whole project under a folder called `monthly-report-agent` in
+this workspace.
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">What the skill does</p>
+<p>The <code>agent-with-bob-shell</code> skill gives Bob detailed instructions for the
+<code>bob()</code> subprocess helper, the Plan→Act→Evaluate loop structure, prompt
+templates, workspace isolation with <code>-w</code>, and the Flask + SSE web UI
+wrapper. You get a complete, runnable project without writing any
+boilerplate yourself.</p>
+</div>
+<p>Bob will create a project with this structure:</p>
+<div class="highlight"><pre><span></span><code>monthly-report-agent/
+├── agent.py              ← orchestrator: bob() helper + Plan→Act→Eval loop
+├── prompts.py            ← PLAN_PROMPT, ACT_PROMPT, EVAL_PROMPT templates
+├── bob_helpers.py        ← bob() and bob_act() subprocess wrappers
+├── server.py             ← Flask server with SSE streaming
+├── index.html            ← browser UI: upload, live progress, brief renderer
+├── requirements.txt      ← flask, markdown
+└── reports/
+    ├── january_status.md ← sample report A (generated)
+    └── february_status.md← sample report B (generated)
+</code></pre></div>
+<hr />
+<h2 id="step-2-install-dependencies-and-run-5-minutes">Step 2 — Install Dependencies and Run (5 minutes)<a class="headerlink" href="#step-2-install-dependencies-and-run-5-minutes" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>monthly-report-agent
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Use a virtual environment</p>
+<p>It is recommended to create and activate a Python virtual environment before installing dependencies to avoid polluting your global Python environment. Refer to the <a href="https://docs.python.org/3/library/venv.html">Python venv documentation</a> for instructions specific to your OS and shell.</p>
+</div>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</code></pre></div>
+<p>Start the web server:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">BOB_API_KEY</span><span class="o">=</span><span class="s2">"</span><span class="nv">$BOB_API_KEY</span><span class="s2">"</span><span class="w"> </span>python3<span class="w"> </span>server.py
+</code></pre></div>
+<p>Then open <strong>http://localhost:5001</strong> in your browser.</p>
+<div class="admonition tip">
+<p class="admonition-title">Port already in use?</p>
+<p>Pass <code>SERVER_PORT</code> to use a different port:
+<div class="highlight"><pre><span></span><code><span class="nv">SERVER_PORT</span><span class="o">=</span><span class="m">8080</span><span class="w"> </span><span class="nv">BOB_API_KEY</span><span class="o">=</span><span class="s2">"</span><span class="nv">$BOB_API_KEY</span><span class="s2">"</span><span class="w"> </span>python3<span class="w"> </span>server.py
+</code></pre></div></p>
+</div>
+<hr />
+<h2 id="step-3-run-your-first-analysis-10-minutes">Step 3 — Run Your First Analysis (10 minutes)<a class="headerlink" href="#step-3-run-your-first-analysis-10-minutes" title="Permanent link">&para;</a></h2>
+<p>In the browser:</p>
+<ol>
+<li>Drop <code>reports/january_status.md</code> into the first upload zone</li>
+<li>Drop <code>reports/february_status.md</code> into the second upload zone</li>
+<li>Click <strong>Run Analysis</strong></li>
+</ol>
+<p>Watch each phase appear in real time:</p>
+<ul>
+<li><strong>[PLAN]</strong> — Bob describes the next action</li>
+<li><strong>[ACT]</strong> — Bob reads both reports and writes the brief</li>
+<li><strong>[EVAL]</strong> — Bob checks quality and decides whether the goal is met</li>
+</ul>
+<p>When done, the formatted follow-up brief renders below the progress feed. Use <strong>Copy Markdown</strong> or <strong>Download .md</strong> to save it.</p>
+<p>You can also run the agent from the command line without the UI:</p>
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>agent.py<span class="w"> </span>--input-a<span class="w"> </span>reports/&lt;filename<span class="w"> </span><span class="k">for</span><span class="w"> </span>report<span class="w"> </span>a&gt;<span class="w"> </span>--input-b<span class="w"> </span>reports/&lt;filename<span class="w"> </span><span class="k">for</span><span class="w"> </span>report<span class="w"> </span>b&gt;
+</code></pre></div>
+<hr />
+<h2 id="step-4-read-the-generated-code-5-minutes">Step 4 — Read the Generated Code (5 minutes)<a class="headerlink" href="#step-4-read-the-generated-code-5-minutes" title="Permanent link">&para;</a></h2>
+<p>Open the files Bob generated. There are four key things to understand:</p>
+<p><strong><code>bob_helpers.py</code> — the subprocess wrappers</strong><br />
+<code>bob()</code> is the only place that calls <code>bob run</code>. It passes <code>--format json</code>, <code>--log-level silent</code>, and <code>-w &lt;workspace&gt;</code>. Everything else is plain Python strings. <code>bob_act()</code> uses <code>--format stream-json</code> to capture the tool trace for the browser UI.</p>
+<p><strong><code>prompts.py</code> — the three prompt templates</strong><br />
+<code>PLAN_PROMPT</code>, <code>ACT_PROMPT</code>, and <code>EVAL_PROMPT</code> are the seam between your orchestration code and Bob's reasoning. Tuning these changes behaviour without touching the loop.</p>
+<p><strong><code>agent.py</code> — the loop</strong><br />
+<code>run_loop()</code> calls Plan → Act → Evaluate in a <code>for</code> loop. The Eval phase returns <code>{"done": true/false, "reason": "...", "next_state": "..."}</code>. When <code>done</code> is <code>false</code>, <code>next_state</code> feeds back into the next Plan — this is how the loop self-corrects.</p>
+<p><strong><code>server.py</code> — the web wrapper</strong><br />
+Each loop phase emits a Server-Sent Event to the browser the moment it completes. The browser UI listens with <code>EventSource</code> and renders each phase progressively.</p>
+<hr />
+<h2 id="step-5-exercise-swap-in-your-own-reports-5-minutes">Step 5 — Exercise: Swap in Your Own Reports (5 minutes)<a class="headerlink" href="#step-5-exercise-swap-in-your-own-reports-5-minutes" title="Permanent link">&para;</a></h2>
+<p>Replace the sample reports with your own content. The format can be anything — plain Markdown, bullet lists, or tables. Bob reads them as text.</p>
+<p>Drop your own files in the browser upload zones, or pass them on the command line:</p>
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>agent.py<span class="w"> </span>--input-a<span class="w"> </span>path/to/my_march.md<span class="w"> </span>--input-b<span class="w"> </span>path/to/my_april.md
+</code></pre></div>
+<hr />
+<h2 id="step-6-exercise-add-a-human-approval-gate-10-minutes">Step 6 — Exercise: Add a Human Approval Gate (10 minutes)<a class="headerlink" href="#step-6-exercise-add-a-human-approval-gate-10-minutes" title="Permanent link">&para;</a></h2>
+<p>Right now the Act phase runs automatically. For higher-stakes scenarios, you may want to approve the plan before Bob executes it.</p>
+<p>Find the loop body in <code>agent.py</code> and add an approval gate between Plan and Act:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># --- your addition starts here ---</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">[APPROVE] Review the plan above."</span><span class="p">)</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Proceed with this action? [y/n]: "</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">answer</span> <span class="o">!=</span> <span class="s2">"y"</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Skipping action. Loop will re-plan on next iteration."</span><span class="p">)</span>
+    <span class="k">continue</span>
+<span class="c1"># --- your addition ends here ---</span>
+</code></pre></div>
+<p>Re-run <code>python3 agent.py</code>. You now have a human-in-the-loop between every Plan and Act step.</p>
+<hr />
+<h2 id="what-you-built">What You Built<a class="headerlink" href="#what-you-built" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>monthly-report-agent/
+├── agent.py              ← orchestrator (loop + bob helpers)
+├── prompts.py            ← prompt templates (tune without touching logic)
+├── bob_helpers.py        ← bob() and bob_act() subprocess wrappers
+├── server.py             ← Flask + SSE web server
+├── index.html            ← browser SPA
+├── requirements.txt
+└── reports/
+    ├── january_status.md
+    └── february_status.md
+</code></pre></div>
+<p>The <code>bob()</code> helper is fewer than 25 lines. The loop is fewer than 50 lines. All the intelligence — reading files, comparing status, writing the brief, judging quality — lives inside Bob Shell.</p>
+<hr />
+<h2 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>One prompt</strong> with the right skill activated generates a complete, runnable agentic application.</li>
+<li><strong><code>bob run</code></strong> is the headless subcommand — any program that can spawn a subprocess can use it as an LLM backend.</li>
+<li><strong><code>--mode ask</code></strong> makes Bob reason without executing tools — safe for Plan and Evaluate phases.</li>
+<li><strong>Prompt templates</strong> are the seam between your orchestration code and Bob's reasoning. Tune them to change behaviour without touching the loop logic.</li>
+<li><strong>JSON eval contracts</strong> are the simplest way to pass structured decisions from Bob back to your Python code.</li>
+<li><strong>No shared memory</strong> between <code>bob run</code> invocations — your Python loop state <em>is</em> the memory. Pass relevant context explicitly in each prompt.</li>
+<li>The full implementation details (helper code, prompt shapes, workspace flags, stream-json schema) live in the <strong><code>agent-with-bob-shell</code></strong> skill — activate it whenever you need to build a new agent.</li>
+</ul>
+<hr />
+<h2 id="taking-it-further">Taking It Further<a class="headerlink" href="#taking-it-further" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Idea</th>
+<th style="text-align: left;">How to start</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Compare more than two reports</td>
+<td style="text-align: left;">Add a third upload zone in <code>index.html</code> and extend <code>run_loop()</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Email the brief automatically</td>
+<td style="text-align: left;">Use Python's <code>smtplib</code> in <code>server.py</code> after the <code>done</code> event is emitted</td>
+</tr>
+<tr>
+<td style="text-align: left;">Schedule the agent weekly</td>
+<td style="text-align: left;">Add a <code>cron</code> job or GitHub Actions workflow that calls <code>python3 agent.py</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Use custom Bob modes per phase</td>
+<td style="text-align: left;">Add <code>.bob/custom_modes.yaml</code> with <code>loop-planner</code> and <code>loop-evaluator</code> modes</td>
+</tr>
+<tr>
+<td style="text-align: left;">Add retry logic on parse errors</td>
+<td style="text-align: left;">Wrap <code>json.loads()</code> in a try/except and re-prompt Bob to fix its output</td>
+</tr>
+<tr>
+<td style="text-align: left;">Deploy the app</td>
+<td style="text-align: left;">Add a <code>Dockerfile</code> — <code>FROM python:3.12-slim</code>, <code>COPY . .</code>, <code>CMD ["python3","server.py"]</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>Lab 6c (Optional) — Agentic Report Analysis App with Bob Shell</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026- IBM Developer
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ibm" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/ibmdeveloper" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M459.4 151.7c.3 4.5.3 9.1.3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53C87.4 130.8 165 172.4 252.1 176.9c-1.6-7.8-2.6-15.9-2.6-24C249.5 95.1 296.3 48 354.4 48c30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/company/ibm/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/user/developerworks" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M549.7 124.1c-6.2-23.7-24.8-42.3-48.3-48.6C458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5c-23.5 6.3-42 24.9-48.3 48.6C15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8C117.3 448 288.1 448 288.1 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6V175.2l142.7 81.2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://dev.to/ibmdeveloper" target="_blank" rel="noopener" title="dev.to" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M120.1 208.3c-3.9-2.9-7.8-4.3-11.6-4.3H91.1v104.5h17.4c3.9 0 7.8-1.4 11.6-4.3s5.8-7.3 5.8-13.1v-69.7c0-5.8-2-10.2-5.8-13.1M404.1 32H43.9C19.7 32 .1 51.6 0 75.8v360.4C.1 460.4 19.7 480 43.9 480h360.2c24.2 0 43.8-19.6 43.9-43.8V75.8c-.1-24.2-19.7-43.8-43.9-43.8M154.2 291.2c0 18.8-11.6 47.3-48.4 47.3H59.4V173h47.4c35.4 0 47.4 28.5 47.4 47.3zm100.7-88.7h-53.3v38.4h32.6v29.6h-32.6v38.4h53.3v29.6h-62.2c-11.2.3-20.4-8.5-20.7-19.7V193.7c-.3-11.1 8.6-20.4 19.7-20.7h63.2zm103.6 115.3c-13.2 30.7-36.8 24.6-47.4 0L272.6 173h32.6l29.7 113.7L364.5 173h32.6l-38.5 144.8z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
