@@ -20,7 +20,27 @@ This hands-on workshop is designed for IBM employees who have already met Bob an
 
 ---
 
-![The Shift in Software Development](../images/CodertoArchitect.png)
+<img src="../images/Slide1.png" width="720" alt="Slide 1">
+
+<br>
+
+<img src="../images/Slide2.png" width="720" alt="Slide 2">
+
+<br>
+
+<img src="../images/Slide3.png" width="720" alt="Slide 3">
+
+<br>
+
+<img src="../images/Slide4.png" width="720" alt="Slide 4">
+
+<br>
+
+<img src="../images/Slide5.png" width="720" alt="Slide 5">
+
+<br>
+
+<img src="../images/Slide6.png" width="720" alt="Slide 6">
 
 ---
 
@@ -43,24 +63,53 @@ This section covers the configuration and workflow patterns that make Bob signif
 
 ---
 
-### Tip 1: Global and Project Rules
+### Tip 1: Always Start a New Project in Its Own Folder
 
-Bob reads two rule files before every conversation, letting you set context once rather than repeating it in every prompt.
+Every project should live in its own dedicated folder. Bob uses the folder as its workspace boundary — it reads project rules, loads MCP servers, and scopes all file operations to that folder.
+
+**Create a folder and open it in VS Code:**
+
+```bash
+mkdir my-project && cd my-project && code .
+```
+
+**Grant trust so Bob has full access:**
+
+When you open a new folder, Bob will prompt you to trust it. You have three options:
+
+- **Trust folder**: grants full access to this folder only
+- **Trust parent folder**: automatically trusts all subdirectories — useful if you keep all your projects under one directory like `~/projects/`
+- **Don't trust**: Bob runs in restricted safe mode (no project rules, no MCP servers, no auto-approval)
+
+Without trust, Bob operates with significant restrictions — project rules are ignored, MCP servers won't connect, and tool auto-approval is disabled. Always trust folders containing your own code.
+
+!!! tip "Trust decisions are saved"
+    Your choice is stored in `~/.bob/trustedFolders.json` so you are only asked once per folder.
+
+---
+
+### Tip 2: Global and Project Rules
+
+Bob reads rules before every conversation, letting you set context once rather than repeating it in every prompt. Rules use a **directory-based** approach — place any number of `.md` files inside the rules directory and Bob loads them all.
 
 **Global rules** apply to every Bob conversation on your machine:
 
-- Location: `~/.bob/RULES.md` (or configure it in **Bob Settings → Rules**)
+- Location: `~/.bob/rules/` (directory of `.md` files)
 - Use for: personal preferences, coding style, output format, tone, language
 
 **Project rules** apply only when Bob is open in a specific workspace:
 
-- Location: `.bob/RULES.md` at the root of your project
+- Location: `.bob/rules/` at the root of your project
 - Use for: tech stack, architecture decisions, team conventions, DO NOT CHANGE sections
 
-**Example project rules file:**
+**Example project rules setup:**
+
+```bash
+mkdir -p .bob/rules
+```
 
 ```markdown
-# Project Rules
+# .bob/rules/stack.md
 
 ## Stack
 - Backend: Node.js 20 + Express
@@ -77,14 +126,14 @@ Bob reads two rule files before every conversation, letting you set context once
 - Do not update package-lock.json manually
 ```
 
-**Try it now:** Open Bob Settings, find the Rules section, and add one rule that describes your preferred code style or output format.
+**Try it now:** Create a `.bob/rules/` directory in your project, add a `.md` file describing your stack or preferences, and Bob will pick it up automatically.
 
 !!! tip "Rules compound: the more precise they are, the more consistent Bob's output"
-    Project rules override global rules when they conflict. Teams that share a `.bob/RULES.md` in their repo get consistent Bob behavior across every developer's machine automatically.
+    Project rules layer on top of global rules. Teams that share a `.bob/rules/` directory in their repo get consistent Bob behavior across every developer's machine automatically.
 
 ---
 
-### Tip 2: How to Use and Create Skills
+### Tip 3: How to Use and Create Skills
 
 Skills are reusable instruction sets that Bob can activate on demand. They let you package deep expertise (a framework, a workflow, a coding pattern) into a single slash command.
 
@@ -138,7 +187,7 @@ documentation requirements whenever it reviews or creates code.
 
 ---
 
-### Tip 3: How to Use and Create MCP Servers
+### Tip 4: How to Use and Create MCP Servers
 
 MCP (Model Context Protocol) connects Bob to external tools and data sources (databases, APIs, file systems, internal services) through a standardized interface.
 
@@ -178,24 +227,78 @@ internal Jira instance so Bob can read tickets and update status."
 
 ---
 
-### Tip 4: Intro to Bob Shell
+### Tip 5: Intro to Bob Shell
 
 Bob Shell (`bob`) is the command-line version of Bob. It lets you call Bob from scripts, automation pipelines, and other programs without the IDE.
+
+**Authentication: SSO vs API key**
+
+Bob Shell supports two ways to authenticate:
+
+| | SSO / IBMid | API Key |
+| :--- | :--- | :--- |
+| **How** | Browser login (same as bob.ibm.com) | `BOBSHELL_API_KEY` environment variable |
+| **Best for** | Regular interactive use on your own machine | Automation, CI/CD, scripts, cron jobs |
+| **Setup** | Run `bob` and a browser window opens automatically | Generate a key and export it in your shell profile |
+| **Prompt** | Once per session (or when your session expires) | Never — fully non-interactive |
+
+For most users just getting started, **SSO is the default** — install Bob Shell, run `bob`, log in once in the browser, and you're done. Only set up an API key if you need Bob Shell to run unattended without a browser.
+
+**Install:**
+
+=== "macOS / Linux"
+    ```bash
+    curl -fsSL https://bob.ibm.com/download/bobshell.sh | bash
+    ```
+
+=== "Windows"
+    ```powershell
+    Set-ExecutionPolicy Bypass -Scope Process; irm -Uri "https://bob.ibm.com/download/bobshell.ps1" | iex
+    ```
+
+**Set your API key (so it persists across sessions):**
+
+1. Go to [bob.ibm.com](https://bob.ibm.com) and log in
+2. Open your subscription instance and navigate to the **API key management** section
+3. Create a new API key, set the type to **Inference**, and copy the value — you will not be able to view it again after creation
+4. Add it to your shell profile so it is set automatically on every login:
+
+    === "macOS / Linux"
+        ```bash
+        # Add to ~/.zshrc or ~/.bashrc
+        echo 'export BOBSHELL_API_KEY="your-api-key-here"' >> ~/.zshrc
+        source ~/.zshrc
+        ```
+
+    === "Windows"
+        ```powershell
+        # Set permanently for your user account
+        [System.Environment]::SetEnvironmentVariable('BOBSHELL_API_KEY', 'your-api-key-here', 'User')
+        ```
+
+3. Once `BOBSHELL_API_KEY` is set, Bob Shell picks it up automatically — no extra flag needed:
+
+    ```bash
+    bob -p "Hello"
+    ```
+
+!!! warning "Never commit your API key to version control"
+    Store it only in your shell profile or a secrets manager, never in a file that gets pushed to a repo.
 
 **Common Bob Shell commands:**
 
 ```bash
 # Ask Bob a question from the terminal
-bob run "Summarize the changes in the last 5 git commits"
+bob -p "Summarize the changes in the last 5 git commits"
 
 # Use a specific mode (ask = no file edits, safe for analysis)
-bob run --mode ask "What are the top 3 risks in this codebase?"
+bob -p "What are the top 3 risks in this codebase?" -m ask
 
-# Pass a file as context
-bob run --context ./README.md "Generate a one-paragraph summary of this project"
+# Pass a file as context using @ mention
+bob -p "Generate a one-paragraph summary of @README.md"
 
-# Output structured JSON
-bob run --format json "List the public API endpoints in src/"
+# Ask Bob to output structured JSON
+bob -p "List the public API endpoints in src/ and return the result as JSON"
 ```
 
 **Where Bob Shell shines:**
@@ -208,12 +311,12 @@ bob run --format json "List the public API endpoints in src/"
 **Quick Bob Shell demo:**
 
 ```bash
-bob run "Look at the files in this directory and tell me what this project does in 2 sentences."
+bob -p "Look at the files in this directory and tell me what this project does in 2 sentences."
 ```
 
 ---
 
-### Tip 5: Misc Power Tips
+### Tip 6: Misc Power Tips
 
 **Start with a New Task for every distinct job.** Bob's context window is finite. A fresh task means Bob focuses on exactly what you need now, and it's faster.
 
@@ -326,8 +429,11 @@ Use Bob to analyze a public GitHub repository, the same way you might analyze a 
 The simplest path is to analyze this workshop's own repo:
 
 ```
-Use Git to clone or examine https://github.com/ibm/intro-bob-workshop
-and give me:
+Clone https://github.com/ibm/intro-bob-workshop into a local folder
+called `intro-bob-workshop` in the current directory using:
+git clone https://github.com/ibm/intro-bob-workshop intro-bob-workshop
+
+Then give me:
 1. A high-level overview of what this project is and what it does
 2. The technology stack (languages, frameworks, tools)
 3. The overall structure: what's in each major directory
@@ -356,7 +462,7 @@ Format as an onboarding brief.
 
 ### Option C: Analyze a Public Open Source Project
 
-Pick any public repository you're curious about:
+Pick any public repository you're curious about. If you need an example, try the Qiskit quantum computing SDK: [https://github.com/Qiskit/qiskit](https://github.com/Qiskit/qiskit)
 
 ```
 Examine the public repository at [PUBLIC REPO URL].
@@ -414,8 +520,11 @@ and one for generating new code with the skill active.
 ```
 
 **Test it:**
+
+First, make sure the `ibm-team-dashboard.html` file from Exercise 1 is in your current workspace. Then run:
+
 ```
-/ibm-code-review Review the code Bob created in Exercise 1 and apply the checklist.
+/ibm-code-review ibm-team-dashboard.html
 ```
 
 ---
