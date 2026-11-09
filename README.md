@@ -13,10 +13,10 @@ These workshops demonstrate how IBM Bob transforms work through practical exerci
 
 Team-based demonstration format where students create prompts and watch Bob build games, websites, and interactive projects. No coding experience needed!
 
-### 🚀 High School Workshop (90 minutes)
-**From Design Thinking to Agentic AI - EDT Edition**
+### 🚀 High School Workshop (45 minutes workshop + 30 minutes presentations)
+**Prompt Like a Pro: Introduction to Agentic AI with Bob**
 
-Hands-on introduction to agentic AI where students create interactive projects, analyze code, and explore real-world applications.
+Hands-on introduction to agentic AI where students start with a three-prompt engineering challenge, build their own interactive project, and present it to the group.
 
 ### 💼 IBM Employee Workshop (60 minutes)
 **Accelerate Your Work with Agentic AI**
@@ -56,8 +56,8 @@ Visit the workshop website: **[https://ibm.github.io/intro-bob-workshop](https:/
 │   ├── README.md                  # Workshop overview and introduction
 │   ├── pre-work/                  # Prerequisites and setup
 │   ├── lab-1/                     # TechTrek Workshop
-│   ├── lab-2/                     # High School Workshop (legacy)
-│   ├── lab-2-edt/                 # High School Workshop (EDT Edition)
+│   ├── lab-2/                     # High School Workshop
+│   ├── lab-2-edt/                 # High School Workshop (EDT Edition, hidden from navigation)
 │   ├── lab-3/                     # IBM Employee Workshop
 │   ├── lab-4/                     # Take Your Child to Work Day
 │   ├── lab-5/                     # IBM PM Workshop
@@ -153,7 +153,7 @@ Bob represents the future of AI-assisted development and productivity.
 1. Start with [Pre-work](docs/pre-work/README.md) to set up your environment
 2. Choose your workshop:
    - [TechTrek Workshop](docs/lab-1/README.md)
-   - [High School Workshop (EDT Edition)](docs/lab-2-edt/README.md)
+   - [High School Workshop](docs/lab-2/README.md)
    - [IBM Employee Workshop](docs/lab-3/README.md)
    - [Take Your Child to Work Day](docs/lab-4/README.md)
    - [IBM PM Workshop](docs/lab-5/README.md)

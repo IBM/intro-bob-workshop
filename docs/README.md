@@ -31,12 +31,12 @@ Perfect for students in grades 6-8 who want to see AI in action. Work in teams t
 
 [Start TechTrek Workshop →](lab-1/README.md)
 
-#### 🚀 High School Workshop (90 minutes)
-**From Design Thinking to Agentic AI - EDT Edition**
+#### 🚀 High School Workshop (45 minutes workshop + 30 minutes presentations)
+**Prompt Like a Pro: Introduction to Agentic AI with Bob**
 
-Designed for high school students interested in technology and AI. Learn how AI agents work, create interactive projects, and explore real-world applications of agentic AI.
+Designed for high school students interested in technology and AI. Start with a prompt engineering challenge to see how a bad, better, and good prompt change the results, then build your own project and present it to the group.
 
-[Start High School Workshop →](lab-2-edt/README.md)
+[Start High School Workshop →](lab-2/README.md)
 
 #### 💼 IBM Employee Workshop (60 minutes)
 **Accelerate Your Work with Agentic AI**
@@ -83,7 +83,7 @@ Each workshop is designed to be:
 | :--- | :--- |
 | [Lab 0: Pre-work](pre-work/README.md) | Setup and prerequisites for the workshops |
 | [Lab 1: TechTrek Workshop](lab-1/README.md) | Team-based demonstration format (90 minutes) |
-| [Lab 2: High School Workshop (EDT Edition)](lab-2-edt/README.md) | Design thinking to AI implementation (90 minutes) |
+| [Lab 2: High School Workshop](lab-2/README.md) | Prompt engineering and student-built projects (45 minutes workshop + 30 minutes presentations) |
 | [Lab 3: IBM Employee Workshop](lab-3/README.md) | Professional development acceleration (60 minutes) |
 | [Lab 4: Take Your Child to Work Day](lab-4/README.md) | Parent-child AI adventure (30 minutes) |
 | [Lab 5: IBM PM Workshop](lab-5/README.md) | Accelerate PM work with agentic AI (60 minutes) |
