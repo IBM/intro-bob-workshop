@@ -2,7 +2,7 @@
 ## Introduction to Agentic AI with IBM Bob
 
 ### Workshop Overview
-This workshop introduces high school students to agentic AI through hands-on exercises with Bob, an AI assistant that can autonomously use tools to accomplish tasks. Students first learn how the quality of a prompt changes the quality of the result, then use that skill to build a project of their own and present it to the group.
+This workshop introduces high school students to agentic AI through hands-on exercises with Bob, an AI assistant that can autonomously use tools to accomplish tasks. Students first learn how the quality of a prompt changes the quality of the result, then apply what they learned to build a project of their own and present it to the group.
 
 **Duration:** 75 minutes total
 
@@ -42,7 +42,7 @@ This workshop introduces high school students to agentic AI through hands-on exe
 - Breaks down complex problems into steps
 - Learns from results and adapts
 
-**The key idea for today:** Bob is only as good as the instructions you give him. Learning to write a clear prompt is the most useful skill you will practice in this workshop.
+**The key idea for today:** Bob is only as good as the instructions you give him. Learning to write a clear prompt is the most useful technique you will practice in this workshop.
 
 ![The Shift in Software Development](../images/CodertoArchitect.png)
 
